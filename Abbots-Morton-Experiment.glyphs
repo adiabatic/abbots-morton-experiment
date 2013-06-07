@@ -415,6 +415,18 @@ width = 600;
 unicode = E67E;
 },
 {
+glyphname = "out-Qs";
+lastChange = "2013-06-07 20:27:27 -0800";
+layers = (
+{
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 600;
+}
+);
+unicode = E67B;
+},
+{
 glyphname = "owe-Qs";
 lastChange = "2013-06-06 23:45:50 -0800";
 layers = (
