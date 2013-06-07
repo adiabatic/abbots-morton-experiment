@@ -1,8 +1,7 @@
 {
 DisplayStrings = (
 "/leftangledparenthesis-Qs/ah-Qs/awe-Qs/at-Qs/bay-Qs/rightangledparenthesis-Qs",
-"/bay-Qs",
-"/tea-Qs"
+"/see-Qs"
 );
 copyright = "Uncopyrighted (public domain)";
 customParameters = (
@@ -301,7 +300,7 @@ unicode = E675;
 },
 {
 glyphname = "it-Qs";
-lastChange = "2013-06-07 20:25:46 -0800";
+lastChange = "2013-06-07 20:54:56 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -310,12 +309,12 @@ paths = (
 {
 closed = 0;
 nodes = (
-"250 500 LINE",
-"250 0 LINE"
+"100 500 LINE",
+"100 0 LINE"
 );
 }
 );
-width = 600;
+width = 200;
 }
 );
 unicode = E670;
@@ -490,7 +489,7 @@ unicode = E650;
 },
 {
 glyphname = "roe-Qs";
-lastChange = "2013-06-07 20:41:37 -0800";
+lastChange = "2013-06-07 20:55:42 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -499,28 +498,45 @@ paths = (
 {
 closed = 0;
 nodes = (
-"140 500 LINE",
-"290 500 OFFCURVE",
-"465 465 OFFCURVE",
-"465 265 CURVE SMOOTH",
-"465 65 OFFCURVE",
-"290 6 OFFCURVE",
-"140 0 CURVE SMOOTH"
+"100 500 LINE",
+"250 500 OFFCURVE",
+"425 465 OFFCURVE",
+"425 265 CURVE SMOOTH",
+"425 65 OFFCURVE",
+"250 0 OFFCURVE",
+"100 0 CURVE SMOOTH"
 );
 }
 );
-width = 600;
+width = 525;
 }
 );
 unicode = E668;
 },
 {
 glyphname = "see-Qs";
-lastChange = "2013-06-06 23:45:19 -0800";
+lastChange = "2013-06-07 21:11:58 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
+paths = (
+{
+closed = 0;
+nodes = (
+"250 3 LINE",
+"431 -3 OFFCURVE",
+"450 258 OFFCURVE",
+"450 284 CURVE SMOOTH",
+"450 500 OFFCURVE",
+"250 619 OFFCURVE",
+"250 746 CURVE SMOOTH",
+"250 951 OFFCURVE",
+"446 951 OFFCURVE",
+"500 951 CURVE"
+);
+}
+);
 width = 600;
 }
 );
@@ -540,7 +556,7 @@ unicode = E65C;
 },
 {
 glyphname = "tea-Qs";
-lastChange = "2013-06-07 20:46:01 -0800";
+lastChange = "2013-06-07 20:57:11 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -549,12 +565,12 @@ paths = (
 {
 closed = 0;
 nodes = (
-"250 950 LINE",
-"250 0 LINE"
+"100 950 LINE",
+"100 0 LINE"
 );
 }
 );
-width = 600;
+width = 200;
 }
 );
 unicode = E652;
