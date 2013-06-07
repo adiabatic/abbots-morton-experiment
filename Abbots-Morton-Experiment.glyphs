@@ -682,6 +682,10 @@ customParameters = (
 {
 name = "Filter";
 value = "GlyphsFilterOffsetCurve; 50; 50; 1; 0.5;";
+},
+{
+name = "Filter";
+value = "GlyphsFilterRemoveOverlap;";
 }
 );
 name = "Regular";
