@@ -33,6 +33,15 @@ position = "{25, -450}";
 },
 {
 position = "{97, 950}";
+},
+{
+position = "{69, -50}";
+},
+{
+position = "{25, 900}";
+},
+{
+position = "{26, -400}";
 }
 );
 horizontalStems = (
