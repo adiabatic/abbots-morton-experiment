@@ -296,11 +296,20 @@ unicode = E675;
 },
 {
 glyphname = "it-Qs";
-lastChange = "2013-06-06 23:45:37 -0800";
+lastChange = "2013-06-07 20:25:46 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
+paths = (
+{
+closed = 0;
+nodes = (
+"250 500 LINE",
+"250 0 LINE"
+);
+}
+);
 width = 600;
 }
 );
