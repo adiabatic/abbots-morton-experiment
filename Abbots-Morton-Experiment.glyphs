@@ -1,7 +1,9 @@
 {
 DisplayStrings = (
 "/leftangledparenthesis-Qs/ah-Qs/awe-Qs/at-Qs/bay-Qs/rightangledparenthesis-Qs",
-"/key-Qs"
+"/key-Qs",
+"/eat-Qs",
+"/et-Qs"
 );
 copyright = "Uncopyrighted (public domain)";
 customParameters = (
@@ -256,7 +258,7 @@ unicode = E673;
 },
 {
 glyphname = "et-Qs";
-lastChange = "2013-06-07 21:42:04 -0800";
+lastChange = "2013-06-07 23:37:18 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -265,14 +267,14 @@ paths = (
 {
 closed = 0;
 nodes = (
-"0 500 LINE",
-"0 250 OFFCURVE",
-"250 0 OFFCURVE",
-"500 0 CURVE"
+"100 500 LINE",
+"100 250 OFFCURVE",
+"350 0 OFFCURVE",
+"600 0 CURVE"
 );
 }
 );
-width = 500;
+width = 700;
 }
 );
 unicode = E672;
@@ -396,7 +398,7 @@ unicode = E65F;
 },
 {
 glyphname = "key-Qs";
-lastChange = "2013-06-07 23:32:02 -0800";
+lastChange = "2013-06-07 23:35:07 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -405,17 +407,17 @@ paths = (
 {
 closed = 0;
 nodes = (
-"105 905 LINE",
-"168 773 OFFCURVE",
-"292 641 OFFCURVE",
-"293 509 CURVE",
-"-66 237 OFFCURVE",
-"215 0 OFFCURVE",
-"415 0 CURVE SMOOTH"
+"100 905 LINE",
+"163 773 OFFCURVE",
+"287 641 OFFCURVE",
+"288 509 CURVE",
+"-71 237 OFFCURVE",
+"210 0 OFFCURVE",
+"410 0 CURVE SMOOTH"
 );
 }
 );
-width = 600;
+width = 510;
 }
 );
 unicode = E654;
