@@ -1,13 +1,9 @@
 {
 DisplayStrings = (
 "/leftangledparenthesis-Qs/ah-Qs/awe-Qs/at-Qs/bay-Qs/rightangledparenthesis-Qs",
-"/see-Qs",
-"/low-Qs",
-"/utter-Qs",
-"/at-Qs",
-"/eight-Qs",
-"/day-Qs",
-"/they-Qs"
+"/bay-Qs",
+"/bay-Qs/may-Qs",
+"/zoo-Qs"
 );
 copyright = "Uncopyrighted (public domain)";
 customParameters = (
@@ -794,7 +790,7 @@ unicode = E65D;
 },
 {
 glyphname = "zoo-Qs";
-lastChange = "2013-06-07 22:05:12 -0800";
+lastChange = "2013-06-07 22:40:17 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -803,19 +799,19 @@ paths = (
 {
 closed = 0;
 nodes = (
-"212 500 LINE",
-"302 596 OFFCURVE",
-"444 604 OFFCURVE",
-"444 550 CURVE SMOOTH",
-"444 326 OFFCURVE",
-"161 282 OFFCURVE",
-"165 62 CURVE SMOOTH",
-"167 -19 OFFCURVE",
-"196 -237 OFFCURVE",
-"324 -237 CURVE SMOOTH",
-"379 -237 OFFCURVE",
-"481 -134 OFFCURVE",
-"481 -5 CURVE SMOOTH"
+"158 500 LINE",
+"198 526 OFFCURVE",
+"444 550 OFFCURVE",
+"444 384 CURVE SMOOTH",
+"444 270 OFFCURVE",
+"218 102 OFFCURVE",
+"165 -98 CURVE SMOOTH",
+"123 -258 OFFCURVE",
+"196 -400 OFFCURVE",
+"324 -400 CURVE SMOOTH",
+"479 -400 OFFCURVE",
+"481 -129 OFFCURVE",
+"481 0 CURVE SMOOTH"
 );
 }
 );
