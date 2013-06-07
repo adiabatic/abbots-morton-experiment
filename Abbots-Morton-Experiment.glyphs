@@ -1,6 +1,8 @@
 {
 DisplayStrings = (
-"/leftangledparenthesis-Qs/ah-Qs/awe-Qs/at-Qs/bay-Qs/rightangledparenthesis-Qs"
+"/leftangledparenthesis-Qs/ah-Qs/awe-Qs/at-Qs/bay-Qs/rightangledparenthesis-Qs",
+"/bay-Qs",
+"/tea-Qs"
 );
 copyright = "Uncopyrighted (public domain)";
 customParameters = (
@@ -488,11 +490,25 @@ unicode = E650;
 },
 {
 glyphname = "roe-Qs";
-lastChange = "2013-06-06 23:45:31 -0800";
+lastChange = "2013-06-07 20:41:37 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
+paths = (
+{
+closed = 0;
+nodes = (
+"140 500 LINE",
+"290 500 OFFCURVE",
+"465 465 OFFCURVE",
+"465 265 CURVE SMOOTH",
+"465 65 OFFCURVE",
+"290 6 OFFCURVE",
+"140 0 CURVE SMOOTH"
+);
+}
+);
 width = 600;
 }
 );
@@ -524,11 +540,20 @@ unicode = E65C;
 },
 {
 glyphname = "tea-Qs";
-lastChange = "2013-06-06 23:44:49 -0800";
+lastChange = "2013-06-07 20:46:01 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
+paths = (
+{
+closed = 0;
+nodes = (
+"250 950 LINE",
+"250 0 LINE"
+);
+}
+);
 width = 600;
 }
 );
