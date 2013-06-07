@@ -199,12 +199,22 @@ unicode = E653;
 },
 {
 glyphname = "eat-Qs";
-lastChange = "2013-06-06 23:45:38 -0800";
+lastChange = "2013-06-07 23:34:49 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
-width = 600;
+paths = (
+{
+closed = 0;
+nodes = (
+"100 -50 LINE",
+"353 502 LINE",
+"359 -49 LINE"
+);
+}
+);
+width = 459;
 }
 );
 unicode = E671;
