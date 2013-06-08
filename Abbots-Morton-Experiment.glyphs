@@ -287,24 +287,56 @@ unicode = E672;
 },
 {
 glyphname = "exam-Qs";
-lastChange = "2013-06-06 23:45:35 -0800";
+lastChange = "2013-06-08 06:38:51 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
-width = 600;
+paths = (
+{
+closed = 0;
+nodes = (
+"500 -400 LINE",
+"50 500 LINE"
+);
+},
+{
+closed = 0;
+nodes = (
+"50 0 LINE",
+"300 500 LINE"
+);
+}
+);
+width = 550;
 }
 );
 unicode = E66C;
 },
 {
 glyphname = "excite-Qs";
-lastChange = "2013-06-06 23:45:34 -0800";
+lastChange = "2013-06-08 06:21:29 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
-width = 600;
+paths = (
+{
+closed = 0;
+nodes = (
+"50 900 LINE",
+"500 0 LINE"
+);
+},
+{
+closed = 0;
+nodes = (
+"500 500 LINE",
+"250 0 LINE"
+);
+}
+);
+width = 550;
 }
 );
 unicode = E66B;
@@ -1098,11 +1130,21 @@ unicode = E661;
 },
 {
 glyphname = "why-Qs";
-lastChange = "2013-06-06 23:45:27 -0800";
+lastChange = "2013-06-08 06:18:00 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
+paths = (
+{
+closed = 0;
+nodes = (
+"500 500 LINE",
+"100 -400 LINE",
+"29 -109 LINE"
+);
+}
+);
 width = 600;
 }
 );
