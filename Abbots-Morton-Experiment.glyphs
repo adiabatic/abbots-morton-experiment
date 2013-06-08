@@ -1,9 +1,6 @@
 {
 DisplayStrings = (
-"/leftangledparenthesis-Qs/ah-Qs/awe-Qs/at-Qs/bay-Qs/rightangledparenthesis-Qs",
-"/key-Qs",
-"/eat-Qs",
-"/et-Qs"
+"/leftangledparenthesis-Qs/ah-Qs/awe-Qs/at-Qs/bay-Qs/rightangledparenthesis-Qs"
 );
 copyright = "Uncopyrighted (public domain)";
 customParameters = (
@@ -766,11 +763,20 @@ unicode = E659;
 },
 {
 glyphname = "way-Qs";
-lastChange = "2013-06-06 23:45:26 -0800";
+lastChange = "2013-06-08 01:37:14 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
+paths = (
+{
+closed = 0;
+nodes = (
+"500 500 LINE",
+"100 -400 LINE"
+);
+}
+);
 width = 600;
 }
 );
