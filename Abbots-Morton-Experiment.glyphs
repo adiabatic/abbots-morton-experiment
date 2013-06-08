@@ -161,11 +161,23 @@ unicode = E651;
 },
 {
 glyphname = "cheer-Qs";
-lastChange = "2013-06-06 23:45:23 -0800";
+lastChange = "2013-06-08 05:38:52 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
+paths = (
+{
+closed = 0;
+nodes = (
+"39 500 LINE",
+"330 753 LINE",
+"34 0 OFFCURVE",
+"462 0 OFFCURVE",
+"570 0 CURVE"
+);
+}
+);
 width = 600;
 }
 );
