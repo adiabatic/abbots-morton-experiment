@@ -1114,6 +1114,28 @@ width = 500;
 unicode = E67A;
 },
 {
+glyphname = "utter-Qs.alt";
+lastChange = "2013-06-08 07:02:10 -0800";
+layers = (
+{
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+paths = (
+{
+closed = 0;
+nodes = (
+"491 0 LINE",
+"-62 0 OFFCURVE",
+"75 357 OFFCURVE",
+"243 500 CURVE SMOOTH"
+);
+}
+);
+width = 600;
+}
+);
+},
+{
 glyphname = "vie-Qs";
 lastChange = "2013-06-08 03:36:34 -0800";
 layers = (
