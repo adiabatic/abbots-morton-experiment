@@ -743,7 +743,7 @@ unicode = E656;
 },
 {
 glyphname = "they-Qs";
-lastChange = "2013-06-07 21:56:30 -0800";
+lastChange = "2013-06-08 02:31:56 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -753,12 +753,12 @@ paths = (
 closed = 0;
 nodes = (
 "320 500 LINE",
-"275 500 OFFCURVE",
-"-23 -216 OFFCURVE",
-"160 -288 CURVE SMOOTH",
-"343 -360 OFFCURVE",
-"445 -281 OFFCURVE",
-"445 -236 CURVE SMOOTH"
+"296 448 OFFCURVE",
+"-28 -357 OFFCURVE",
+"160 -400 CURVE SMOOTH",
+"257 -422 OFFCURVE",
+"410 -345 OFFCURVE",
+"487 -288 CURVE SMOOTH"
 );
 }
 );
