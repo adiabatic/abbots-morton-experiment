@@ -1140,11 +1140,37 @@ unicode = E660;
 },
 {
 glyphname = "zhivago-Qs";
-lastChange = "2013-06-06 23:45:22 -0800";
+lastChange = "2013-06-08 06:15:13 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
+paths = (
+{
+closed = 0;
+nodes = (
+"599 0 LINE",
+"252 0 OFFCURVE",
+"110 -234 OFFCURVE",
+"110 -344 CURVE SMOOTH",
+"110 -377 OFFCURVE",
+"123 -399 OFFCURVE",
+"148 -399 CURVE SMOOTH",
+"168 -399 OFFCURVE",
+"195 -386 OFFCURVE",
+"228 -353 CURVE SMOOTH",
+"252 -330 OFFCURVE",
+"279 -297 OFFCURVE",
+"309 -253 CURVE SMOOTH",
+"433 -70 OFFCURVE",
+"480 69 OFFCURVE",
+"480 175 CURVE SMOOTH",
+"480 457 OFFCURVE",
+"148 500 OFFCURVE",
+"69 500 CURVE"
+);
+}
+);
 width = 600;
 }
 );
