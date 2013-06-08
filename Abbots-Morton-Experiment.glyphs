@@ -11,8 +11,14 @@ designer = "Nathan Sharfi";
 familyName = "Abbots Morton Experiment";
 featurePrefixes = (
 {
-code = "languagesystem DFLT dflt;\012\012feature liga {\012 sub [eight-Qs] no-Qs' by no-Qs.alt;\012} liga;";
+code = "languagesystem DFLT dflt;";
 name = "Languagesystems";
+}
+);
+features = (
+{
+code = " sub [eight-Qs ox-Qs] no-Qs' by no-Qs.alt;\012 \012 sub utter-Qs' [low-Qs oolong-Qs see-Qs vie-Qs] by utter-Qs.alt;";
+name = calt;
 }
 );
 fontMaster = (
