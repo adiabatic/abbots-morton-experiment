@@ -9,6 +9,12 @@ value = "Public domain.";
 date = "2013-06-06 23:41:20 +0000";
 designer = "Nathan Sharfi";
 familyName = "Abbots Morton Experiment";
+featurePrefixes = (
+{
+code = "languagesystem DFLT dflt;\012\012feature liga {\012 sub [eight-Qs] no-Qs' by no-Qs.alt;\012} liga;";
+name = "Languagesystems";
+}
+);
 fontMaster = (
 {
 ascender = 1000;
