@@ -9,25 +9,46 @@
 	        src: url(AbbotsMortonExperiment-Regular.otf);
 	    }
 	    
+	    @font-face {
+	        font-family: AME;
+	        src: url(AbbotsMortonExperiment-Bold.otf);
+	        font-weight: bold;
+	    }
+	    
 	    html {
-            font: 18pt/2 AME, sans-serif;
+            font: 18pt/1.25 AME, sans-serif;
             text-rendering: optimizeLegibility;
 	    }
 	    
-	    h1 { font-size: 1.1rem; }
+	    [lang='en-Qaas'] {
+	        line-height: 1.75;
+	    }
+	    
+	    h1, h2 {
+	        font-size: 1.1rem;
+	        margin: 1rem 0 0;
+	    }
+	    
+	    p {
+	        margin: .25rem 0;
+	    }
 	</style>
 </head>
 <body>
-    <h1>Abbots Morton Experiment</h1>
-    <!--
-    <p>/ɑ/: </p>
-    <p>/ɔ/: </p>
-    <p>/b/: </p>
-    <p></p>
-    -->
-    <p>&#x200b;&#x200b;</p>
+    <h1>·   Abbots Morton Experiment</h1>
+
+    <p lang='en-Qaas'>&#x200b;&#x200b;</p>
     
-    <p>Bane: .</p>
+    
+    <h2>Utterly contextual.</h2>
+    
+    <p lang='en-Qaas'></p>
+
+    
+    <h2 data-en='I say “no, no, no.”'>  “, , .”</h2>
+
+    <p lang='en-Qaas'> .</p>
+    
     
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
