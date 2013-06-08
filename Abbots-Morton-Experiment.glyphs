@@ -457,7 +457,7 @@ unicode = E669;
 },
 {
 glyphname = "low-Qs";
-lastChange = "2013-06-07 21:26:57 -0800";
+lastChange = "2013-06-08 02:02:03 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -466,20 +466,20 @@ paths = (
 {
 closed = 0;
 nodes = (
-"40 0 LINE",
-"338 0 OFFCURVE",
-"493 72 OFFCURVE",
-"493 154 CURVE SMOOTH",
-"493 217 OFFCURVE",
-"334 296 OFFCURVE",
-"85 296 CURVE",
-"386 296 OFFCURVE",
-"244 500 OFFCURVE",
-"525 500 CURVE"
+"100 0 LINE",
+"398 0 OFFCURVE",
+"553 72 OFFCURVE",
+"553 154 CURVE SMOOTH",
+"553 217 OFFCURVE",
+"434 296 OFFCURVE",
+"185 296 CURVE",
+"216 296 OFFCURVE",
+"514 500 OFFCURVE",
+"585 500 CURVE"
 );
 }
 );
-width = 600;
+width = 685;
 }
 );
 unicode = E667;
