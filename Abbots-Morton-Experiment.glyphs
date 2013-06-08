@@ -1395,7 +1395,7 @@ name = "Regular";
 customParameters = (
 {
 name = "Filter";
-value = "GlyphsFilterOffsetCurve; 100; 100; 1; 0.5;";
+value = "GlyphsFilterOffsetCurve; 70; 70; 1; 0.5;";
 },
 {
 name = "Filter";
