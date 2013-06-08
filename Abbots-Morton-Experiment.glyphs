@@ -1390,6 +1390,22 @@ value = "GlyphsFilterRemoveOverlap;";
 }
 );
 name = "Regular";
+},
+{
+customParameters = (
+{
+name = "Filter";
+value = "GlyphsFilterOffsetCurve; 100; 100; 1; 0.5;";
+},
+{
+name = "Filter";
+value = "GlyphsFilterRemoveOverlap;";
+}
+);
+isBold = 1;
+linkStyle = "Regular";
+name = "Bold";
+weightClass = "Bold";
 }
 );
 unitsPerEm = 1000;
