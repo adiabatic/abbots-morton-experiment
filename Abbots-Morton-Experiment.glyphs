@@ -1034,12 +1034,30 @@ unicode = E663;
 },
 {
 glyphname = "ye-Qs";
-lastChange = "2013-06-06 23:45:25 -0800";
+lastChange = "2013-06-08 05:03:24 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
-width = 600;
+paths = (
+{
+closed = 0;
+nodes = (
+"100 500 LINE",
+"402 500 OFFCURVE",
+"496 593 OFFCURVE",
+"496 689 CURVE SMOOTH",
+"496 790 OFFCURVE",
+"392 894 OFFCURVE",
+"319 894 CURVE SMOOTH",
+"273 894 OFFCURVE",
+"249 855 OFFCURVE",
+"249 786 CURVE SMOOTH",
+"256 -50 LINE"
+);
+}
+);
+width = 596;
 }
 );
 unicode = E660;
