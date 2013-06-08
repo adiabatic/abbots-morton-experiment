@@ -704,12 +704,32 @@ unicode = E67B;
 },
 {
 glyphname = "owe-Qs";
-lastChange = "2013-06-06 23:45:50 -0800";
+lastChange = "2013-06-08 04:58:27 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
-width = 600;
+paths = (
+{
+closed = 0;
+nodes = (
+"351 500 LINE",
+"212 500 OFFCURVE",
+"100 388 OFFCURVE",
+"100 250 CURVE SMOOTH",
+"100 111 OFFCURVE",
+"212 0 OFFCURVE",
+"351 0 CURVE SMOOTH",
+"489 0 OFFCURVE",
+"601 111 OFFCURVE",
+"601 250 CURVE SMOOTH",
+"601 388 OFFCURVE",
+"489 500 OFFCURVE",
+"351 500 CURVE"
+);
+}
+);
+width = 701;
 }
 );
 unicode = E67C;
