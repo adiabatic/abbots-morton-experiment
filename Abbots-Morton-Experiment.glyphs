@@ -436,7 +436,7 @@ unicode = E655;
 },
 {
 glyphname = "he-Qs";
-lastChange = "2013-06-08 08:45:21 -0800";
+lastChange = "2013-06-09 20:48:49 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -453,7 +453,7 @@ nodes = (
 );
 }
 );
-width = 444;
+width = 162;
 }
 );
 unicode = E662;
