@@ -1449,7 +1449,7 @@ unicode = 002E;
 },
 {
 glyphname = "periodcentered";
-lastChange = "2013-06-12 19:31:43 -0800";
+lastChange = "2013-06-12 21:08:14 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -1769,28 +1769,6 @@ width = 550;
 unicode = 002D;
 },
 {
-glyphname = "quotedblbase";
-lastChange = "2013-06-12 19:32:15 -0800";
-layers = (
-{
-components = (
-{
-name = "comma";
-transform = "{1, 0, 0, 1, 0, 0}";
-},
-{
-name = "comma";
-transform = "{1, 0, 0, 1, 0, 0}";
-}
-);
-layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-width = 600;
-}
-);
-unicode = 201E;
-},
-{
 glyphname = "quotedblleft";
 layers = (
 {
@@ -1835,24 +1813,6 @@ width = 600;
 }
 );
 unicode = 2019;
-},
-{
-glyphname = "quotesinglbase";
-lastChange = "2013-06-12 19:32:15 -0800";
-layers = (
-{
-components = (
-{
-name = "comma";
-transform = "{1, 0, 0, 1, 0, 0}";
-}
-);
-layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-width = 600;
-}
-);
-unicode = 201A;
 },
 {
 glyphname = "leftangledparenthesis-Qs";
