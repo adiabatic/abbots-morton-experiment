@@ -17,7 +17,7 @@ name = "Languagesystems";
 );
 features = (
 {
-code = " sub [eight-Qs ox-Qs et-Qs] no-Qs' by no-Qs.alt;\012 \012 sub utter-Qs' [low-Qs oolong-Qs see-Qs vie-Qs] by utter-Qs.alt;";
+code = "#sub [eight-Qs ox-Qs et-Qs] no-Qs' by no-Qs.alt;\012 \012#sub utter-Qs' [low-Qs oolong-Qs see-Qs vie-Qs] by utter-Qs.alt;";
 name = calt;
 }
 );
