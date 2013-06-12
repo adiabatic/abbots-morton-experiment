@@ -404,7 +404,7 @@ unicode = E67D;
 },
 {
 glyphname = "gay-Qs";
-lastChange = "2013-06-08 08:45:21 -0800";
+lastChange = "2013-06-10 05:42:59 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -429,7 +429,7 @@ nodes = (
 );
 }
 );
-width = 533;
+width = 508;
 }
 );
 unicode = E655;
