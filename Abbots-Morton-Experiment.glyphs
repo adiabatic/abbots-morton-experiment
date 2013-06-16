@@ -1590,7 +1590,7 @@ unicode = 0038;
 },
 {
 glyphname = "nine";
-lastChange = "2013-06-16 21:45:53 -0800";
+lastChange = "2013-06-16 21:47:04 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -1599,21 +1599,21 @@ paths = (
 {
 closed = 0;
 nodes = (
-"342 621 LINE SMOOTH",
-"148 472 OFFCURVE",
-"-292 867 OFFCURVE",
-"339 950 CURVE"
+"406 621 LINE SMOOTH",
+"212 472 OFFCURVE",
+"-228 867 OFFCURVE",
+"403 950 CURVE"
 );
 },
 {
 closed = 0;
 nodes = (
-"339 950 LINE",
-"339 0 LINE"
+"403 950 LINE",
+"403 0 LINE"
 );
 }
 );
-width = 414;
+width = 481;
 }
 );
 unicode = 0039;
