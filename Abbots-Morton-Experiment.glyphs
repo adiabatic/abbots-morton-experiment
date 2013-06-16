@@ -1321,12 +1321,31 @@ unicode = E65B;
 },
 {
 glyphname = "zero";
-lastChange = "2013-06-12 21:57:36 -0800";
+lastChange = "2013-06-16 20:04:34 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
-width = 600;
+paths = (
+{
+closed = 1;
+nodes = (
+"637 -450 OFFCURVE",
+"775 -137 OFFCURVE",
+"775 250 CURVE SMOOTH",
+"775 637 OFFCURVE",
+"637 950 OFFCURVE",
+"425 950 CURVE SMOOTH",
+"213 950 OFFCURVE",
+"75 637 OFFCURVE",
+"75 250 CURVE SMOOTH",
+"75 -137 OFFCURVE",
+"213 -450 OFFCURVE",
+"425 -450 CURVE SMOOTH"
+);
+}
+);
+width = 850;
 }
 );
 unicode = 0030;
