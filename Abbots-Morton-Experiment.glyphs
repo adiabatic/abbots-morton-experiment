@@ -1,6 +1,6 @@
 {
 DisplayStrings = (
-6
+8
 );
 copyright = "Uncopyrighted (public domain)";
 customParameters = (
@@ -54,6 +54,7 @@ horizontalStems = (
 );
 id = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 userData = {
+GSCornerRadius = 200;
 GSOffsetHorizontal = 50;
 GSOffsetMakeStroke = 1;
 GSOffsetVertical = 50;
@@ -1528,11 +1529,21 @@ unicode = 0036;
 },
 {
 glyphname = "seven";
-lastChange = "2013-06-12 21:57:36 -0800";
+lastChange = "2013-06-16 20:47:44 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
+paths = (
+{
+closed = 0;
+nodes = (
+"124 950 LINE",
+"512 950 LINE",
+"142 6 LINE"
+);
+}
+);
 width = 600;
 }
 );
@@ -1540,12 +1551,39 @@ unicode = 0037;
 },
 {
 glyphname = "eight";
-lastChange = "2013-06-12 21:57:36 -0800";
+lastChange = "2013-06-16 21:25:45 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
-width = 600;
+paths = (
+{
+closed = 1;
+nodes = (
+"203 737 OFFCURVE",
+"213 639 OFFCURVE",
+"296 529 CURVE SMOOTH",
+"415 373 LINE SMOOTH",
+"498 264 OFFCURVE",
+"507 167 OFFCURVE",
+"447 66 CURVE SMOOTH",
+"394 -21 OFFCURVE",
+"320 -21 OFFCURVE",
+"268 66 CURVE SMOOTH",
+"206 167 OFFCURVE",
+"216 264 OFFCURVE",
+"298 373 CURVE SMOOTH",
+"414 530 LINE SMOOTH",
+"495 641 OFFCURVE",
+"504 736 OFFCURVE",
+"445 839 CURVE SMOOTH",
+"394 925 OFFCURVE",
+"319 925 OFFCURVE",
+"266 839 CURVE SMOOTH"
+);
+}
+);
+width = 714;
 }
 );
 unicode = 0038;
