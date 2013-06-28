@@ -2244,24 +2244,6 @@ isBold = 1;
 linkStyle = "Regular";
 name = "Bold";
 weightClass = "Bold";
-},
-{
-customParameters = (
-{
-name = "Filter";
-value = "GlyphsFilterOffsetCurve; 10; 10; 1; 0.5;";
-},
-{
-name = "Filter";
-value = "GlyphsFilterRemoveOverlap;";
-},
-{
-name = "Filter";
-value = "GlyphsFilterAddExtremes;";
-}
-);
-name = "Thin";
-weightClass = "Thin";
 }
 );
 unitsPerEm = 1000;
