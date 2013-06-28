@@ -47,7 +47,7 @@ position = "{26, -400}";
 }
 );
 horizontalStems = (
-50
+40
 );
 id = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 userData = {
@@ -57,8 +57,9 @@ GSOffsetMakeStroke = 1;
 GSOffsetVertical = 50;
 };
 verticalStems = (
-50
+40
 );
+weightValue = 40;
 xHeight = 500;
 }
 );
@@ -2213,6 +2214,7 @@ value = "GlyphsFilterAddExtremes;";
 name = "Regular";
 },
 {
+active = 0;
 customParameters = (
 {
 name = "Filter";
