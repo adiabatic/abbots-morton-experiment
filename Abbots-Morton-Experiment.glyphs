@@ -21,6 +21,12 @@ code = "languagesystem DFLT dflt;\012languagesystem Quik dflt;\012";
 name = "Languagesystems";
 }
 );
+features = (
+{
+code = "pos utter-Qs roe-Qs -50;";
+name = calt;
+}
+);
 fontMaster = (
 {
 ascender = 1000;
@@ -3218,6 +3224,18 @@ width = 600;
 }
 );
 unicode = 0020;
+},
+{
+glyphname = "zerowidthnonjoiner";
+lastChange = "2013-06-29 18:14:38 -0800";
+layers = (
+{
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 600;
+}
+);
+unicode = 200C;
 },
 {
 glyphname = "percent";
