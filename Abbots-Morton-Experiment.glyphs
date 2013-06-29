@@ -241,7 +241,7 @@ unicode = E65E;
 },
 {
 glyphname = "day-Qs";
-lastChange = "2013-06-28 22:03:34 -0800";
+lastChange = "2013-06-29 16:45:34 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -251,8 +251,8 @@ paths = (
 closed = 1;
 nodes = (
 "110 -278 LINE",
-"110 503 LINE",
-"40 503 LINE",
+"110 550 LINE",
+"40 550 LINE",
 "40 -522 LINE",
 "354.68 -19 LINE",
 "295.32 18.55 LINE"
