@@ -1,7 +1,4 @@
 {
-DisplayStrings = (
-"/low-Qs.bs"
-);
 copyright = "\U00A9 2013 Nathan Sharfi";
 customParameters = (
 {
@@ -26,7 +23,7 @@ name = "Languagesystems";
 );
 features = (
 {
-code = "#@StartsTall\012\012@StartsShort       = [awe-Qs    roe-Qs];\012@StartsShortMarked = [awe-Qs.sb roe-Qs.sx];\012\012@StartsBaseline       = [low-Qs    roe-Qs];\012@StartsBaselineMarked = [low-Qs.bs roe-Qs.bx];\012\012#@StartsDeep\012\012#---------\012\012@EndsShort =       [ah-Qs    low-Qs    utter-Qs];\012@EndsShortMarked = [ah-Qs.bs low-Qs.bs utter-Qs.bs];\012\012@EndsBaseline       = [awe-Qs    bay-Qs    et-Qs    she-Qs];\012@EndsBaselineMarked = [awe-Qs.sb bay-Qs.xb et-Qs.sb she-Qs.xb];\012\012sub @EndsShort'       @StartsShort  by @EndsShortMarked;\012sub @EndsShortMarked  @StartsShort' by @StartsShortMarked;\012\012sub @EndsBaseline'       @StartsBaseline  by @EndsBaselineMarked;\012sub @EndsBaselineMarked  @StartsBaseline' by @StartsBaselineMarked;\012\012sub @EndsBaselineMarked no-Qs' by no-Qs.alt;\012#sub [she-Qs eight-Qs ox-Qs et-Qs] no-Qs' by no-Qs.alt;\012\012#sub [ah-Qs utter-Qs] roe-Qs' by roe-Qs.sx;\012 \012#sub utter-Qs' [low-Qs oolong-Qs see-Qs vie-Qs] by utter-Qs.alt;\012";
+code = "#@StartsTall\012\012@StartsShort       = [awe-Qs    roe-Qs    no-Qs    ox-Qs];\012@StartsShortMarked = [awe-Qs.sb roe-Qs.sx no-Qs.ss ox-Qs.sb];\012\012@StartsBaseline       = [low-Qs    no-Qs     roe-Qs];\012@StartsBaselineMarked = [low-Qs.bs no-Qs.alt roe-Qs.bx];\012\012#@StartsDeep\012\012#---------\012\012@EndsShort =       [ah-Qs    low-Qs    no-Qs    utter-Qs];\012@EndsShortMarked = [ah-Qs.bs low-Qs.bs no-Qs.ss utter-Qs.bs];\012\012@EndsBaseline       = [awe-Qs    bay-Qs    et-Qs    ox-Qs    she-Qs];\012@EndsBaselineMarked = [awe-Qs.sb bay-Qs.xb et-Qs.sb ox-Qs.sb she-Qs.xb];\012\012sub @EndsShort'       @StartsShort  by @EndsShortMarked;\012sub @EndsShortMarked  @StartsShort' by @StartsShortMarked;\012\012sub @EndsBaseline'       @StartsBaseline  by @EndsBaselineMarked;\012sub @EndsBaselineMarked  @StartsBaseline' by @StartsBaselineMarked;\012\012sub @EndsBaselineMarked no-Qs' by no-Qs.alt;\012#sub [she-Qs eight-Qs ox-Qs et-Qs] no-Qs' by no-Qs.alt;\012\012#sub [ah-Qs utter-Qs] roe-Qs' by roe-Qs.sx;\012 \012#sub utter-Qs' [low-Qs oolong-Qs see-Qs vie-Qs] by utter-Qs.alt;\012";
 name = calt;
 }
 );
@@ -1120,6 +1117,33 @@ width = 651;
 );
 },
 {
+glyphname = "no-Qs.ss";
+lastChange = "2013-06-29 06:20:59 -0800";
+layers = (
+{
+anchors = (
+{
+name = "entry";
+position = "{77, 500}";
+},
+{
+name = "exit";
+position = "{575, 502}";
+}
+);
+components = (
+{
+name = "no-Qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 651;
+}
+);
+},
+{
 glyphname = "oolong-Qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
@@ -1313,6 +1337,33 @@ width = 650;
 }
 );
 unicode = E678;
+},
+{
+glyphname = "ox-Qs.sb";
+lastChange = "2013-06-29 06:23:14 -0800";
+layers = (
+{
+anchors = (
+{
+name = "entry";
+position = "{77, 499}";
+},
+{
+name = "exit";
+position = "{575, -47}";
+}
+);
+components = (
+{
+name = "ox-Qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 650;
+}
+);
 },
 {
 glyphname = "oy-Qs";
