@@ -9,22 +9,11 @@
 	        src: url(AbbotsMortonExperiment-Regular.otf);
 	    }
 	    
-	    @font-face {
-	        font-family: AME;
-	        src: url(AbbotsMortonExperiment-Bold.otf);
-	        font-weight: bold;
-	    }
-	    
-	    @font-face {
-	        font-family: AME;
-	        src: url(AbbotsMortonExperiment-Thin.otf);
-	        font-weight: 100;
-	    }
-	    
-	    
 	    html {
-            font: 18pt/1.25 AME, sans-serif;
+            font: 18pt/1.25 "Abbots Morton Experiment", AME, sans-serif;
             text-rendering: optimizeLegibility;
+            font-feature-settings: 'calt';
+            
 	    }
 	    
 	    [lang='en-Qaas'] {
@@ -33,7 +22,12 @@
 	    
 	    h1, h2 {
 	        font-size: 1.1rem;
-	        margin: 1rem 0 0;
+	        
+	        padding: 0 0 .25rem;
+	        margin: 2rem 0 1rem;
+	        font-weight: normal;
+	        text-align: center;
+	        border-bottom: thin solid;
 	    }
 	    
 	    p {
@@ -46,8 +40,12 @@
 <body>
     <h1>·   Abbots Morton Experiment</h1>
 
-    <p lang='en-Qaas'>&#x200b;&#x200b;</p>
+    <p lang='en-Qaas'>&#x200b;&#x200b;
+     () [] {} /\ 0123456789 +-*/ ? ! " " : ; ‘ ’ # 45° 12′ 24″ *      25% </p>
     
+    <p>  23 .</p>
+    
+    <p>   .</p>
     
     <h2>Utterly contextual.</h2>
     
@@ -59,6 +57,11 @@
     <p lang='en-Qaas'> .</p>
     
     <h2 data-en='Thin is in.' class='thin'>  .</h2>
+    
+    <h2>-r (  .)</h2>
+    <p>{ } —  ·    [].
+    
+    <h2> —   - .</h2>
     
     
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
