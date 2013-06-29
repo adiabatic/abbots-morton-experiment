@@ -3,15 +3,20 @@ DisplayStrings = (
 "/she-Qs",
 "/no-Qs.alt"
 );
-copyright = "Uncopyrighted (public domain)";
+copyright = "\U00A9 2013 Nathan Sharfi";
 customParameters = (
 {
 name = "license";
-value = "Public domain.";
+value = "Apache License, version 2.0";
+},
+{
+name = "licenseURL";
+value = "http://www.apache.org/licenses/LICENSE-2.0.html";
 }
 );
 date = "2013-06-06 23:41:20 +0000";
 designer = "Nathan Sharfi";
+designerURL = "http://www.frogorbits.com/";
 familyName = "Abbots Morton Experiment";
 featurePrefixes = (
 {
@@ -1223,7 +1228,7 @@ nodes = (
 "110 934.2 OFFCURVE",
 "310 934.334 OFFCURVE",
 "310 711 CURVE",
-"317.001 -50 LINE",
+"317 -50 LINE",
 "386.999 -50 LINE",
 "379.999 711.322 LINE",
 "380 1032.28 OFFCURVE",
@@ -1812,7 +1817,7 @@ nodes = (
 "265.601 805.705 LINE",
 "468.021 953.081 OFFCURVE",
 "545.716 919.502 OFFCURVE",
-"545.001 832.287 CURVE",
+"545 832.287 CURVE",
 "542.581 559.582 OFFCURVE",
 "-125 -35 OFFCURVE",
 "231 -35 CURVE",
