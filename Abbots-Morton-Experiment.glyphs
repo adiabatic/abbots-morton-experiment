@@ -1,7 +1,4 @@
 {
-DisplayStrings = (
-"/pea-Qs.half/roe-Qs.s"
-);
 copyright = "\U00A9 2013 Nathan Sharfi";
 customParameters = (
 {
@@ -257,7 +254,7 @@ unicode = E65E;
 },
 {
 glyphname = "day-Qs";
-lastChange = "2013-06-30 21:49:02 -0800";
+lastChange = "2013-07-01 03:14:36 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -278,6 +275,7 @@ nodes = (
 width = 400;
 }
 );
+leftKerningGroup = "flatthin";
 unicode = E653;
 },
 {
@@ -360,7 +358,7 @@ unicode = E673;
 },
 {
 glyphname = "et-Qs";
-lastChange = "2013-06-30 21:49:49 -0800";
+lastChange = "2013-07-01 03:18:27 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -558,7 +556,7 @@ unicode = E655;
 },
 {
 glyphname = "he-Qs";
-lastChange = "2013-06-30 23:06:45 -0800";
+lastChange = "2013-07-01 03:14:54 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -583,6 +581,7 @@ nodes = (
 width = 162;
 }
 );
+leftKerningGroup = "flatthin";
 rightKerningGroup = "overhangyskinny";
 unicode = E662;
 },
@@ -641,7 +640,7 @@ unicode = E675;
 },
 {
 glyphname = "it-Qs";
-lastChange = "2013-06-30 21:37:41 -0800";
+lastChange = "2013-07-01 03:14:20 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -660,7 +659,7 @@ nodes = (
 width = 150;
 }
 );
-leftKerningGroup = "removethin";
+leftKerningGroup = "flatthin";
 rightKerningGroup = "removethin";
 unicode = E670;
 },
@@ -1582,7 +1581,7 @@ unicode = E65C;
 },
 {
 glyphname = "tea-Qs";
-lastChange = "2013-06-30 21:52:05 -0800";
+lastChange = "2013-07-01 03:23:25 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -1601,7 +1600,7 @@ nodes = (
 width = 150;
 }
 );
-leftKerningGroup = "removethin";
+leftKerningGroup = "flatthin";
 rightKerningGroup = "removethin";
 unicode = E652;
 },
@@ -3777,6 +3776,7 @@ kerning = {
 "@MMK_L_removeextended" = {
 "@MMK_R_removeextended" = "-150";
 "@MMK_R_removestandard" = "-100";
+"@MMK_R_flatthin" = "-116";
 };
 "@MMK_L_removenone" = {
 "@MMK_R_removethin" = "-40";
@@ -3786,6 +3786,7 @@ kerning = {
 "@MMK_R_removestandard" = "-50";
 "bay-Qs" = "-170";
 "@MMK_R_removenone" = "-97";
+"@MMK_R_flatthin" = "-65";
 };
 "@MMK_L_removethin" = {
 "@MMK_R_belowbaselinebulge" = "-150";
@@ -3799,6 +3800,7 @@ kerning = {
 "@MMK_L_trailingmiddlebulge" = {
 "@MMK_R_removethin" = "-100";
 "@MMK_R_belowbaselinebulge" = "-190";
+"@MMK_R_flatthin" = 0;
 };
 };
 };
