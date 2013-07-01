@@ -1296,7 +1296,7 @@ unicode = E67C;
 },
 {
 glyphname = "ox-Qs";
-lastChange = "2013-06-30 21:10:09 -0800";
+lastChange = "2013-07-01 09:19:14 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -1319,6 +1319,7 @@ nodes = (
 width = 500;
 }
 );
+leftKerningGroup = "removestandard";
 leftMetricsKey = "=ah-Qs";
 rightKerningGroup = "removethin";
 unicode = E678;
