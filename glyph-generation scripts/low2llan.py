@@ -1,5 +1,5 @@
-FROM = 'low-Qs'
-TO   = 'llan-Qs'
+FROM = 'low-qs'
+TO   = 'llan-qs'
 
 XHEIGHT = 500
 WIDTH = 685

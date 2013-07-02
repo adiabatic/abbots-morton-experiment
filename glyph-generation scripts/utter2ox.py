@@ -1,5 +1,5 @@
-FROM = 'utter-Qs'
-TO   = 'ox-Qs'
+FROM = 'utter-qs'
+TO   = 'ox-qs'
 
 XHEIGHT = 500
 WIDTH = 500

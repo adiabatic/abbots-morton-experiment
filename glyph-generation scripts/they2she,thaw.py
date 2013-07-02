@@ -1,5 +1,5 @@
-FROM = 'they-Qs'
-TO   = 'she-Qs'
+FROM = 'they-qs'
+TO   = 'she-qs'
 
 from_layer = Font.glyphs[FROM].layers[0]
 XHEIGHT = Font.masters[0].xHeight
@@ -13,7 +13,7 @@ for path in to_layer.paths:
         # mess with node.x and node.y
         node.y += 400 # this is where the bottom ends
 
-TO   = 'thaw-Qs'
+TO   = 'thaw-qs'
 
 from_layer = Font.glyphs[FROM].layers[0]
 XHEIGHT = Font.masters[0].xHeight

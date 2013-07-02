@@ -1,5 +1,5 @@
-FROM = 'ooze-Qs'
-TO   = 'foot-Qs'
+FROM = 'ooze-qs'
+TO   = 'foot-qs'
 
 from_layer = Font.glyphs[FROM].layers[0]
 XHEIGHT = Font.masters[0].xHeight

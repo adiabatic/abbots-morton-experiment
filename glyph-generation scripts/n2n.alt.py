@@ -1,5 +1,5 @@
-FROM = 'no-Qs'
-TO   = 'no-Qs.alt'
+FROM = 'no-qs'
+TO   = 'no-qs.alt'
 
 from_layer = Font.glyphs[FROM].layers[0]
 XHEIGHT = Font.masters[0].xHeight

@@ -1,5 +1,5 @@
-eight_layer = Font.glyphs["eight-Qs"].layers[0]
-i_layer = Font.glyphs['i-Qs'].layers[0] = eight_layer.copyDecomposedLayer()
+eight_layer = Font.glyphs["eight-qs"].layers[0]
+i_layer = Font.glyphs['i-qs'].layers[0] = eight_layer.copyDecomposedLayer()
 
 XHEIGHT = 500
 WIDTH = 600

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE glyphData [
+<!ELEMENT glyphData (glyph)+>
+<!ELEMENT glyph EMPTY>
+<!ATTLIST glyph
+	unicode			CDATA		#IMPLIED
+	unicode2		CDATA		#IMPLIED
+	name			CDATA		#REQUIRED
+	sortName		CDATA		#IMPLIED
+	category		CDATA		#REQUIRED
+	subCategory		CDATA		#REQUIRED
+	script			CDATA		#IMPLIED
+	description		CDATA		#REQUIRED
+	legacy			CDATA		#IMPLIED
+	alternative		CDATA		#IMPLIED
+	decompose		CDATA		#IMPLIED
+	anchors			CDATA		#IMPLIED
+	accents			CDATA		#IMPLIED>
+]>
+<glyphData>
+    <glyph
+        unicode='E650'
+        name='pea-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER PEA'
+    />
+    <glyph
+        unicode='E651'
+        name='bay-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER BAY'
+    />
+    <glyph
+        unicode='E652'
+        name='tea-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER TEA'
+    />
+    <glyph
+        unicode='E653'
+        name='day-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER DAY'
+    />
+    <glyph
+        unicode='E654'
+        name='key-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER KEY'
+    />
+    <glyph
+        unicode='E655'
+        name='gay-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER GAY'
+    />
+    <glyph
+        unicode='E656'
+        name='thaw-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER THAW'
+    />
+    <glyph
+        unicode='E657'
+        name='they-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER THEY'
+    />
+    <glyph
+        unicode='E658'
+        name='fee-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER FEE'
+    />
+    <glyph
+        unicode='E659'
+        name='vie-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER VIE'
+    />
+    <glyph
+        unicode='E65A'
+        name='see-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER SEE'
+    />
+    <glyph
+        unicode='E65B'
+        name='zoo-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER ZOO'
+    />
+    <glyph
+        unicode='E65C'
+        name='she-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER SHE'
+    />
+    <glyph
+        unicode='E65D'
+        name='zhivago-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER ZHIVAGO'
+    />
+    <glyph
+        unicode='E65E'
+        name='cheer-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER CHEER'
+    />
+    <glyph
+        unicode='E65F'
+        name='jay-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER JAY'
+    />
+    <glyph
+        unicode='E660'
+        name='ye-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER YE'
+    />
+    <glyph
+        unicode='E661'
+        name='way-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER WAY'
+    />
+    <glyph
+        unicode='E662'
+        name='he-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER HE'
+    />
+    <glyph
+        unicode='E663'
+        name='why-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER WHY'
+    />
+    <glyph
+        unicode='E664'
+        name='oolong-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER OOLONG'
+    />
+    <glyph
+        unicode='E665'
+        name='may-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER MAY'
+    />
+    <glyph
+        unicode='E666'
+        name='no-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER NO'
+    />
+    <glyph
+        unicode='E667'
+        name='low-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER LOW'
+    />
+    <glyph
+        unicode='E668'
+        name='roe-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER ROE'
+    />
+    <glyph
+        unicode='E669'
+        name='loch-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER LOCH'
+    />
+    <glyph
+        unicode='E66A'
+        name='llan-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER LLAN'
+    />
+    <glyph
+        unicode='E66B'
+        name='excite-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER EXCITE'
+    />
+    <glyph
+        unicode='E66C'
+        name='exam-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER EXAM'
+    />
+    <glyph
+        unicode='E66E'
+        name='leftangledparenthesis-qs'
+        category='Punctuation'
+        subCategory='Parenthesis'
+        script='Quikscript'
+        description='QUIKSCRIPT LEFT ANGLED PARENTHESIS'
+    />
+    <glyph
+        unicode='E66F'
+        name='rightangledparenthesis-qs'
+        category='Punctuation'
+        subCategory='Parenthesis'
+        script='Quikscript'
+        description='QUIKSCRIPT RIGHT ANGLED PARENTHESIS'
+    />
+    <glyph
+        unicode='E670'
+        name='it-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER IT'
+    />
+    <glyph
+        unicode='E671'
+        name='eat-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER EAT'
+    />
+    <glyph
+        unicode='E672'
+        name='et-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER ET'
+    />
+    <glyph
+        unicode='E673'
+        name='eight-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER EIGHT'
+    />
+    <glyph
+        unicode='E674'
+        name='at-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER AT'
+    />
+    <glyph
+        unicode='E675'
+        name='i-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER I'
+    />
+    <glyph
+        unicode='E676'
+        name='ah-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER AH'
+    />
+    <glyph
+        unicode='E677'
+        name='awe-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER AWE'
+    />
+    <glyph
+        unicode='E678'
+        name='ox-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER OX'
+    />
+    <glyph
+        unicode='E679'
+        name='oy-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER OY'
+    />
+    <glyph
+        unicode='E67A'
+        name='utter-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER UTTER'
+    />
+    <glyph
+        unicode='E67B'
+        name='out-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER OUT'
+    />
+    <glyph
+        unicode='E67C'
+        name='owe-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER OWE'
+    />
+    <glyph
+        unicode='E67D'
+        name='foot-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER FOOT'
+    />
+    <glyph
+        unicode='E67E'
+        name='ooze-qs'
+        category='Letter'
+        subCategory='Other'
+        script='Quikscript'
+        description='QUIKSCRIPT LETTER OOZE'
+    />
+ 
+</glyphData>

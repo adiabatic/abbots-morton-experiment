@@ -1,5 +1,5 @@
-FROM = 'oy-Qs'
-TO   = 'out-Qs'
+FROM = 'oy-qs'
+TO   = 'out-qs'
 
 
 from_layer = Font.glyphs[FROM].layers[0]

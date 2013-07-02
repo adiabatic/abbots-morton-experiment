@@ -23,7 +23,7 @@ name = "Languagesystems";
 );
 features = (
 {
-code = "@EndsBaseline = [\012\011awe-Qs\012\011bay-Qs\012\011cheer-Qs\012\011eight-Qs\012\011et-Qs\012\011excite-Qs\012\011key-Qs\012\011llan-Qs\012\011\011\011\011no-Qs.alt\012\011oolong-Qs\012\011ooze-Qs\012\011ox-Qs\012\011oy-Qs\012\011pea-Qs\012\011she-Qs\012\011tea-Qs\012\011\011\011\011utter-Qs.alt\012\011vie-Qs\012\011zhivago-Qs\012\011zoo-Qs\012];\012\012@StartsBaseline = [\012\011\011\011\011oolong-Qs.medi\012\011\011\011\011oolong-Qs.fina\012];\012\012sub @EndsBaseline no-Qs' by no-Qs.alt;\012sub it-Qs oolong-Qs' by oolong-Qs.fina;\012\012sub it-Qs no-Qs' it-Qs by no-Qs.medi;\012sub it-Qs no-Qs' by no-Qs.fina;\012\012sub tea-Qs no-Qs' by no-Qs.fina;\012\012\012# make \"pr\" join properly\012sub pea-Qs' roe-Qs by pea-Qs.half;\012sub pea-Qs.half roe-Qs' by roe-Qs.s;\012\012sub it-Qs  roe-Qs' by roe-Qs.s; # may be a bad idea because it happens across syllable boundaries frequently\012sub tea-Qs roe-Qs' by roe-Qs.b;";
+code = "@EndsBaseline = [\012\011awe-qs\012\011bay-qs\012\011cheer-qs\012\011eight-qs\012\011et-qs\012\011excite-qs\012\011key-qs\012\011llan-qs\012\011\011\011\011no-qs.alt\012\011oolong-qs\012\011ooze-qs\012\011ox-qs\012\011oy-qs\012\011pea-qs\012\011she-qs\012\011tea-qs\012\011\011\011\011utter-qs.alt\012\011vie-qs\012\011zhivago-qs\012\011zoo-qs\012];\012\012@StartsBaseline = [\012\011\011\011\011oolong-qs.medi\012\011\011\011\011oolong-qs.fina\012];\012\012sub @EndsBaseline no-qs' by no-qs.alt;\012sub it-qs oolong-qs' by oolong-qs.fina;\012\012sub it-qs no-qs' it-qs by no-qs.medi;\012sub it-qs no-qs' by no-qs.fina;\012\012sub tea-qs no-qs' by no-qs.fina;\012\012\012# make \"pr\" join properly\012sub pea-qs' roe-qs by pea-qs.half;\012sub pea-qs.half roe-qs' by roe-qs.s;\012\012sub it-qs  roe-qs' by roe-qs.s; # may be a bad idea because it happens across syllable boundaries frequently\012sub tea-qs roe-qs' by roe-qs.b;";
 name = calt;
 }
 );
@@ -71,7 +71,7 @@ xHeight = 500;
 );
 glyphs = (
 {
-glyphname = "ah-Qs";
+glyphname = "ah-qs";
 lastChange = "2013-06-29 18:38:05 -0800";
 layers = (
 {
@@ -106,7 +106,7 @@ rightKerningGroup = "removestandard";
 unicode = E676;
 },
 {
-glyphname = "at-Qs";
+glyphname = "at-qs";
 lastChange = "2013-06-30 23:08:28 -0800";
 layers = (
 {
@@ -130,12 +130,12 @@ nodes = (
 width = 600;
 }
 );
-leftMetricsKey = "=ah-Qs";
+leftMetricsKey = "=ah-qs";
 rightKerningGroup = "removethin";
 unicode = E674;
 },
 {
-glyphname = "awe-Qs";
+glyphname = "awe-qs";
 lastChange = "2013-06-29 18:38:29 -0800";
 layers = (
 {
@@ -166,13 +166,13 @@ width = 550;
 }
 );
 leftKerningGroup = "removestandard";
-leftMetricsKey = "=ah-Qs";
+leftMetricsKey = "=ah-qs";
 rightKerningGroup = "removestandard";
-rightMetricsKey = "=ah-Qs";
+rightMetricsKey = "=ah-qs";
 unicode = E677;
 },
 {
-glyphname = "bay-Qs";
+glyphname = "bay-qs";
 lastChange = "2013-06-30 23:20:32 -0800";
 layers = (
 {
@@ -220,11 +220,11 @@ width = 530;
 );
 leftKerningGroup = "belowbaselinebulge";
 rightKerningGroup = "removestandard";
-rightMetricsKey = "=ah-Qs";
+rightMetricsKey = "=ah-qs";
 unicode = E651;
 },
 {
-glyphname = "cheer-Qs";
+glyphname = "cheer-qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
@@ -253,7 +253,7 @@ width = 681;
 unicode = E65E;
 },
 {
-glyphname = "day-Qs";
+glyphname = "day-qs";
 lastChange = "2013-07-01 03:14:36 -0800";
 layers = (
 {
@@ -279,7 +279,7 @@ leftKerningGroup = "flatthin";
 unicode = E653;
 },
 {
-glyphname = "eat-Qs";
+glyphname = "eat-qs";
 lastChange = "2013-06-30 21:49:14 -0800";
 layers = (
 {
@@ -305,7 +305,7 @@ leftKerningGroup = "removethin";
 unicode = E671;
 },
 {
-glyphname = "eight-Qs";
+glyphname = "eight-qs";
 lastChange = "2013-06-30 20:44:09 -0800";
 layers = (
 {
@@ -357,7 +357,7 @@ rightKerningGroup = "removeextended";
 unicode = E673;
 },
 {
-glyphname = "et-Qs";
+glyphname = "et-qs";
 lastChange = "2013-07-01 03:18:27 -0800";
 layers = (
 {
@@ -382,11 +382,11 @@ width = 550;
 }
 );
 rightKerningGroup = "removestandard";
-rightMetricsKey = "=ah-Qs";
+rightMetricsKey = "=ah-qs";
 unicode = E672;
 },
 {
-glyphname = "exam-Qs";
+glyphname = "exam-qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
@@ -418,7 +418,7 @@ width = 600;
 unicode = E66C;
 },
 {
-glyphname = "excite-Qs";
+glyphname = "excite-qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
@@ -450,7 +450,7 @@ width = 600;
 unicode = E66B;
 },
 {
-glyphname = "fee-Qs";
+glyphname = "fee-qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
@@ -483,7 +483,7 @@ width = 435;
 unicode = E658;
 },
 {
-glyphname = "foot-Qs";
+glyphname = "foot-qs";
 lastChange = "2013-06-30 21:50:35 -0800";
 layers = (
 {
@@ -510,7 +510,7 @@ width = 505;
 unicode = E67D;
 },
 {
-glyphname = "gay-Qs";
+glyphname = "gay-qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
@@ -555,7 +555,7 @@ width = 508;
 unicode = E655;
 },
 {
-glyphname = "he-Qs";
+glyphname = "he-qs";
 lastChange = "2013-07-01 03:14:54 -0800";
 layers = (
 {
@@ -586,7 +586,7 @@ rightKerningGroup = "overhangyskinny";
 unicode = E662;
 },
 {
-glyphname = "i-Qs";
+glyphname = "i-qs";
 lastChange = "2013-06-30 23:09:59 -0800";
 layers = (
 {
@@ -639,7 +639,7 @@ rightKerningGroup = "removethin";
 unicode = E675;
 },
 {
-glyphname = "it-Qs";
+glyphname = "it-qs";
 lastChange = "2013-07-01 03:14:20 -0800";
 layers = (
 {
@@ -664,7 +664,7 @@ rightKerningGroup = "removethin";
 unicode = E670;
 },
 {
-glyphname = "jay-Qs";
+glyphname = "jay-qs";
 lastChange = "2013-06-29 16:29:24 -0800";
 layers = (
 {
@@ -690,11 +690,11 @@ nodes = (
 width = 631;
 }
 );
-leftMetricsKey = "=ah-Qs";
+leftMetricsKey = "=ah-qs";
 unicode = E65F;
 },
 {
-glyphname = "key-Qs";
+glyphname = "key-qs";
 lastChange = "2013-06-29 18:41:06 -0800";
 layers = (
 {
@@ -725,11 +725,11 @@ width = 410;
 }
 );
 rightKerningGroup = "removestandard";
-rightMetricsKey = "=ah-Qs";
+rightMetricsKey = "=ah-qs";
 unicode = E654;
 },
 {
-glyphname = "llan-Qs";
+glyphname = "llan-qs";
 lastChange = "2013-06-29 16:12:14 -0800";
 layers = (
 {
@@ -767,11 +767,11 @@ nodes = (
 width = 585;
 }
 );
-rightMetricsKey = "=ah-Qs";
+rightMetricsKey = "=ah-qs";
 unicode = E66A;
 },
 {
-glyphname = "loch-Qs";
+glyphname = "loch-qs";
 lastChange = "2013-06-30 21:51:00 -0800";
 layers = (
 {
@@ -812,7 +812,7 @@ width = 550;
 unicode = E669;
 },
 {
-glyphname = "low-Qs";
+glyphname = "low-qs";
 lastChange = "2013-06-29 18:39:46 -0800";
 layers = (
 {
@@ -851,11 +851,11 @@ width = 585;
 }
 );
 leftKerningGroup = "removestandard";
-leftMetricsKey = "=ah-Qs";
+leftMetricsKey = "=ah-qs";
 unicode = E667;
 },
 {
-glyphname = "may-Qs";
+glyphname = "may-qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
@@ -900,7 +900,7 @@ width = 499;
 unicode = E665;
 },
 {
-glyphname = "no-Qs";
+glyphname = "no-qs";
 lastChange = "2013-06-30 20:50:01 -0800";
 layers = (
 {
@@ -941,7 +941,7 @@ rightKerningGroup = "removeextended";
 unicode = E666;
 },
 {
-glyphname = "no-Qs.alt";
+glyphname = "no-qs.alt";
 lastChange = "2013-06-29 19:18:22 -0800";
 layers = (
 {
@@ -981,13 +981,13 @@ leftKerningGroup = "removeextended";
 rightKerningGroup = "removeextended";
 },
 {
-glyphname = "no-Qs.fina";
+glyphname = "no-qs.fina";
 lastChange = "2013-06-30 21:31:31 -0800";
 layers = (
 {
 components = (
 {
-name = "no-Qs";
+name = "no-qs";
 transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
@@ -1009,13 +1009,13 @@ width = 651;
 );
 },
 {
-glyphname = "no-Qs.init";
+glyphname = "no-qs.init";
 lastChange = "2013-06-30 21:30:52 -0800";
 layers = (
 {
 components = (
 {
-name = "no-Qs";
+name = "no-qs";
 transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
@@ -1037,13 +1037,13 @@ width = 651;
 );
 },
 {
-glyphname = "no-Qs.medi";
+glyphname = "no-qs.medi";
 lastChange = "2013-06-30 21:44:33 -0800";
 layers = (
 {
 components = (
 {
-name = "no-Qs.fina";
+name = "no-qs.fina";
 transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
@@ -1067,7 +1067,7 @@ leftKerningGroup = "removenone";
 rightKerningGroup = "removenone";
 },
 {
-glyphname = "oolong-Qs";
+glyphname = "oolong-qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
@@ -1106,13 +1106,13 @@ width = 651;
 unicode = E664;
 },
 {
-glyphname = "oolong-Qs.fina";
+glyphname = "oolong-qs.fina";
 lastChange = "2013-06-30 20:59:33 -0800";
 layers = (
 {
 components = (
 {
-name = "oolong-Qs";
+name = "oolong-qs";
 transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
@@ -1135,13 +1135,13 @@ width = 651;
 leftKerningGroup = "removenone";
 },
 {
-glyphname = "oolong-Qs.medi";
+glyphname = "oolong-qs.medi";
 lastChange = "2013-06-30 20:57:15 -0800";
 layers = (
 {
 components = (
 {
-name = "oolong-Qs.fina";
+name = "oolong-qs.fina";
 transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
@@ -1163,7 +1163,7 @@ width = 651;
 );
 },
 {
-glyphname = "ooze-Qs";
+glyphname = "ooze-qs";
 lastChange = "2013-06-30 22:43:48 -0800";
 layers = (
 {
@@ -1191,7 +1191,7 @@ leftKerningGroup = "removethin";
 unicode = E67E;
 },
 {
-glyphname = "out-Qs";
+glyphname = "out-qs";
 lastChange = "2013-06-29 16:12:52 -0800";
 layers = (
 {
@@ -1245,11 +1245,11 @@ nodes = (
 width = 700;
 }
 );
-rightMetricsKey = "=ah-Qs";
+rightMetricsKey = "=ah-qs";
 unicode = E67B;
 },
 {
-glyphname = "owe-Qs";
+glyphname = "owe-qs";
 lastChange = "2013-06-29 19:31:04 -0800";
 layers = (
 {
@@ -1295,7 +1295,7 @@ rightKerningGroup = "trailingmiddlebulge";
 unicode = E67C;
 },
 {
-glyphname = "ox-Qs";
+glyphname = "ox-qs";
 lastChange = "2013-07-01 09:19:14 -0800";
 layers = (
 {
@@ -1320,12 +1320,12 @@ width = 500;
 }
 );
 leftKerningGroup = "removestandard";
-leftMetricsKey = "=ah-Qs";
+leftMetricsKey = "=ah-qs";
 rightKerningGroup = "removethin";
 unicode = E678;
 },
 {
-glyphname = "oy-Qs";
+glyphname = "oy-qs";
 lastChange = "2013-06-29 16:29:14 -0800";
 layers = (
 {
@@ -1379,11 +1379,11 @@ nodes = (
 width = 700;
 }
 );
-leftMetricsKey = "=ah-Qs";
+leftMetricsKey = "=ah-qs";
 unicode = E679;
 },
 {
-glyphname = "pea-Qs";
+glyphname = "pea-qs";
 lastChange = "2013-06-30 21:51:50 -0800";
 layers = (
 {
@@ -1412,7 +1412,7 @@ width = 427;
 unicode = E650;
 },
 {
-glyphname = "pea-Qs.half";
+glyphname = "pea-qs.half";
 lastChange = "2013-06-30 23:45:57 -0800";
 layers = (
 {
@@ -1441,7 +1441,7 @@ width = 412;
 rightKerningGroup = "removestandard";
 },
 {
-glyphname = "roe-Qs";
+glyphname = "roe-qs";
 lastChange = "2013-06-29 18:35:24 -0800";
 layers = (
 {
@@ -1472,17 +1472,17 @@ width = 425;
 }
 );
 leftKerningGroup = "removestandard";
-leftMetricsKey = "=ah-Qs";
+leftMetricsKey = "=ah-qs";
 unicode = E668;
 },
 {
-glyphname = "roe-Qs.b";
+glyphname = "roe-qs.b";
 lastChange = "2013-07-01 09:09:00 -0800";
 layers = (
 {
 components = (
 {
-name = "roe-Qs";
+name = "roe-qs";
 transform = "{1, 0, 0, 1, 40, 0}";
 }
 );
@@ -1505,13 +1505,13 @@ width = 465;
 leftKerningGroup = "removenone";
 },
 {
-glyphname = "roe-Qs.s";
+glyphname = "roe-qs.s";
 lastChange = "2013-07-01 09:10:11 -0800";
 layers = (
 {
 components = (
 {
-name = "roe-Qs";
+name = "roe-qs";
 transform = "{1, 0, 0, 1, 40, 0}";
 }
 );
@@ -1534,7 +1534,7 @@ width = 465;
 leftKerningGroup = "removenone";
 },
 {
-glyphname = "see-Qs";
+glyphname = "see-qs";
 lastChange = "2013-06-29 19:29:57 -0800";
 layers = (
 {
@@ -1571,12 +1571,12 @@ width = 400;
 }
 );
 leftKerningGroup = "removestandard";
-leftMetricsKey = "=ah-Qs";
+leftMetricsKey = "=ah-qs";
 rightKerningGroup = "trailingmiddlebulge";
 unicode = E65A;
 },
 {
-glyphname = "she-Qs";
+glyphname = "she-qs";
 lastChange = "2013-06-29 19:16:01 -0800";
 layers = (
 {
@@ -1610,7 +1610,7 @@ rightKerningGroup = "she";
 unicode = E65C;
 },
 {
-glyphname = "tea-Qs";
+glyphname = "tea-qs";
 lastChange = "2013-07-01 03:23:25 -0800";
 layers = (
 {
@@ -1635,7 +1635,7 @@ rightKerningGroup = "removethin";
 unicode = E652;
 },
 {
-glyphname = "thaw-Qs";
+glyphname = "thaw-qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
@@ -1668,7 +1668,7 @@ width = 519;
 unicode = E656;
 },
 {
-glyphname = "they-Qs";
+glyphname = "they-qs";
 lastChange = "2013-06-30 23:21:16 -0800";
 layers = (
 {
@@ -1701,7 +1701,7 @@ width = 357;
 unicode = E657;
 },
 {
-glyphname = "utter-Qs";
+glyphname = "utter-qs";
 lastChange = "2013-07-01 08:50:45 -0800";
 layers = (
 {
@@ -1727,11 +1727,11 @@ width = 500;
 );
 leftKerningGroup = "removethin";
 rightKerningGroup = "removestandard";
-rightMetricsKey = "=ah-Qs";
+rightMetricsKey = "=ah-qs";
 unicode = E67A;
 },
 {
-glyphname = "utter-Qs.alt";
+glyphname = "utter-qs.alt";
 lastChange = "2013-06-29 16:29:03 -0800";
 layers = (
 {
@@ -1755,10 +1755,10 @@ nodes = (
 width = 496;
 }
 );
-rightMetricsKey = "=ah-Qs";
+rightMetricsKey = "=ah-qs";
 },
 {
-glyphname = "vie-Qs";
+glyphname = "vie-qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
@@ -1797,7 +1797,7 @@ width = 454;
 unicode = E659;
 },
 {
-glyphname = "way-Qs";
+glyphname = "way-qs";
 lastChange = "2013-06-29 16:17:27 -0800";
 layers = (
 {
@@ -1817,12 +1817,12 @@ nodes = (
 width = 514;
 }
 );
-leftMetricsKey = "=ah-Qs";
-rightMetricsKey = "=ah-Qs";
+leftMetricsKey = "=ah-qs";
+rightMetricsKey = "=ah-qs";
 unicode = E661;
 },
 {
-glyphname = "why-Qs";
+glyphname = "why-qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
@@ -1847,7 +1847,7 @@ width = 621;
 unicode = E663;
 },
 {
-glyphname = "ye-Qs";
+glyphname = "ye-qs";
 lastChange = "2013-07-01 08:53:08 -0800";
 layers = (
 {
@@ -1890,7 +1890,7 @@ rightKerningGroup = "overhangyskinny";
 unicode = E660;
 },
 {
-glyphname = "ye-Qs.alt";
+glyphname = "ye-qs.alt";
 lastChange = "2013-06-30 21:52:27 -0800";
 layers = (
 {
@@ -1930,7 +1930,7 @@ width = 506;
 );
 },
 {
-glyphname = "zhivago-Qs";
+glyphname = "zhivago-qs";
 lastChange = "2013-06-29 16:28:44 -0800";
 layers = (
 {
@@ -1986,12 +1986,12 @@ nodes = (
 width = 580;
 }
 );
-leftMetricsKey = "=ah-Qs";
-rightMetricsKey = "=ah-Qs";
+leftMetricsKey = "=ah-qs";
+rightMetricsKey = "=ah-qs";
 unicode = E65D;
 },
 {
-glyphname = "zoo-Qs";
+glyphname = "zoo-qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
@@ -3471,7 +3471,7 @@ width = 294;
 unicode = 2019;
 },
 {
-glyphname = "leftangledparenthesis-Qs";
+glyphname = "leftangledparenthesis-qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
@@ -3496,7 +3496,7 @@ width = 600;
 unicode = E66E;
 },
 {
-glyphname = "rightangledparenthesis-Qs";
+glyphname = "rightangledparenthesis-qs";
 lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
@@ -3816,7 +3816,7 @@ kerning = {
 "@MMK_R_removeextended" = "-100";
 "@MMK_R_removenone" = "-97";
 "@MMK_R_removestandard" = "-50";
-"bay-Qs" = "-170";
+"bay-qs" = "-170";
 };
 "@MMK_L_removethin" = {
 "@MMK_R_belowbaselinebulge" = "-150";

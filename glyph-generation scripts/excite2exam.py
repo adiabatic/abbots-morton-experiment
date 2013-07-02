@@ -1,5 +1,5 @@
-FROM = 'excite-Qs'
-TO   = 'exam-Qs'
+FROM = 'excite-qs'
+TO   = 'exam-qs'
 
 from_layer = Font.glyphs[FROM].layers[0]
 XHEIGHT = Font.masters[0].xHeight
