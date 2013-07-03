@@ -1,8 +1,4 @@
 {
-DisplayStrings = (
-"/it-qs.2s/roe-qs.s2",
-"/utter-qs/it-qs"
-);
 copyright = "\U00A9 2013 Nathan Sharfi";
 customParameters = (
 {
@@ -27,7 +23,7 @@ name = "Languagesystems";
 );
 features = (
 {
-code = "# We want to read these left to right, so \"Ends...Starts, Ends...Starts\". \012\012\012@EndsShort = [\012\011\011\011\011out-qs.init\012\011\011\011\011\012];\012\012@StartsShort = [\012\011\011\011\011roe-qs.s2\012];\012\012@EndsBaseline = [\012\011awe-qs\012\011bay-qs\012\011cheer-qs\012\011eight-qs\012\011et-qs\012\011excite-qs\012\011key-qs\012\011llan-qs\012\011\011\011\011no-qs.alt\012\011oolong-qs\012\011ooze-qs\012\011ox-qs\012\011oy-qs\012\011pea-qs\012\011she-qs\012\011tea-qs\012\011\011\011\011utter-qs.alt\012\011vie-qs\012\011zhivago-qs\012\011zoo-qs\012];\012\012@StartsBaseline = [\012\011\011\011\011oolong-qs.medi\012\011\011\011\011oolong-qs.fina\012];\012\012\012\012\012sub @EndsBaseline no-qs' by no-qs.alt;\012sub it-qs oolong-qs' by oolong-qs.fina;\012\012sub it-qs no-qs' it-qs by no-qs.medi;\012sub it-qs no-qs'       by no-qs.fina;\012\012sub tea-qs no-qs' by no-qs.fina;\012\012\012# make \"pr\" join properly\012sub pea-qs'     roe-qs  by pea-qs.half;\012sub pea-qs.half roe-qs' by roe-qs.s2;\012\012sub it-qs'   roe-qs  by it-qs.2s;\012sub it-qs.2s roe-qs' by roe-qs.s2;\012sub tea-qs roe-qs'   by roe-qs.b2;\012\012";
+code = "# We want to read these left to right, so \"Ends...Starts, Ends...Starts\". \012\012\012@EndsShort = [\012\011\011\011\011out-qs.init\012\011\011\011\011\012];\012\012@StartsShort = [\012\011\011\011\011roe-qs.s2\012];\012\012@EndsBaseline = [\012\011awe-qs\012\011bay-qs\012\011cheer-qs\012\011eight-qs\012\011et-qs\012\011excite-qs\012\011key-qs\012\011llan-qs\012\011\011\011\011no-qs.alt\012\011oolong-qs\012\011ooze-qs\012\011ox-qs\012\011oy-qs\012\011pea-qs\012\011she-qs\012\011tea-qs\012\011\011\011\011utter-qs.alt\012\011vie-qs\012\011zhivago-qs\012\011zoo-qs\012];\012\012@StartsBaseline = [\012\011\011\011\011oolong-qs.b2b\012\011\011\011\011oolong-qs.b2\012];\012\012\012\012\012sub @EndsBaseline no-qs' by no-qs.alt;\012sub it-qs oolong-qs' by oolong-qs.b2;\012\012sub it-qs no-qs' it-qs by no-qs.s2s;\012sub it-qs no-qs'       by no-qs.s2;\012\012sub tea-qs no-qs' by no-qs.b2;\012\012\012# make \"pr\" join properly\012sub pea-qs'     roe-qs  by pea-qs.half;\012sub pea-qs.half roe-qs' by roe-qs.s2;\012\012sub it-qs'   roe-qs  by it-qs.2s;\012sub it-qs.2s roe-qs' by roe-qs.s2;\012sub tea-qs roe-qs'   by roe-qs.b2;\012\012";
 name = calt;
 }
 );
@@ -976,6 +972,34 @@ rightKerningGroup = "removeextended";
 unicode = E666;
 },
 {
+glyphname = "no-qs.2s";
+lastChange = "2013-07-03 22:36:44 -0800";
+layers = (
+{
+components = (
+{
+name = "no-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"576 535 LINE",
+"576 465 LINE",
+"651 465 LINE",
+"651 535 LINE"
+);
+}
+);
+width = 651;
+}
+);
+},
+{
 glyphname = "no-qs.alt";
 lastChange = "2013-06-29 19:18:22 -0800";
 layers = (
@@ -1016,8 +1040,36 @@ leftKerningGroup = "removeextended";
 rightKerningGroup = "removeextended";
 },
 {
-glyphname = "no-qs.fina";
-lastChange = "2013-06-30 21:31:31 -0800";
+glyphname = "no-qs.b2";
+lastChange = "2013-07-03 22:42:23 -0800";
+layers = (
+{
+components = (
+{
+name = "no-qs.alt";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"75 -35 LINE",
+"75 35 LINE",
+"0 35 LINE",
+"0 -35 LINE"
+);
+}
+);
+width = 651;
+}
+);
+},
+{
+glyphname = "no-qs.s2";
+lastChange = "2013-07-03 22:36:56 -0800";
 layers = (
 {
 components = (
@@ -1044,41 +1096,13 @@ width = 651;
 );
 },
 {
-glyphname = "no-qs.init";
-lastChange = "2013-06-30 21:30:52 -0800";
+glyphname = "no-qs.s2s";
+lastChange = "2013-07-03 22:37:02 -0800";
 layers = (
 {
 components = (
 {
-name = "no-qs";
-transform = "{1, 0, 0, 1, 0, 0}";
-}
-);
-layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-paths = (
-{
-closed = 1;
-nodes = (
-"576 535 LINE",
-"576 465 LINE",
-"651 465 LINE",
-"651 535 LINE"
-);
-}
-);
-width = 651;
-}
-);
-},
-{
-glyphname = "no-qs.medi";
-lastChange = "2013-06-30 21:44:33 -0800";
-layers = (
-{
-components = (
-{
-name = "no-qs.fina";
+name = "no-qs.s2";
 transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
@@ -1141,7 +1165,7 @@ width = 651;
 unicode = E664;
 },
 {
-glyphname = "oolong-qs.fina";
+glyphname = "oolong-qs.b2";
 lastChange = "2013-06-30 20:59:33 -0800";
 layers = (
 {
@@ -1170,13 +1194,13 @@ width = 651;
 leftKerningGroup = "removenone";
 },
 {
-glyphname = "oolong-qs.medi";
+glyphname = "oolong-qs.b2b";
 lastChange = "2013-06-30 20:57:15 -0800";
 layers = (
 {
 components = (
 {
-name = "oolong-qs.fina";
+name = "oolong-qs.b2";
 transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
@@ -3781,21 +3805,10 @@ unicode = 2032;
 },
 {
 glyphname = "second";
-lastChange = "2013-06-28 22:02:02 -0800";
+lastChange = "2013-07-03 22:49:18 -0800";
 layers = (
 {
-components = (
-{
-name = "minute";
-transform = "{1, 0, 0, 1, 0, 0}";
-},
-{
-name = "minute";
-transform = "{1, 0, 0, 1, 0, 0}";
-}
-);
-layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
+background = {
 paths = (
 {
 closed = 1;
@@ -3815,10 +3828,52 @@ nodes = (
 );
 }
 );
+};
+components = (
+{
+name = "minute";
+transform = "{1, 0, 0, 1, 170, 0}";
+},
+{
+name = "minute";
+transform = "{1, 0, 0, 1, 0, 0}";
+},
+{
+name = "minute";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
 width = 600;
 }
 );
 unicode = 2033;
+},
+{
+glyphname = "jiffy";
+lastChange = "2013-07-03 22:47:57 -0800";
+layers = (
+{
+components = (
+{
+name = "minute";
+transform = "{1, 0, 0, 1, -154, 1}";
+},
+{
+name = "minute";
+transform = "{1, 0, 0, 1, 128, 2}";
+},
+{
+name = "minute";
+transform = "{1, 0, 0, 1, -18, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 337;
+}
+);
 }
 );
 keepAlternatesTogether = 1;
