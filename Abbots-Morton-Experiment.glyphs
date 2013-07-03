@@ -53,7 +53,7 @@ position = "{26, -400}";
 }
 );
 horizontalStems = (
-40
+35
 );
 id = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 userData = {
@@ -63,7 +63,7 @@ GSOffsetMakeStroke = 1;
 GSOffsetVertical = 35;
 };
 verticalStems = (
-40
+35
 );
 weightValue = 40;
 xHeight = 500;
