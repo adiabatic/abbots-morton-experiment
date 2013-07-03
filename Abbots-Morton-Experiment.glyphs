@@ -1,4 +1,8 @@
 {
+DisplayStrings = (
+"/it-qs.2s/roe-qs.s2",
+"/utter-qs/it-qs"
+);
 copyright = "\U00A9 2013 Nathan Sharfi";
 customParameters = (
 {
@@ -23,7 +27,7 @@ name = "Languagesystems";
 );
 features = (
 {
-code = "@EndsBaseline = [\012\011awe-qs\012\011bay-qs\012\011cheer-qs\012\011eight-qs\012\011et-qs\012\011excite-qs\012\011key-qs\012\011llan-qs\012\011\011\011\011no-qs.alt\012\011oolong-qs\012\011ooze-qs\012\011ox-qs\012\011oy-qs\012\011pea-qs\012\011she-qs\012\011tea-qs\012\011\011\011\011utter-qs.alt\012\011vie-qs\012\011zhivago-qs\012\011zoo-qs\012];\012\012@StartsBaseline = [\012\011\011\011\011oolong-qs.medi\012\011\011\011\011oolong-qs.fina\012];\012\012sub @EndsBaseline no-qs' by no-qs.alt;\012sub it-qs oolong-qs' by oolong-qs.fina;\012\012sub it-qs no-qs' it-qs by no-qs.medi;\012sub it-qs no-qs' by no-qs.fina;\012\012sub tea-qs no-qs' by no-qs.fina;\012\012\012# make \"pr\" join properly\012sub pea-qs' roe-qs by pea-qs.half;\012sub pea-qs.half roe-qs' by roe-qs.s;\012\012sub it-qs  roe-qs' by roe-qs.s; # may be a bad idea because it happens across syllable boundaries frequently\012sub tea-qs roe-qs' by roe-qs.b;";
+code = "# We want to read these left to right, so \"Ends...Starts, Ends...Starts\". \012\012\012@EndsShort = [\012\011\011\011\011out-qs.init\012\011\011\011\011\012];\012\012@StartsShort = [\012\011\011\011\011roe-qs.s2\012];\012\012@EndsBaseline = [\012\011awe-qs\012\011bay-qs\012\011cheer-qs\012\011eight-qs\012\011et-qs\012\011excite-qs\012\011key-qs\012\011llan-qs\012\011\011\011\011no-qs.alt\012\011oolong-qs\012\011ooze-qs\012\011ox-qs\012\011oy-qs\012\011pea-qs\012\011she-qs\012\011tea-qs\012\011\011\011\011utter-qs.alt\012\011vie-qs\012\011zhivago-qs\012\011zoo-qs\012];\012\012@StartsBaseline = [\012\011\011\011\011oolong-qs.medi\012\011\011\011\011oolong-qs.fina\012];\012\012\012\012\012sub @EndsBaseline no-qs' by no-qs.alt;\012sub it-qs oolong-qs' by oolong-qs.fina;\012\012sub it-qs no-qs' it-qs by no-qs.medi;\012sub it-qs no-qs'       by no-qs.fina;\012\012sub tea-qs no-qs' by no-qs.fina;\012\012\012# make \"pr\" join properly\012sub pea-qs'     roe-qs  by pea-qs.half;\012sub pea-qs.half roe-qs' by roe-qs.s2;\012\012sub it-qs'   roe-qs  by it-qs.2s;\012sub it-qs.2s roe-qs' by roe-qs.s2;\012sub tea-qs roe-qs'   by roe-qs.b2;\012\012";
 name = calt;
 }
 );
@@ -72,7 +76,7 @@ xHeight = 500;
 glyphs = (
 {
 glyphname = "ah-qs";
-lastChange = "2013-06-29 18:38:05 -0800";
+lastChange = "2013-07-03 20:32:05 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -101,8 +105,6 @@ nodes = (
 width = 550;
 }
 );
-leftKerningGroup = "removestandard";
-rightKerningGroup = "removestandard";
 unicode = E676;
 },
 {
@@ -643,7 +645,7 @@ unicode = E675;
 },
 {
 glyphname = "it-qs";
-lastChange = "2013-07-01 03:14:20 -0800";
+lastChange = "2013-07-03 20:35:34 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -662,9 +664,35 @@ nodes = (
 width = 150;
 }
 );
-leftKerningGroup = "flatthin";
-rightKerningGroup = "removethin";
 unicode = E670;
+},
+{
+glyphname = "it-qs.2s";
+lastChange = "2013-07-03 20:42:49 -0800";
+layers = (
+{
+components = (
+{
+name = "it-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"150 465 LINE",
+"150 535 LINE",
+"110 535 LINE",
+"110 465 LINE"
+);
+}
+);
+width = 150;
+}
+);
 },
 {
 glyphname = "jay-qs";
@@ -1484,7 +1512,7 @@ rightKerningGroup = "removestandard";
 },
 {
 glyphname = "roe-qs";
-lastChange = "2013-06-29 18:35:24 -0800";
+lastChange = "2013-07-03 20:34:45 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -1493,33 +1521,31 @@ paths = (
 {
 closed = 1;
 nodes = (
-"185 -35 OFFCURVE",
-"385 37 OFFCURVE",
-"385 265 CURVE",
-"385 494 OFFCURVE",
-"178 535 OFFCURVE",
-"25 535 CURVE",
-"25 465 LINE",
-"170 465 OFFCURVE",
-"315 434 OFFCURVE",
-"315 265 CURVE",
-"315 93 OFFCURVE",
-"165 35 OFFCURVE",
-"25 35 CURVE",
-"25 -35 LINE"
+"200 -35 OFFCURVE",
+"400 37 OFFCURVE",
+"400 265 CURVE",
+"400 494 OFFCURVE",
+"193 535 OFFCURVE",
+"40 535 CURVE",
+"40 465 LINE",
+"185 465 OFFCURVE",
+"330 434 OFFCURVE",
+"330 265 CURVE",
+"330 93 OFFCURVE",
+"180 35 OFFCURVE",
+"40 35 CURVE",
+"40 -35 LINE"
 );
 }
 );
-width = 425;
+width = 440;
 }
 );
-leftKerningGroup = "removestandard";
-leftMetricsKey = "=ah-qs";
 unicode = E668;
 },
 {
-glyphname = "roe-qs.b";
-lastChange = "2013-07-01 09:09:00 -0800";
+glyphname = "roe-qs.b2";
+lastChange = "2013-07-03 20:38:16 -0800";
 layers = (
 {
 components = (
@@ -1536,8 +1562,8 @@ closed = 1;
 nodes = (
 "0 35 LINE",
 "0 -35 LINE",
-"65 -35 LINE",
-"65 35 LINE"
+"80 -35 LINE",
+"80 35 LINE"
 );
 }
 );
@@ -1547,8 +1573,8 @@ width = 465;
 leftKerningGroup = "removenone";
 },
 {
-glyphname = "roe-qs.s";
-lastChange = "2013-07-01 09:10:11 -0800";
+glyphname = "roe-qs.s2";
+lastChange = "2013-07-03 21:03:52 -0800";
 layers = (
 {
 components = (
@@ -1563,17 +1589,16 @@ paths = (
 {
 closed = 1;
 nodes = (
-"0 535 LINE",
-"0 465 LINE",
-"65 465 LINE",
-"65 535 LINE"
+"-3 535 LINE",
+"-3 465 LINE",
+"80 465 LINE",
+"80 535 LINE"
 );
 }
 );
 width = 465;
 }
 );
-leftKerningGroup = "removenone";
 },
 {
 glyphname = "see-qs";
@@ -1744,7 +1769,7 @@ unicode = E657;
 },
 {
 glyphname = "utter-qs";
-lastChange = "2013-07-01 08:50:45 -0800";
+lastChange = "2013-07-03 20:34:03 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -1764,13 +1789,27 @@ nodes = (
 );
 }
 );
-width = 500;
+width = 515;
 }
 );
-leftKerningGroup = "removethin";
-rightKerningGroup = "removestandard";
-rightMetricsKey = "=ah-qs";
 unicode = E67A;
+},
+{
+glyphname = "utter-qs.2s";
+lastChange = "2013-07-03 20:34:47 -0800";
+layers = (
+{
+components = (
+{
+name = "utter-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 515;
+}
+);
 },
 {
 glyphname = "utter-qs.alt";
@@ -3823,43 +3862,6 @@ name = "Bold";
 weightClass = "Bold";
 }
 );
-kerning = {
-"0D4C6578-C4F3-4653-B13A-F1323A6E6F4B" = {
-"@MMK_L_overhangyskinny" = {
-"@MMK_R_removethin" = "-155";
-"@MMK_R_yeunconnected" = 80;
-};
-"@MMK_L_removeextended" = {
-"@MMK_R_flatthin" = "-116";
-"@MMK_R_removeextended" = "-150";
-"@MMK_R_removestandard" = "-100";
-};
-"@MMK_L_removenone" = {
-"@MMK_R_removethin" = "-40";
-};
-"@MMK_L_removestandard" = {
-"@MMK_R_flatthin" = "-65";
-"@MMK_R_removeextended" = "-100";
-"@MMK_R_removenone" = "-97";
-"@MMK_R_removestandard" = "-50";
-"bay-qs" = "-170";
-};
-"@MMK_L_removethin" = {
-"@MMK_R_belowbaselinebulge" = "-150";
-"@MMK_R_removeextended" = "-115";
-"@MMK_R_removenone" = "-40";
-};
-"@MMK_L_she" = {
-"@MMK_R_removeextended" = "-160";
-"@MMK_R_removethin" = "-180";
-};
-"@MMK_L_trailingmiddlebulge" = {
-"@MMK_R_belowbaselinebulge" = "-190";
-"@MMK_R_flatthin" = 0;
-"@MMK_R_removethin" = "-100";
-};
-};
-};
 unitsPerEm = 1000;
 versionMajor = 1;
 versionMinor = 0;

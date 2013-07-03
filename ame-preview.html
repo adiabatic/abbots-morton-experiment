@@ -10,6 +10,11 @@
 	        src: url(AbbotsMortonExperiment-Regular.otf);
 	    }
 	    
+	    @font-face {
+	        font-family: Putterbubble;
+	        src: url(…);
+	    }
+	    
 	    html {
             font: 36pt/1.5 AME, "Abbots Morton Experiment", "HelveticaNeue-Medium", sans-serif;
             text-rendering: optimizeLegibility;
@@ -46,20 +51,39 @@
 	        margin: .5rem 0;
 	    }
 	    
-	    .repertoire {
+	    .junior {
 	        text-rendering: optimizeSpeed;
-	        font-feature-settings: 'calt' 0, 'kern' 0;
+	        font-feature-settings: 'calt' 0, 'kern' 1;
+	    }
+	    
+	    .senior {
+	        font-feature-settings: 'calt' 1, 'kern' 1;
+	    }
+	    
+	    .repertoire {
+	        line-height: .75;
+	    }
+	    
+	    .tiny {
+	        font-size: 12pt;
+	        line-height: 1;
+	        margin-bottom: 0; padding-bottom: 0;
 	    }
 	</style>
 </head>
 <body>
-    <header>
+    <header hidden>
         <h1>·  </h1>
         <h2>Abbots Morton Experiment</h2>
     </header>
 
     <h2></h2>
-    <p class='repertoire'>&#x200b;&#x200b;</p>
+    <p class='tiny'></p>
+    <p class='junior repertoire'>&#x200b;&#x200b;</p>
+
+    <p class='tiny'></p>
+    <p class='senior repertoire'>&#x200b;&#x200b;</p>
+    <hr>
     <p>
          () [] {} /\ 0123456789 +-*/<br>
         " ?", ‘ !’,  “ ”.<br>

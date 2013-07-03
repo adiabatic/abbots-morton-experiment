@@ -5,6 +5,23 @@ Abbots Morton Experiment is a sans-serif font for [Quikscript][qs] that uses con
 See it in action [on the blog at frogorbits.com][blog].
 
 
+## Hacking
+
+Glyph connection positions are described by their height:
+
+- ‘t’ for Tall
+- ‘s’ for Short
+- ‘b’ for at the baseline
+- ‘d’ for Deep
+
+With this, we can describe a character’s connection capabilities in its suffix. Thus:
+
+- may-qs is an isolate form, suitable for Junior Quikscript
+- may-qs.b2 is a final form that connects to the previous letter at the baseline
+- may-qs.2s is an initial form that connects to the next letter at the Short height
+- may-qs.b2s is a medial form that starts at the baseline and connects to the Short height
+- may-qs.s2b is another medial form that starts at the top of the letter and ends deep inside
+
 ## License
 
 Apache License, version 2.0.
