@@ -306,7 +306,61 @@ unicode = E671;
 },
 {
 glyphname = "eight-qs";
-lastChange = "2013-06-30 20:44:09 -0800";
+lastChange = "2013-07-03 01:51:48 -0800";
+layers = (
+{
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"546 35 OFFCURVE",
+"335 269 OFFCURVE",
+"335 450 CURVE",
+"335 482 OFFCURVE",
+"368 515 OFFCURVE",
+"400 515 CURVE",
+"432 515 OFFCURVE",
+"465 482 OFFCURVE",
+"465 450 CURVE",
+"465 418 OFFCURVE",
+"432 385 OFFCURVE",
+"400 385 CURVE",
+"165 385 OFFCURVE",
+"247 535 OFFCURVE",
+"25 535 CURVE",
+"25 465 LINE",
+"139 465 OFFCURVE",
+"206 315 OFFCURVE",
+"400 315 CURVE",
+"469 315 OFFCURVE",
+"535 381 OFFCURVE",
+"535 450 CURVE",
+"535 519 OFFCURVE",
+"469 585 OFFCURVE",
+"400 585 CURVE",
+"331 585 OFFCURVE",
+"265 519 OFFCURVE",
+"265 450 CURVE",
+"265 231 OFFCURVE",
+"503 -35 OFFCURVE",
+"625 -35 CURVE",
+"625 35 LINE"
+);
+}
+);
+width = 650;
+}
+);
+leftKerningGroup = "removestandard";
+leftMetricsKey = "=ah-qs";
+rightKerningGroup = "removestandard";
+rightMetricsKey = "=ah-qs";
+unicode = E673;
+},
+{
+glyphname = "eight-qs.001";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
