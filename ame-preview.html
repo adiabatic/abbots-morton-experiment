@@ -18,6 +18,8 @@
 	    html {
             font: 36pt/1.5 AME, "Abbots Morton Experiment", "HelveticaNeue-Medium", sans-serif;
             text-rendering: optimizeLegibility;
+            
+            -moz-font-feature-settings: 'calt', 'kern';
 	        font-feature-settings: 'calt', 'kern';
 	    }
 	    
@@ -53,7 +55,8 @@
 	    
 	    .junior {
 	        text-rendering: optimizeSpeed;
-	        font-feature-settings: 'calt' 0, 'kern' 1;
+/*	        -moz-font-feature-settings: 'calt' 0, 'kern' 1;
+	*/        font-feature-settings: 'calt' 0, 'kern' 1;
 	    }
 	    
 	    .senior {
@@ -72,11 +75,15 @@
 	</style>
 </head>
 <body>
-    <header hidden>
+    <header>
         <h1>·  </h1>
         <h2>Abbots Morton Experiment</h2>
     </header>
-
+    
+    <p>   ? !</p>
+    <p> ·  </p>
+    <p></p>
+    
     <h2></h2>
     <p class='tiny'></p>
     <p class='junior repertoire'>&#x200b;&#x200b;</p>
