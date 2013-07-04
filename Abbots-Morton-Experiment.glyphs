@@ -1,4 +1,7 @@
 {
+DisplayStrings = (
+"\U00B7/at-qs/bay-qs/utter-qs/tea-qs/see-qs"
+);
 copyright = "\U00A9 2013 Nathan Sharfi";
 customParameters = (
 {
@@ -105,7 +108,7 @@ unicode = E676;
 },
 {
 glyphname = "at-qs";
-lastChange = "2013-06-30 23:08:28 -0800";
+lastChange = "2013-07-04 02:03:29 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -129,7 +132,6 @@ width = 600;
 }
 );
 leftMetricsKey = "=ah-qs";
-rightKerningGroup = "removethin";
 unicode = E674;
 },
 {
@@ -171,7 +173,7 @@ unicode = E677;
 },
 {
 glyphname = "bay-qs";
-lastChange = "2013-06-30 23:20:32 -0800";
+lastChange = "2013-07-04 02:12:55 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -208,16 +210,15 @@ nodes = (
 "399 -31 OFFCURVE",
 "399 -14 OFFCURVE",
 "399 0 CURVE",
-"399 550 LINE",
-"329 550 LINE"
+"399 535 LINE",
+"329 535 LINE"
 );
 }
 );
 width = 530;
 }
 );
-leftKerningGroup = "belowbaselinebulge";
-rightKerningGroup = "removestandard";
+leftKerningGroup = "deepbulge";
 rightMetricsKey = "=ah-qs";
 unicode = E651;
 },
@@ -3828,6 +3829,13 @@ name = "Bold";
 weightClass = "Bold";
 }
 );
+kerning = {
+"0D4C6578-C4F3-4653-B13A-F1323A6E6F4B" = {
+"at-qs" = {
+"@MMK_R_deepbulge" = "-215";
+};
+};
+};
 unitsPerEm = 1000;
 versionMajor = 1;
 versionMinor = 0;
