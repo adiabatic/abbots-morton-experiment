@@ -22,6 +22,10 @@ With this, we can describe a character’s connection capabilities in its suffix
 - may-qs.b2s is a medial form that starts at the baseline and connects to the Short height
 - may-qs.s2b is another medial form that starts at the top of the letter and ends deep inside
 
+The sorts of connections a letter is tuned for can be further described:
+
+- ‘r’ for “reach” — utter-qs.2sr is designed to reach over to the Short connection at the top of .May
+
 ## License
 
 Apache License, version 2.0.

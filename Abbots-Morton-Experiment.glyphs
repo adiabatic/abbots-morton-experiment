@@ -1,7 +1,7 @@
 {
 DisplayStrings = (
-"/day_utter-qs/roe-qs.s2",
-"/may-qs/et-qs.2b/roe-qs.b2/it-qs"
+"/may-qs.2b",
+"/may-qs.b2s"
 );
 copyright = "\U00A9 2013 Nathan Sharfi";
 customParameters = (
@@ -20,14 +20,17 @@ designerURL = "http://www.frogorbits.com/";
 familyName = "Abbots Morton Experiment";
 featurePrefixes = (
 {
-automatic = 1;
 code = "languagesystem DFLT dflt;\012languagesystem Quik dflt;\012";
 name = "Languagesystems";
+},
+{
+code = "\012@halfiesafe      = [roe-qs    zoo-qs];\012@halfieoptimized = [roe-qs.s2 zoo-qs];\012\012lookup HALFIES {\012\011sub pea-qs' @halfiesafe by pea-qs.half;\012\011sub he-qs'  @halfiesafe by he-qs.half;\012} HALFIES;\012\012\012lookup POSTHALFIES {\012\011sub @halfiesafe by @halfieoptimized;\012} POSTHALFIES;\012\012@has_s2 = [ et-qs eight-qs];\012@cxn_s2 = [ et-qs.s2 ];\012\012@has_b2 = [ at-qs    i-qs may-qs ];\012@can_has_b2 = [@has_b2 may-qs.2s];\012@cxn_b2 = [ at-qs.b2 ];\012\012@has_2b = [it-qs.2b];\012\012lookup MAYSTUFF {\012\011sub         may-qs'    @has_s2 by may-qs.2s;\012\011sub         may-qs'    @has_b2 by may-qs.2b;\012\012\011sub @has_2b may-qs.b2' @has_s2 by may-qs.b2s;\012\011sub @has_2b may-qs.2s' @has_s2 by may-qs.b2s;\012\011# .May doesn't do b2b, or s2s\012} MAYSTUFF;\012\012lookup ITSTUFF {\012\011sub it-qs'    @has_s2 by it-qs.2s;\012\011sub it-qs'    @can_has_b2 by it-qs.2b;\012} ITSTUFF;\012";
+name = "Stuff";
 }
 );
 features = (
 {
-code = "# We want to read these left to right, so \"Ends...Starts, Ends...Starts\". \012\012\012@EndsShort = [\012\011\011\011\011out-qs.init\012\011\011\011\011\012];\012\012@StartsShort = [\012\011\011\011\011roe-qs.s2\012];\012\012@EndsBaseline = [\012\011awe-qs\012\011bay-qs\012\011cheer-qs\012\011eight-qs\012\011et-qs\012\011excite-qs\012\011key-qs\012\011llan-qs\012\011\011\011\011no-qs.alt\012\011oolong-qs\012\011ooze-qs\012\011ox-qs\012\011oy-qs\012\011pea-qs\012\011she-qs\012\011tea-qs\012\011\011\011\011utter-qs.alt\012\011vie-qs\012\011zhivago-qs\012\011zoo-qs\012];\012\012@StartsBaseline = [\012\011\011\011\011oolong-qs.b2b\012\011\011\011\011oolong-qs.b2\012];\012\012\012\012\012sub @EndsBaseline no-qs' by no-qs.alt;\012sub it-qs oolong-qs' by oolong-qs.b2;\012\012sub it-qs no-qs' it-qs by no-qs.s2s;\012sub it-qs no-qs'       by no-qs.s2;\012\012sub tea-qs no-qs' by no-qs.b2;\012\012\012\012# make \"pr\" join properly\012sub pea-qs'     roe-qs  by pea-qs.half;\012sub pea-qs.half roe-qs' by roe-qs.s2;\012\012sub it-qs'   roe-qs  by it-qs.2s;\012sub it-qs.2s roe-qs' by roe-qs.s2;\012sub tea-qs roe-qs'   by roe-qs.b2;\012\012sub utter-qs'   may-qs  by utter-qs.2sr;\012sub utter-qs.2sr may-qs' by may-qs.s2;\012\012sub day-qs utter-qs by day_utter-qs;\012sub day_utter-qs roe-qs' by roe-qs.s2;\012\012sub utter-qs'   roe-qs by utter-qs.2s;\012sub utter-qs.2s roe-qs' by roe-qs.s2;";
+code = "sub [it-qs]' lookup ITSTUFF;\012\012sub [may-qs may-qs.2s may-qs.s2]' lookup MAYSTUFF; # incomplete list\012\012sub et-qs' @has_b2 by et-qs.2b;\012\012sub [pea-qs he-qs]' lookup HALFIES\012\011@halfiesafe' lookup POSTHALFIES\012\011;\012";
 name = calt;
 }
 );
@@ -176,6 +179,23 @@ width = 600;
 );
 leftMetricsKey = "=ah-qs";
 unicode = E674;
+},
+{
+glyphname = "at-qs.b2";
+lastChange = "2013-07-04 06:52:32 -0800";
+layers = (
+{
+components = (
+{
+name = "at-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 600;
+}
+);
 },
 {
 glyphname = "at-qs.b2s";
@@ -439,7 +459,7 @@ unicode = E673;
 },
 {
 glyphname = "et-qs";
-lastChange = "2013-07-01 03:18:27 -0800";
+lastChange = "2013-07-04 06:43:07 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -459,16 +479,14 @@ nodes = (
 );
 }
 );
-width = 550;
+width = 565;
 }
 );
-rightKerningGroup = "removestandard";
-rightMetricsKey = "=ah-qs";
 unicode = E672;
 },
 {
 glyphname = "et-qs.2b";
-lastChange = "2013-07-04 03:48:19 -0800";
+lastChange = "2013-07-04 06:43:16 -0800";
 layers = (
 {
 components = (
@@ -479,7 +497,41 @@ transform = "{1, 0, 0, 1, 0, 0}";
 );
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
-width = 550;
+width = 565;
+}
+);
+},
+{
+glyphname = "et-qs.s2";
+lastChange = "2013-07-04 06:43:09 -0800";
+layers = (
+{
+components = (
+{
+name = "et-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 565;
+}
+);
+},
+{
+glyphname = "et-qs.s2b";
+lastChange = "2013-07-04 06:43:18 -0800";
+layers = (
+{
+components = (
+{
+name = "et-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 565;
 }
 );
 },
@@ -654,7 +706,7 @@ unicode = E655;
 },
 {
 glyphname = "he-qs";
-lastChange = "2013-07-01 03:14:54 -0800";
+lastChange = "2013-07-04 05:43:34 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -671,8 +723,8 @@ nodes = (
 "145.345 986.525 OFFCURVE",
 "40 926.158 OFFCURVE",
 "40 786 CURVE",
-"47 -35 LINE",
-"117 -35 LINE"
+"40 -35 LINE",
+"110 -35 LINE"
 );
 }
 );
@@ -682,6 +734,35 @@ width = 162;
 leftKerningGroup = "flatthin";
 rightKerningGroup = "overhangyskinny";
 unicode = E662;
+},
+{
+glyphname = "he-qs.half";
+layers = (
+{
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"109.999 786.293 LINE",
+"110 872.145 OFFCURVE",
+"170.459 909.067 OFFCURVE",
+"361.271 865.864 CURVE",
+"376.729 934.136 LINE",
+"145.345 986.525 OFFCURVE",
+"40 926.158 OFFCURVE",
+"40 786 CURVE",
+"40 500 LINE",
+"110 500 LINE"
+);
+}
+);
+width = 162;
+}
+);
+leftKerningGroup = "flatthin";
+rightKerningGroup = "overhangyskinny";
 },
 {
 glyphname = "i-qs";
@@ -758,6 +839,34 @@ width = 150;
 }
 );
 unicode = E670;
+},
+{
+glyphname = "it-qs.2b";
+lastChange = "2013-07-04 07:54:42 -0800";
+layers = (
+{
+components = (
+{
+name = "it-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"150 -35 LINE",
+"150 35 LINE",
+"110 35 LINE",
+"110 -35 LINE"
+);
+}
+);
+width = 150;
+}
+);
 },
 {
 glyphname = "it-qs.2s";
@@ -1026,6 +1135,132 @@ width = 499;
 }
 );
 unicode = E665;
+},
+{
+glyphname = "may-qs.2b";
+lastChange = "2013-07-04 07:46:26 -0800";
+layers = (
+{
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"268 -105 OFFCURVE",
+"317 -150 OFFCURVE",
+"356 -213 CURVE",
+"399 -283 OFFCURVE",
+"373.69 -365 OFFCURVE",
+"201 -365 CURVE",
+"198.943 -365 OFFCURVE",
+"110 -315 OFFCURVE",
+"110 2 CURVE",
+"110 116.326 OFFCURVE",
+"207.751 465 OFFCURVE",
+"366 465 CURVE",
+"366 535 LINE",
+"146.23 535 OFFCURVE",
+"40 133.706 OFFCURVE",
+"40 2 CURVE",
+"40 -385 OFFCURVE",
+"166.851 -435 OFFCURVE",
+"201 -435 CURVE",
+"446.406 -435 OFFCURVE",
+"478 -279 OFFCURVE",
+"416 -177 CURVE",
+"347 -64 OFFCURVE",
+"246 0 OFFCURVE",
+"147 33 CURVE",
+"130 -53 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"492 -30 LINE",
+"492 40 LINE",
+"79 40 LINE",
+"79 -30 LINE"
+);
+}
+);
+width = 499;
+}
+);
+},
+{
+glyphname = "may-qs.2s";
+lastChange = "2013-07-04 06:50:43 -0800";
+layers = (
+{
+components = (
+{
+name = "may-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"499 465 LINE",
+"499 535 LINE",
+"366 535 LINE",
+"366 465 LINE"
+);
+}
+);
+width = 499;
+}
+);
+},
+{
+glyphname = "may-qs.b2";
+lastChange = "2013-07-04 07:37:35 -0800";
+layers = (
+{
+components = (
+{
+name = "may-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 499;
+}
+);
+},
+{
+glyphname = "may-qs.b2s";
+lastChange = "2013-07-04 08:15:18 -0800";
+layers = (
+{
+components = (
+{
+name = "may-qs.2s";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"0 35 LINE",
+"0 -35 LINE",
+"41 -35 LINE",
+"41 35 LINE"
+);
+}
+);
+width = 499;
+}
+);
 },
 {
 glyphname = "may-qs.s2";
