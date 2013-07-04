@@ -1,6 +1,7 @@
 {
 DisplayStrings = (
-"\U00B7/at-qs/bay-qs/utter-qs/tea-qs/see-qs"
+"/day_utter-qs/roe-qs.s2",
+"/may-qs/et-qs.2b/roe-qs.b2/it-qs"
 );
 copyright = "\U00A9 2013 Nathan Sharfi";
 customParameters = (
@@ -26,7 +27,7 @@ name = "Languagesystems";
 );
 features = (
 {
-code = "# We want to read these left to right, so \"Ends...Starts, Ends...Starts\". \012\012\012@EndsShort = [\012\011\011\011\011out-qs.init\012\011\011\011\011\012];\012\012@StartsShort = [\012\011\011\011\011roe-qs.s2\012];\012\012@EndsBaseline = [\012\011awe-qs\012\011bay-qs\012\011cheer-qs\012\011eight-qs\012\011et-qs\012\011excite-qs\012\011key-qs\012\011llan-qs\012\011\011\011\011no-qs.alt\012\011oolong-qs\012\011ooze-qs\012\011ox-qs\012\011oy-qs\012\011pea-qs\012\011she-qs\012\011tea-qs\012\011\011\011\011utter-qs.alt\012\011vie-qs\012\011zhivago-qs\012\011zoo-qs\012];\012\012@StartsBaseline = [\012\011\011\011\011oolong-qs.b2b\012\011\011\011\011oolong-qs.b2\012];\012\012\012\012\012sub @EndsBaseline no-qs' by no-qs.alt;\012sub it-qs oolong-qs' by oolong-qs.b2;\012\012sub it-qs no-qs' it-qs by no-qs.s2s;\012sub it-qs no-qs'       by no-qs.s2;\012\012sub tea-qs no-qs' by no-qs.b2;\012\012\012# make \"pr\" join properly\012sub pea-qs'     roe-qs  by pea-qs.half;\012sub pea-qs.half roe-qs' by roe-qs.s2;\012\012sub it-qs'   roe-qs  by it-qs.2s;\012sub it-qs.2s roe-qs' by roe-qs.s2;\012sub tea-qs roe-qs'   by roe-qs.b2;\012\012";
+code = "# We want to read these left to right, so \"Ends...Starts, Ends...Starts\". \012\012\012@EndsShort = [\012\011\011\011\011out-qs.init\012\011\011\011\011\012];\012\012@StartsShort = [\012\011\011\011\011roe-qs.s2\012];\012\012@EndsBaseline = [\012\011awe-qs\012\011bay-qs\012\011cheer-qs\012\011eight-qs\012\011et-qs\012\011excite-qs\012\011key-qs\012\011llan-qs\012\011\011\011\011no-qs.alt\012\011oolong-qs\012\011ooze-qs\012\011ox-qs\012\011oy-qs\012\011pea-qs\012\011she-qs\012\011tea-qs\012\011\011\011\011utter-qs.alt\012\011vie-qs\012\011zhivago-qs\012\011zoo-qs\012];\012\012@StartsBaseline = [\012\011\011\011\011oolong-qs.b2b\012\011\011\011\011oolong-qs.b2\012];\012\012\012\012\012sub @EndsBaseline no-qs' by no-qs.alt;\012sub it-qs oolong-qs' by oolong-qs.b2;\012\012sub it-qs no-qs' it-qs by no-qs.s2s;\012sub it-qs no-qs'       by no-qs.s2;\012\012sub tea-qs no-qs' by no-qs.b2;\012\012\012\012# make \"pr\" join properly\012sub pea-qs'     roe-qs  by pea-qs.half;\012sub pea-qs.half roe-qs' by roe-qs.s2;\012\012sub it-qs'   roe-qs  by it-qs.2s;\012sub it-qs.2s roe-qs' by roe-qs.s2;\012sub tea-qs roe-qs'   by roe-qs.b2;\012\012sub utter-qs'   may-qs  by utter-qs.2sr;\012sub utter-qs.2sr may-qs' by may-qs.s2;\012\012sub day-qs utter-qs by day_utter-qs;\012sub day_utter-qs roe-qs' by roe-qs.s2;\012\012sub utter-qs'   roe-qs by utter-qs.2s;\012sub utter-qs.2s roe-qs' by roe-qs.s2;";
 name = calt;
 }
 );
@@ -73,6 +74,48 @@ xHeight = 500;
 }
 );
 glyphs = (
+{
+glyphname = "day_utter-qs";
+lastChange = "2013-07-04 03:29:21 -0800";
+layers = (
+{
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"110 -411 LINE",
+"40 -411 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"110 -411 LINE",
+"292 -4 LINE SMOOTH",
+"402 242 OFFCURVE",
+"571 465 OFFCURVE",
+"801 465 CURVE",
+"801 535 LINE",
+"544 535 OFFCURVE",
+"372 338 OFFCURVE",
+"255 92 CURVE SMOOTH",
+"110 -214 LINE",
+"110 535 LINE",
+"40 535 LINE",
+"40 -411 LINE"
+);
+}
+);
+width = 841;
+}
+);
+leftKerningGroup = "day";
+leftMetricsKey = "day-qs";
+rightKerningGroup = "utter.2s";
+rightMetricsKey = "utter-qs";
+},
 {
 glyphname = "ah-qs";
 lastChange = "2013-07-03 20:32:05 -0800";
@@ -133,6 +176,24 @@ width = 600;
 );
 leftMetricsKey = "=ah-qs";
 unicode = E674;
+},
+{
+glyphname = "at-qs.b2s";
+lastChange = "2013-07-04 02:21:13 -0800";
+layers = (
+{
+components = (
+{
+name = "at-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 600;
+}
+);
+rightKerningGroup = "at";
 },
 {
 glyphname = "awe-qs";
@@ -278,6 +339,24 @@ leftKerningGroup = "flatthin";
 unicode = E653;
 },
 {
+glyphname = "day-qs.s2";
+lastChange = "2013-07-04 02:22:19 -0800";
+layers = (
+{
+components = (
+{
+name = "day-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 400;
+}
+);
+leftKerningGroup = "day";
+},
+{
 glyphname = "eat-qs";
 lastChange = "2013-06-30 21:49:14 -0800";
 layers = (
@@ -386,6 +465,23 @@ width = 550;
 rightKerningGroup = "removestandard";
 rightMetricsKey = "=ah-qs";
 unicode = E672;
+},
+{
+glyphname = "et-qs.2b";
+lastChange = "2013-07-04 03:48:19 -0800";
+layers = (
+{
+components = (
+{
+name = "et-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 550;
+}
+);
 },
 {
 glyphname = "exam-qs";
@@ -930,6 +1026,24 @@ width = 499;
 }
 );
 unicode = E665;
+},
+{
+glyphname = "may-qs.s2";
+lastChange = "2013-07-04 02:38:26 -0800";
+layers = (
+{
+components = (
+{
+name = "may-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 499;
+}
+);
+leftKerningGroup = "may.s2";
 },
 {
 glyphname = "no-qs";
@@ -1599,13 +1713,13 @@ leftKerningGroup = "removenone";
 },
 {
 glyphname = "roe-qs.s2";
-lastChange = "2013-07-03 21:03:52 -0800";
+lastChange = "2013-07-04 03:46:13 -0800";
 layers = (
 {
 components = (
 {
 name = "roe-qs";
-transform = "{1, 0, 0, 1, 40, 0}";
+transform = "{1, 0, 0, 1, 43, 0}";
 }
 );
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
@@ -1614,16 +1728,17 @@ paths = (
 {
 closed = 1;
 nodes = (
-"-3 535 LINE",
-"-3 465 LINE",
-"80 465 LINE",
-"80 535 LINE"
+"0 535 LINE",
+"0 465 LINE",
+"83 465 LINE",
+"83 535 LINE"
 );
 }
 );
-width = 465;
+width = 483;
 }
 );
+leftKerningGroup = "roe.s2";
 },
 {
 glyphname = "see-qs";
@@ -1821,7 +1936,7 @@ unicode = E67A;
 },
 {
 glyphname = "utter-qs.2s";
-lastChange = "2013-07-03 20:34:47 -0800";
+lastChange = "2013-07-04 04:29:57 -0800";
 layers = (
 {
 components = (
@@ -1835,6 +1950,34 @@ name = "Regular";
 width = 515;
 }
 );
+rightKerningGroup = "utter.2s";
+},
+{
+glyphname = "utter-qs.2sr";
+lastChange = "2013-07-04 02:51:16 -0800";
+layers = (
+{
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"405 535 OFFCURVE",
+"40 232 OFFCURVE",
+"40 -35 CURVE",
+"110 -35 LINE",
+"110 198 OFFCURVE",
+"445 465 OFFCURVE",
+"675 465 CURVE",
+"675 535 LINE"
+);
+}
+);
+width = 715;
+}
+);
+rightKerningGroup = "utter.2s";
 },
 {
 glyphname = "utter-qs.alt";
@@ -3833,6 +3976,13 @@ kerning = {
 "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B" = {
 "at-qs" = {
 "@MMK_R_deepbulge" = "-215";
+};
+"@MMK_L_at" = {
+"@MMK_R_day" = "-150";
+};
+"@MMK_L_utter.2s" = {
+"@MMK_R_may.s2" = "-406";
+"@MMK_R_roe.s2" = "-42";
 };
 };
 };
