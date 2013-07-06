@@ -2186,6 +2186,23 @@ width = 427;
 unicode = E650;
 },
 {
+glyphname = "pea-qs.2b";
+lastChange = "2013-07-06 22:46:45 -0800";
+layers = (
+{
+components = (
+{
+name = "pea-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 427;
+}
+);
+},
+{
 glyphname = "pea-qs.half";
 lastChange = "2013-06-30 23:45:57 -0800";
 layers = (
@@ -2638,6 +2655,23 @@ width = 496;
 }
 );
 rightMetricsKey = "=ah-qs";
+},
+{
+glyphname = "utter-qs.alt.2b";
+lastChange = "2013-07-06 22:46:45 -0800";
+layers = (
+{
+components = (
+{
+name = "utter-qs.alt";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 496;
+}
+);
 },
 {
 glyphname = "vie-qs";
