@@ -20,8 +20,7 @@ code = "languagesystem DFLT dflt;\012languagesystem Quik dflt;\012";
 name = "Languagesystems";
 },
 {
-code = 
-;
+code = "";
 name = "Everything";
 }
 );
@@ -1175,12 +1174,18 @@ unicode = E654;
 },
 {
 glyphname = "key-qs.2b";
-lastChange = "2013-07-06 21:52:20 -0800";
+lastChange = "2013-07-06 22:42:34 -0800";
 layers = (
 {
+components = (
+{
+name = "key-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
-width = 600;
+width = 410;
 }
 );
 },
@@ -2181,17 +2186,6 @@ width = 427;
 unicode = E650;
 },
 {
-glyphname = "pea-qs.2b";
-lastChange = "2013-07-06 21:52:20 -0800";
-layers = (
-{
-layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-width = 600;
-}
-);
-},
-{
 glyphname = "pea-qs.half";
 lastChange = "2013-06-30 23:45:57 -0800";
 layers = (
@@ -2644,28 +2638,6 @@ width = 496;
 }
 );
 rightMetricsKey = "=ah-qs";
-},
-{
-glyphname = "utter-qs.alt.001";
-lastChange = "2013-07-06 21:56:11 -0800";
-layers = (
-{
-layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-width = 600;
-}
-);
-},
-{
-glyphname = "utter-qs.alt.2b";
-lastChange = "2013-07-06 21:56:11 -0800";
-layers = (
-{
-layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-width = 600;
-}
-);
 },
 {
 glyphname = "vie-qs";
@@ -4675,17 +4647,6 @@ width = 600;
 }
 );
 unicode = 2033;
-},
-{
-glyphname = "shaddaKasratan-ar";
-lastChange = "2013-07-06 21:56:11 -0800";
-layers = (
-{
-layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-width = 600;
-}
-);
 },
 {
 glyphname = "ebh.2b";
