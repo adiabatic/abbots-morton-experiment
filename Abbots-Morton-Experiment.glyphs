@@ -1,8 +1,4 @@
 {
-DisplayStrings = (
-"/may-qs.2b",
-"/may-qs.b2s"
-);
 copyright = "\U00A9 2013 Nathan Sharfi";
 customParameters = (
 {
@@ -24,8 +20,8 @@ code = "languagesystem DFLT dflt;\012languagesystem Quik dflt;\012";
 name = "Languagesystems";
 },
 {
-code = "\012@halfiesafe      = [roe-qs    zoo-qs];\012@halfieoptimized = [roe-qs.s2 zoo-qs];\012\012lookup HALFIES {\012\011sub pea-qs' @halfiesafe by pea-qs.half;\012\011sub he-qs'  @halfiesafe by he-qs.half;\012} HALFIES;\012\012\012lookup POSTHALFIES {\012\011sub @halfiesafe by @halfieoptimized;\012} POSTHALFIES;\012\012@has_s2 = [ et-qs eight-qs];\012@cxn_s2 = [ et-qs.s2 ];\012\012@has_b2 = [ at-qs    i-qs may-qs ];\012@can_has_b2 = [@has_b2 may-qs.2s];\012@cxn_b2 = [ at-qs.b2 ];\012\012@has_2b = [it-qs.2b];\012\012lookup MAYSTUFF {\012\011sub         may-qs'    @has_s2 by may-qs.2s;\012\011sub         may-qs'    @has_b2 by may-qs.2b;\012\012\011sub @has_2b may-qs.b2' @has_s2 by may-qs.b2s;\012\011sub @has_2b may-qs.2s' @has_s2 by may-qs.b2s;\012\011# .May doesn't do b2b, or s2s\012} MAYSTUFF;\012\012lookup ITSTUFF {\012\011sub it-qs'    @has_s2 by it-qs.2s;\012\011sub it-qs'    @can_has_b2 by it-qs.2b;\012} ITSTUFF;\012";
-name = "Stuff";
+code = "# Glyph names and lookup names must be:\012# - up to 31 characters\012# - be comprised of A-Z a-z 0-9 . _\012# - must not start with a digit or period (underscores OK)\012\012# glyph names and lookup names can be 31 characters;\012# glyph class names (lists) max out at 30.\012\012\012\012##############################\012# Glyph Classes\012#\012\012@LETTERS = [\012    pea-qs\012    bay-qs\012    tea-qs\012    day-qs\012    key-qs\012    gay-qs\012    thaw-qs\012    they-qs\012    fee-qs\012    vie-qs\012    see-qs\012    zoo-qs\012    she-qs\012    zhivago-qs\012    cheer-qs\012    jay-qs\012    ye-qs\012    way-qs\012    he-qs\012    why-qs\012    oolong-qs\012    may-qs\012    no-qs\012    low-qs\012    roe-qs\012    \012    it-qs\012    eat-qs\012    et-qs\012    eight-qs\012    at-qs\012    i-qs\012    ah-qs\012    awe-qs\012    ox-qs\012    oy-qs\012    utter-qs\012    out-qs\012    owe-qs\012    foot-qs\012    ooze-qs\012    \012    loch-qs\012    llan-qs\012    \012    exam-qs\012    excite-qs\012];\012\012@LETTERS_AND_ALTS = [\012    @LETTERS\012    no-qs.alt\012    utter-qs.alt\012];\012\012\012# some of these names are too long\012\012# describing connections on the left of the letter\012#- connections on the left of the letter, where it starts (examples are of letters on the left)\012#    - attaching on the baseline\012#        - horizontally, in the clear (.She, .Zhivago, .Cheer, .Jay, .Et, .Eight, .Awe)\012#        - horizontally after clearing a bulge -- lengthen the distance between (.Gay, .Thaw, #.Oolong, .NoAlt, .Llan, \012#        - downward at 45\U00B0 (some variants of .Oi)\012#        - downward at 80\U00B0 (.Ooze)\012#        - upward at 45\U00B0 (.Day, .Bay)\012#        - \012\012# We're doing \"ends with...\012    \012# can end at baseline horizontally\012@cebh = [ # yes, bad name\012    pea-qs\012    bay-qs\012    tea-qs\012    day-qs\012    key-qs\012    #gay-qs (too much reaching)\012    #thaw-qs \"\012    #they-qs (not really at baseline)\012    #fee-qs\012    #vie-qs (not really at baseline)\012    #see-qs\012    zoo-qs\012    she-qs\012    zhivago-qs\012    cheer-qs\012    jay-qs\012    ye-qs\012    #way-qs\012    he-qs\012    #why-qs\012    #oolong-qs\012    may-qs\012    no-qs\012    #no-qs.alt\012    #low-qs\012    #roe-qs\012    \012    it-qs\012    eat-qs\012    et-qs\012    eight-qs\012    #at-qs\012    #i-qs\012    #ah-qs\012    awe-qs\012    #ox-qs not horizontal\012    #oy-qs\012    #utter-qs\012    utter-qs.alt\012    #out-qs\012    #owe-qs\012    #foot-qs\012    ooze-qs\012    \012    #loch-qs\012    llan-qs\012    \012    #exam-qs\012    #excite-qs\012\012];\012\012# ends at baseline horizontally\012@ebh.2b = [\012    pea-qs.2b\012    bay-qs.2b\012    tea-qs.2b\012    day-qs.2b\012    key-qs.2b\012    #gay-qs (too much reaching)\012    #thaw-qs \"\012    #they-qs (not really at baseline)\012    #fee-qs\012    #vie-qs (not really at baseline)\012    #see-qs\012    zoo-qs.2b\012    she-qs.2b\012    zhivago-qs.2b\012    cheer-qs.2b\012    jay-qs.2b\012    ye-qs.2b\012    #way-qs\012    he-qs.2b\012    #why-qs\012    #oolong-qs\012    may-qs.2b\012    no-qs.2b\012    #no-qs.alt\012    #low-qs\012    #roe-qs\012    \012    it-qs.2b\012    eat-qs.2b\012    et-qs.2b\012    eight-qs.2b\012    #at-qs\012    #i-qs\012    #ah-qs\012    awe-qs.2b\012    #ox-qs not horizontal\012    #oy-qs\012    #utter-qs\012    utter-qs.alt.2b\012    #out-qs\012    #owe-qs\012    #foot-qs\012    ooze-qs.2b\012    \012    #loch-qs\012    llan-qs.2b\012    \012    #exam-qs\012    #excite-qs\012\012];\012\012# can start at baseline horizontally\012@csbh = [\012    #pea-qs complicated spacing\012    #bay-qs\012    tea-qs\012    #day-qs\012    #half-day would work\012    #key-qs\012    #gay-qs\012    #thaw-qs complicated spacing\012    #they-qs\012    #fee-qs\012    vie-qs\012    see-qs\012    #zoo-qs\012    #she-qs\012    #zhivago-qs\012    #cheer-qs\012    #jay-qs\012    ye-qs\012    #way-qs\012    he-qs\012    #why-qs\012    oolong-qs\012    may-qs\012    #no-qs\012    no-qs.alt\012    low-qs\012    roe-qs\012    \012    it-qs\012    eat-qs\012    #et-qs\012    #eight-qs\012    at-qs\012    i-qs\012    ah-qs\012    #awe-qs\012    #ox-qs\012    #oy-qs\012    #utter-qs\012    #out-qs\012    #owe-qs\012    #foot-qs\012    ooze-qs\012    \012    #loch-qs\012    #llan-qs\012    \012    #exam-qs\012    #excite-qs\012];\012\012# starts at baseline horizontally\012@sbh.b2 = [\012    #pea-qs complicated spacing\012    #bay-qs\012    tea-qs.b2\012    #day-qs\012    #half-day would work\012    #key-qs\012    #gay-qs\012    #thaw-qs complicated spacing\012    #they-qs\012    #fee-qs\012    vie-qs.b2\012    see-qs.b2\012    #zoo-qs\012    #she-qs\012    #zhivago-qs\012    #cheer-qs\012    #jay-qs\012    ye-qs.b2\012    #way-qs\012    he-qs.b2\012    #why-qs\012    oolong-qs.b2\012    may-qs.b2\012    #no-qs\012    no-qs.alt.b2\012    low-qs.b2\012    roe-qs.b2\012    \012    it-qs.b2\012    eat-qs.b2\012    #et-qs\012    #eight-qs\012    at-qs.b2\012    i-qs.b2\012    ah-qs.b2\012    #awe-qs\012    #ox-qs\012    #oy-qs\012    #utter-qs\012    #out-qs\012    #owe-qs\012    #foot-qs\012    ooze-qs.b2\012    \012    #loch-qs\012    #llan-qs\012    \012    #exam-qs\012    #excite-qs\012];\012\012\012\012\012##############################\012# Lookups\012#\012\012lookup liga_before_calt {\012    # ...\012} liga_before_calt;\012\012\012\012lookup calt_pass_1 {\012    sub @cebh' @csbh' by @ebh.2b @sbh.b2;\012} calt_pass_1;\012\012\012\012lookup calt_pass_2 {\012    # ...\012} calt_pass_2;\012\012\012\012##############################\012# Features\012#\012\012feature calt {\012    lookup liga_before_calt;\012    lookup calt_pass_1;\012    lookup calt_pass_2;\012    lookup liga_after_calt;\012} calt;\012";
+name = "Everything";
 }
 );
 features = (
@@ -4209,15 +4205,15 @@ weightClass = "Bold";
 );
 kerning = {
 "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B" = {
-"at-qs" = {
-"@MMK_R_deepbulge" = "-215";
-};
 "@MMK_L_at" = {
 "@MMK_R_day" = "-150";
 };
 "@MMK_L_utter.2s" = {
 "@MMK_R_may.s2" = "-406";
 "@MMK_R_roe.s2" = "-42";
+};
+"at-qs" = {
+"@MMK_R_deepbulge" = "-215";
 };
 };
 };
