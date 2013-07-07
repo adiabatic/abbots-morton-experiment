@@ -58,7 +58,17 @@
             - *rbh
 -
     name: eat-qs
-    connection sets: *no_alt_cxn_sets 
+    connection sets: *no_alt_cxn_sets
+-
+    name: et-qs
+    connection sets:
+        -
+            -
+                side: left
+                height: short
+                angle: vertical
+        -
+            - *rbh
 
 -
     name: utter-qs
