@@ -217,16 +217,8 @@ lookup calt_pass_2 {{
     sub @does_s2'   lookup  s2_to_s2s   # 9
         @does_2b'   lookup _2b_to_s2b;
     
-    # things connect backwards     
+    # things connect backwards to things they shouldn't
     
-
-    # at the baseline
-#    sub @does_2b' lookup _2b_to_b2b
-#        @does_b2' lookup  b2_to_b2b;
-#
-    sub @does_2b' lookup _2b_to_b2b
-        @can_2b'  lookup plain_to_2b;
-
         
 }} calt_pass_2;
 
