@@ -149,12 +149,14 @@ lookup _2b_to_b2b {{
 
 ### Connects the unconnected.
 lookup calt_pass_1 {{
-    # at the baseline
-    sub @can_2b @can_b2' lookup plain_to_b2;
-    sub @can_2b' lookup plain_to_2b @can_b2;
     
     # at the Short height
-    sub @can_2s' lookup plain_to_2s @can_s2' lookup plain_to_s2;
+    sub @can_2s' lookup plain_to_2s
+        @can_s2' lookup plain_to_s2;
+
+    # at the baseline
+    sub @can_2b' lookup plain_to_2b
+        @can_b2' lookup plain_to_b2;
 }} calt_pass_1;
 
 
@@ -162,9 +164,8 @@ lookup calt_pass_1 {{
 lookup calt_pass_2 {{
     
     # Short height
-    sub @does_2s @can_s2' lookup plain_to_s2;
-    sub @can_2s' lookup plain_to_2s @does_s2;
-    sub @does_2s  @does_2s' lookup _2s_to_s2s;
+    sub @does_2s' lookup _2s_to_s2s
+        @does_s2' lookup  s2_to_s2s;
 
     
     # at the baseline
