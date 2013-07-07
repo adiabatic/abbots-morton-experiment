@@ -1144,23 +1144,6 @@ width = 150;
 );
 },
 {
-glyphname = "it-qs.s2s";
-lastChange = "2013-07-07 06:42:22 -0800";
-layers = (
-{
-components = (
-{
-name = "it-qs";
-transform = "{1, 0, 0, 1, 0, 0}";
-}
-);
-layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-width = 150;
-}
-);
-},
-{
 glyphname = "jay-qs";
 lastChange = "2013-06-29 16:29:24 -0800";
 layers = (
