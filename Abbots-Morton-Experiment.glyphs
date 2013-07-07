@@ -676,7 +676,7 @@ unicode = E672;
 },
 {
 glyphname = "et-qs.2b";
-lastChange = "2013-07-04 06:43:16 -0800";
+lastChange = "2013-07-07 09:46:18 -0800";
 layers = (
 {
 components = (
@@ -687,6 +687,17 @@ transform = "{1, 0, 0, 1, 0, 0}";
 );
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"524 35 LINE",
+"524 -35 LINE",
+"565 -35 LINE",
+"565 35 LINE"
+);
+}
+);
 width = 565;
 }
 );
