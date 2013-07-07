@@ -169,9 +169,8 @@ lookup calt_pass_2 {{
 
     
     # at the baseline
-    sub @does_2b @can_b2' lookup plain_to_b2;
-    sub @can_2b' lookup plain_to_2b @does_b2;
-    sub @does_2b  @does_2b' lookup _2b_to_b2b;
+    sub @does_2b' lookup _2b_to_b2b
+        @does_b2'  lookup  b2_to_b2b;
     
 }} calt_pass_2;
 
@@ -191,7 +190,7 @@ lookup calt_pass_3 {{
 feature calt {{    
     lookup calt_pass_1;
     lookup calt_pass_2;
-    lookup calt_pass_3;
+#    lookup calt_pass_3;
 }} calt;
 """
 
