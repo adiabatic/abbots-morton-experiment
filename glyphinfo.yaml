@@ -11,9 +11,7 @@
                 side: right
                 height: baseline
                 angle: horizontal
-        -
-            - *lbh
-            - *rbh
+
 -
     name: no-qs
     connection sets: &no_cxn_sets
@@ -44,7 +42,13 @@
             - *rbh
 -
     name: it-qs
-    connection sets: *no_cxn_sets # just connect at the top for now
+    connection sets:
+        -
+            - *lbh
+            - *rsh
+        -
+            - *lsh
+            - *rbh
 -
     name: eat-qs
     connection sets: *no_alt_cxn_sets 

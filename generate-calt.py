@@ -31,16 +31,16 @@ class Predicates(object):
             
     @classmethod
     def can_s2s(self, glyph):
-        have_lhs = False
-        have_rhs = False
-        
         for cset in glyph['connection sets']:
+            have_lhs = False
+            have_rhs = False
             for cxn in cset:
                 try:
                     if cxn['side'] == 'left'  and cxn['height'] == 'short': have_lhs = True
                     if cxn['side'] == 'right' and cxn['height'] == 'short': have_rhs = True
                 except: pass
-        return have_lhs and have_rhs
+                if have_lhs and have_rhs: return True
+        return False
             
             
     @classmethod
@@ -54,6 +54,19 @@ class Predicates(object):
         def f(cxn): return cxn.get('side') == 'right' and cxn.get('height') == 'baseline'
         return self._any_cxn(f, glyph)
             
+    @classmethod
+    def can_b2b(self, glyph):        
+        for cset in glyph['connection sets']:
+            have_lhs = False
+            have_rhs = False
+            for cxn in cset:
+                try:
+                    if cxn['side'] == 'left'  and cxn['height'] == 'baseline': have_lhs = True
+                    if cxn['side'] == 'right' and cxn['height'] == 'baseline': have_rhs = True
+                except: pass
+                if have_lhs and have_rhs: return True
+        return False
+            
 
     
 pred = Predicates()
@@ -64,6 +77,7 @@ TEMPLATE = """
 ## Glyph Classes
 ##
 
+## Connects at Short
 {0.can_2s}
 {0.can_s2}
 
@@ -73,6 +87,13 @@ TEMPLATE = """
 {0.can_s2s}
 {0.does_s2s}
 
+
+## Connects at baseline
+{0.can_2b}
+{0.can_b2}
+
+{0.does_2b}
+{0.does_b2}
 
 ##############################################################
 ## Single-Glyph Substitutions
@@ -95,6 +116,25 @@ lookup _2s_to_s2s {{
 }} _2s_to_s2s;
 
 
+## at baseline
+
+lookup plain_to_2b {{
+    {0.plain_to_2b}
+}} plain_to_2b; 
+
+lookup plain_to_b2 {{
+    {0.plain_to_b2}
+}} plain_to_b2; 
+
+lookup b2_to_b2b {{
+    {0.b2_to_b2b}
+}} b2_to_b2b;
+
+lookup _2b_to_b2b {{
+    {0._2b_to_b2b}
+}} _2b_to_b2b;
+
+
 ##############################################################
 ## Features
 ##
@@ -107,9 +147,8 @@ feature calt {{
     ##
     
     # at the baseline
-    {0.calt_pass_1_baseline_1}
-
-    {0.calt_pass_1_baseline_2}
+    sub @can_2b @can_b2' lookup plain_to_b2;
+    sub @can_2b' lookup plain_to_2b @can_b2;
 
     
     # at the Short height
@@ -151,6 +190,9 @@ does_b2 = [x + ".b2" for x in can_b2]
 can_2b  = [glyph['name'] for glyph in glyphs if pred.can_2b(glyph)]
 does_2b = [x + '.2b' for x in can_2b]
 
+can_b2b  = [glyph['name'] for glyph in glyphs if pred.can_b2b(glyph)]
+does_b2b = [x + ".b2b" for x in can_b2b]
+
 
 CTX.calt_pass_1_baseline_1 = \
     "\n    ".join("sub {} {}' by {};".format(classnameize(can_b2), can, does)
@@ -177,6 +219,8 @@ does_s2s = [x + ".s2s" for x in can_s2s]
 
 
 ### lookups
+
+
 CTX.plain_to_2s = \
     '\n    '.join("sub {} by {};".format(can, does) for can, does in zip(can_2s, does_2s))
 
@@ -189,7 +233,34 @@ CTX.s2_to_s2s = \
 CTX._2s_to_s2s = \
     '\n    '.join("sub {}.2s by {};".format(can, does) for can, does in zip(can_s2s, does_s2s))
 
+## at baseline
+
+CTX.plain_to_2b = \
+    '\n    '.join("sub {} by {};".format(can, does) for can, does in zip(can_2b, does_2b))
+
+CTX.plain_to_b2 = \
+    '\n    '.join("sub {} by {};".format(can, does) for can, does in zip(can_b2, does_b2))
+
+CTX.b2_to_b2b = \
+    '\n    '.join("sub {}.b2 by {};".format(can, does) for can, does in zip(can_b2b, does_b2b))
+
+CTX._2b_to_b2b = \
+    '\n    '.join("sub {}.2b by {};".format(can, does) for can, does in zip(can_b2b, does_b2b))
+
+
+
 ### classes
+
+
+CTX.can_2b =   "@can_2b = {};".format(classnameize(can_2b))
+CTX.can_b2 =   "@can_b2 = {};".format(classnameize(can_b2))
+
+CTX.does_2b =  "@does_2b = {};".format(classnameize(does_2b))
+CTX.does_b2 =  "@does_b2 = {};".format(classnameize(does_b2))
+
+
+
+
 CTX.can_2s =   "@can_2s = {};".format(classnameize(can_2s))
 CTX.can_s2 =   "@can_s2 = {};".format(classnameize(can_s2))
 
