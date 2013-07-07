@@ -161,39 +161,26 @@ lookup calt_pass_1 {{
 
 ### Connects what's connected on one side already.
 lookup calt_pass_2 {{
+    
+    # Short height
     sub @does_2s @can_s2' lookup plain_to_s2;
     sub @can_2s' lookup plain_to_2s @does_s2;
 }} calt_pass_2;
+
+lookup calt_pass_3 {{
+    sub @does_s2' lookup s2_to_s2s @does_s2;
+    sub @does_2s' lookup _2s_to_s2s @does_s2;
+}} calt_pass_3;
 
 
 ##############################################################
 ## Features
 ##
 
-feature calt {{
-
-    
-    ###############################
-    ## Pass 1: Connecting the Unconnected
-    ##
-    
+feature calt {{    
     lookup calt_pass_1;
-
-    
-    ###############################
-    ## Pass 2: Reaching Out to Those Who Care
-    ##
-    
     lookup calt_pass_2;
-    
-
-
-    ###############################
-    ## Pass 3: Made One Connection, Make Another
-    ##
-    
-    sub @does_s2' lookup s2_to_s2s @does_s2;
-    sub @does_2s' lookup _2s_to_s2s @does_s2;
+    lookup calt_pass_3;
 }} calt;
 """
 
