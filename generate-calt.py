@@ -90,7 +90,9 @@ lookup s2_to_s2s {{
     {0.s2_to_s2s}
 }} s2_to_s2s;
 
-# not sure if I need 2s_to_s2s
+lookup _2s_to_s2s {{
+    {0._2s_to_s2s}
+}} _2s_to_s2s;
 
 
 ##############################################################
@@ -127,7 +129,8 @@ feature calt {{
     ## Pass 3: Made One Connection, Make Another
     ##
     
-    sub @does_s2' lookup s2_to_s2s @does_s2; 
+    sub @does_s2' lookup s2_to_s2s @does_s2;
+    sub @does_2s' lookup _2s_to_s2s @does_s2;
 }} calt;
 """
 
