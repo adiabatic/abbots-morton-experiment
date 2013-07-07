@@ -327,7 +327,7 @@ CTX._2b_to_b2b = \
 ## crossovers
 
 CTX.b2_to_b2s = \
-    '\n    '.join("sub {}.2b by {};".format(can, does) for can, does in zip(can_b2s, does_b2s))
+    '\n    '.join("sub {}.b2 by {};".format(can, does) for can, does in zip(can_b2s, does_b2s))
 
 CTX.s2_to_s2b = \
     '\n    '.join("sub {}.s2 by {};".format(can, does) for can, does in zip(can_s2b, does_s2b))
