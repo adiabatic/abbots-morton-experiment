@@ -48,3 +48,22 @@
 -
     name: eat-qs
     connection sets: *no_alt_cxn_sets 
+
+-
+    name: utter-qs
+    connection sets:
+        -
+            - *lbh
+        -
+            - *rsh
+        -
+            - *lbh
+            - *rsh
+-
+    name: roe-qs
+    connection sets:
+        -
+            - *lsh
+        -
+            - *lbh
+            

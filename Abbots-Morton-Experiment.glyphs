@@ -20,7 +20,7 @@ code = "languagesystem DFLT dflt;\012languagesystem Quik dflt;\012";
 name = "Languagesystems";
 },
 {
-code = "\012lookup plain_to_2s {\012    sub no-qs by no-qs.2s;\012    sub it-qs by it-qs.2s;\012} plain_to_2s; \012\012lookup plain_to_s2 {\012    sub no-qs by no-qs.s2;\012    sub it-qs by it-qs.s2;\012} plain_to_s2; \012\012feature calt {\012\012    @can_2s = [ no-qs it-qs ];\012    @can_s2 = [ no-qs it-qs ];\012    \012    @does_2s = [ no-qs.2s it-qs.2s ];\012    @does_s2 = [ no-qs.s2 it-qs.s2 ];\012    \012    ###############################\012    ## Pass 1: Connecting the Unconnected\012    ##\012    \012    # at the baseline\012    sub [ tea-qs no-qs.alt eat-qs ] tea-qs' by tea-qs.b2;\012    sub [ tea-qs no-qs.alt eat-qs ] no-qs.alt' by no-qs.alt.b2;\012    sub [ tea-qs no-qs.alt eat-qs ] eat-qs' by eat-qs.b2;\012\012    sub tea-qs' [ tea-qs no-qs.alt eat-qs ] by tea-qs.2b;\012    sub no-qs.alt' [ tea-qs no-qs.alt eat-qs ] by no-qs.alt.2b;\012    sub eat-qs' [ tea-qs no-qs.alt eat-qs ] by eat-qs.2b;\012\012    \012    # at the Short height\012    sub @can_2s @can_s2' lookup plain_to_s2;\012    sub @can_2s' lookup plain_to_2s @can_s2;\012    \012    ###############################\012    ## Pass 2: Upgrading the Half-Connected\012    ##\012    \012    sub @does_2s @can_s2' lookup plain_to_s2;\012    sub @can_2s' lookup plain_to_2s @does_s2;\012    \012} calt;\012\012";
+code = "\012lookup plain_to_2s {\012    sub no-qs by no-qs.2s;\012    sub it-qs by it-qs.2s;\012    sub utter-qs by utter-qs.2s;\012} plain_to_2s; \012\012lookup plain_to_s2 {\012    sub no-qs by no-qs.s2;\012    sub it-qs by it-qs.s2;\012    sub roe-qs by roe-qs.s2;\012} plain_to_s2; \012\012lookup s2_to_s2s {\012    sub no-qs by no-qs.s2s;\012    sub it-qs by it-qs.s2s;\012} s2_to_s2s;\012\012# not sure if I need 2s_to_s2s\012\012feature calt {\012\012    @can_2s = [ no-qs it-qs utter-qs ];\012    @can_s2 = [ no-qs it-qs roe-qs ];\012    \012    @does_2s = [ no-qs.2s it-qs.2s utter-qs.2s ];\012    @does_s2 = [ no-qs.s2 it-qs.s2 roe-qs.s2 ];\012    \012    @can_s2s = [ no-qs it-qs ];\012    @does_s2s = [ no-qs.s2s it-qs.s2s ];\012    \012    ###############################\012    ## Pass 1: Connecting the Unconnected\012    ##\012    \012    # at the baseline\012    sub [ tea-qs no-qs.alt eat-qs utter-qs roe-qs ] tea-qs' by tea-qs.b2;\012    sub [ tea-qs no-qs.alt eat-qs utter-qs roe-qs ] no-qs.alt' by no-qs.alt.b2;\012    sub [ tea-qs no-qs.alt eat-qs utter-qs roe-qs ] eat-qs' by eat-qs.b2;\012    sub [ tea-qs no-qs.alt eat-qs utter-qs roe-qs ] utter-qs' by utter-qs.b2;\012    sub [ tea-qs no-qs.alt eat-qs utter-qs roe-qs ] roe-qs' by roe-qs.b2;\012\012    sub tea-qs' [ tea-qs no-qs.alt eat-qs ] by tea-qs.2b;\012    sub no-qs.alt' [ tea-qs no-qs.alt eat-qs ] by no-qs.alt.2b;\012    sub eat-qs' [ tea-qs no-qs.alt eat-qs ] by eat-qs.2b;\012\012    \012    # at the Short height\012    sub @can_2s @can_s2' lookup plain_to_s2;\012    sub @can_2s' lookup plain_to_2s @can_s2;\012\012    \012    ###############################\012    ## Pass 2: Reaching Out to Those Who Care\012    ##\012    \012    sub @does_2s @can_s2' lookup plain_to_s2;\012    sub @can_2s' lookup plain_to_2s @does_s2;\012\012\012    ###############################\012    ## Pass 3: Made One Connection, Make Another\012    ##\012    \012    sub @does_s2' lookup s2_to_s2s @does_s2; \012} calt;\012\012";
 name = "Everything";
 }
 );
@@ -1093,6 +1093,23 @@ width = 150;
 {
 glyphname = "it-qs.s2";
 lastChange = "2013-07-07 04:29:18 -0800";
+layers = (
+{
+components = (
+{
+name = "it-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 150;
+}
+);
+},
+{
+glyphname = "it-qs.s2s";
+lastChange = "2013-07-07 06:42:22 -0800";
 layers = (
 {
 components = (
@@ -2704,6 +2721,23 @@ transform = "{1, 0, 0, 1, 0, 0}";
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
 width = 496;
+}
+);
+},
+{
+glyphname = "utter-qs.b2";
+lastChange = "2013-07-07 06:42:22 -0800";
+layers = (
+{
+components = (
+{
+name = "utter-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 515;
 }
 );
 },
