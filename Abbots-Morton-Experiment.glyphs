@@ -2687,7 +2687,7 @@ unicode = E652;
 },
 {
 glyphname = "tea-qs.2b";
-lastChange = "2013-07-06 21:52:20 -0800";
+lastChange = "2013-07-07 21:28:55 -0800";
 layers = (
 {
 components = (
@@ -2698,13 +2698,24 @@ transform = "{1, 0, 0, 1, 0, 0}";
 );
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"150 -35 LINE",
+"150 35 LINE",
+"110 35 LINE",
+"110 -35 LINE"
+);
+}
+);
 width = 150;
 }
 );
 },
 {
 glyphname = "tea-qs.b2";
-lastChange = "2013-07-06 21:59:05 -0800";
+lastChange = "2013-07-07 21:29:18 -0800";
 layers = (
 {
 components = (
@@ -2715,6 +2726,17 @@ transform = "{1, 0, 0, 1, 0, 0}";
 );
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 name = "Regular";
+paths = (
+{
+closed = 1;
+nodes = (
+"40 -35 LINE",
+"40 35 LINE",
+"0 35 LINE",
+"0 -35 LINE"
+);
+}
+);
 width = 150;
 }
 );
