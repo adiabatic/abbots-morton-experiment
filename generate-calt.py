@@ -202,9 +202,9 @@ lookup calt_pass_2 {{
         @can_s2'  lookup plain_to_s2;
 
     sub @does_s2'  lookup s2_to_s2b      # 8
-        @can_b2'   lookup plain_to_2b;
+        @can_b2'   lookup plain_to_b2;
     sub @does_s2'  lookup s2_to_s2s      # 9
-        @can_s2'   lookup plain_to_2s;
+        @can_s2'   lookup plain_to_s2;
     
     
     sub @does_b2'   lookup  b2_to_b2b   # 5
@@ -218,6 +218,8 @@ lookup calt_pass_2 {{
         @does_2b'   lookup _2b_to_s2b;
     
     # at this point, the last letter in a word tries to connect rightward
+    
+    
 
     # at the baseline
 #    sub @does_2b' lookup _2b_to_b2b
