@@ -166,6 +166,14 @@ lookup s2_to_s2b {{
     {0.s2_to_s2b}
 }} s2_to_s2b;
 
+lookup _2b_to_s2b {{
+    {0._2b_to_s2b}
+}} _2b_to_s2b;
+
+lookup _2s_to_b2s {{
+    {0._2s_to_b2s}
+}} _2s_to_b2s;
+
 
 ##############################################################
 ## 'calt' Passes
@@ -184,33 +192,64 @@ lookup calt_pass_1 {{
 }} calt_pass_1;
 
 
+
 ### Connects what's connected on one side already.
 lookup calt_pass_2 {{
     
-    # Short height
-    sub @does_2s' lookup _2s_to_s2s
-        @does_s2' lookup  s2_to_s2s;
+    sub @does_b2' lookup b2_to_b2b     # 5
+        @can_2b'  lookup plain_to_2b;
+    sub @does_b2' lookup b2_to_b2s     # 6
+        @can_s2'  lookup plain_to_s2;
 
+    sub @does_s2'  lookup s2_to_s2b      # 8
+        @can_b2'   lookup plain_to_2b;
+    sub @does_s2'  lookup s2_to_s2s      # 9
+        @can_s2'   lookup plain_to_2s;
+        
     
     # at the baseline
+#    sub @does_2b' lookup _2b_to_b2b
+#        @does_b2' lookup  b2_to_b2b;
+#
     sub @does_2b' lookup _2b_to_b2b
-        @does_b2' lookup  b2_to_b2b;
-    
+        @can_2b'  lookup plain_to_2b;
+
+        
 }} calt_pass_2;
 
-lookup calt_pass_3 {{
-    sub @does_s2s
-        @can_s2'   lookup plain_to_s2;
 
-    sub @does_b2b
-        @can_b2'   lookup plain_to_b2;
 
-    # diagonally
-    sub @does_s2' lookup s2_to_s2b
-        @can_b2'  lookup plain_to_b2;
-    
-}} calt_pass_3;
+#lookup calt_pass_3 {{#
+#    sub @does_s2s#
+#        @can_s2'   lookup plain_to_s2;#
+#
+#    sub @does_b2b#
+#        @can_b2'   lookup plain_to_b2;#
+#
+#    # diagonally#
+#    sub @does_s2' lookup s2_to_s2b#
+#        @can_b2'  lookup plain_to_b2;#
+#
+#    sub @does_b2' lookup b2_to_b2s#
+#        @can_s2'  lookup plain_to_s2;#
+#    #
+#}} calt_pass_3;
 
+
+
+#lookup calt_pass_4 {{#
+#    # diagonally#
+##    sub @does_2b' lookup _2b_to_s2b#
+##        @does_s2' lookup  s2_to_s2b;#
+#
+# #   sub @does_b2' lookup  b2_to_b2s#
+#  #      @does_s2' lookup  s2_to_s2s;#
+#    #
+#   # sub @does_b2#
+#    sub @does_s2' lookup s2_to_s2b#
+#        @does_b2' lookup b2_to_b2s;
+#    #
+#}} calt_pass_4;#
 
 ##############################################################
 ## Features
@@ -219,7 +258,8 @@ lookup calt_pass_3 {{
 feature calt {{    
     lookup calt_pass_1;
     lookup calt_pass_2;
-    lookup calt_pass_3;
+#    lookup calt_pass_3;
+#    lookup calt_pass_4;
 }} calt;
 """
 
@@ -247,17 +287,8 @@ can_b2b  = [glyph['name'] for glyph in glyphs if pred.can_b2b(glyph)]
 does_b2b = [x + ".b2b" for x in can_b2b]
 
 
-CTX.calt_pass_1_baseline_1 = \
-    "\n    ".join("sub {} {}' by {};".format(classnameize(can_b2), can, does)
-                  for can, does in zip(can_b2, does_b2))
-CTX.calt_pass_1_baseline_2 = \
-    '\n    '.join("sub {}' {} by {};".format(can, classnameize(can_2b), does)
-                   for can, does in zip(can_2b, does_2b))
-
 ####
 ## Short Height
-
-
 
 # can/does start/end at short height horizontally on one side only
 can_s2  = [glyph['name'] for glyph in glyphs if pred.can_s2(glyph)]
@@ -275,6 +306,8 @@ does_s2b = [x + ".s2b" for x in can_s2b]
 
 can_b2s  = [glyph['name'] for glyph in glyphs if pred.can_b2s(glyph)]
 does_b2s = [x + ".b2s" for x in can_b2s]
+
+
 
 
 
@@ -316,6 +349,13 @@ CTX.b2_to_b2s = \
 
 CTX.s2_to_s2b = \
     '\n    '.join("sub {}.s2 by {};".format(can, does) for can, does in zip(can_s2b, does_s2b))
+
+CTX._2b_to_s2b = \
+    '\n    '.join("sub {}.2b by {};".format(can, does) for can, does in zip(can_s2b, does_s2b))
+
+CTX._2s_to_b2s = \
+    '\n    '.join("sub {}.2s by {};".format(can, does) for can, does in zip(can_b2s, does_b2s))
+
 
 
 
