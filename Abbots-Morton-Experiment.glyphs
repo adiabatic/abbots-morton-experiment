@@ -20,7 +20,7 @@ code = "languagesystem DFLT dflt;\012languagesystem Quik dflt;\012";
 name = "Languagesystems";
 },
 {
-code = "";
+code = "\012lookup plain_to_2s {\012    sub no-qs by no-qs.2s;\012    sub it-qs by it-qs.2s;\012} plain_to_2s; \012\012lookup plain_to_s2 {\012    sub no-qs by no-qs.s2;\012    sub it-qs by it-qs.s2;\012} plain_to_s2; \012\012feature calt {\012\012    @can_2s = [ no-qs it-qs ];\012    @can_s2 = [ no-qs it-qs ];\012    \012    @does_2s = [ no-qs.2s it-qs.2s ];\012    @does_s2 = [ no-qs.s2 it-qs.s2 ];\012    \012    ###############################\012    ## Pass 1: Connecting the Unconnected\012    ##\012    \012    # at the baseline\012    sub [ tea-qs no-qs.alt eat-qs ] tea-qs' by tea-qs.b2;\012    sub [ tea-qs no-qs.alt eat-qs ] no-qs.alt' by no-qs.alt.b2;\012    sub [ tea-qs no-qs.alt eat-qs ] eat-qs' by eat-qs.b2;\012\012    sub tea-qs' [ tea-qs no-qs.alt eat-qs ] by tea-qs.2b;\012    sub no-qs.alt' [ tea-qs no-qs.alt eat-qs ] by no-qs.alt.2b;\012    sub eat-qs' [ tea-qs no-qs.alt eat-qs ] by eat-qs.2b;\012\012    \012    # at the Short height\012    sub @can_2s @can_s2' lookup plain_to_s2;\012    sub @can_2s' lookup plain_to_2s @can_s2;\012    \012    ###############################\012    ## Pass 2: Upgrading the Half-Connected\012    ##\012    \012    sub @does_2s @can_s2' lookup plain_to_s2;\012    sub @can_2s' lookup plain_to_2s @does_s2;\012    \012} calt;\012\012";
 name = "Everything";
 }
 );
@@ -1091,6 +1091,23 @@ width = 150;
 );
 },
 {
+glyphname = "it-qs.s2";
+lastChange = "2013-07-07 04:29:18 -0800";
+layers = (
+{
+components = (
+{
+name = "it-qs";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 150;
+}
+);
+},
+{
 glyphname = "jay-qs";
 lastChange = "2013-06-29 16:29:24 -0800";
 layers = (
@@ -1585,12 +1602,12 @@ unicode = E666;
 },
 {
 glyphname = "no-qs.2b";
-lastChange = "2013-07-06 21:56:11 -0800";
+lastChange = "2013-07-07 05:30:51 -0800";
 layers = (
 {
 components = (
 {
-name = "no-qs";
+name = "no-qs.alt.2b";
 transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
@@ -1667,6 +1684,23 @@ width = 651;
 );
 leftKerningGroup = "removeextended";
 rightKerningGroup = "removeextended";
+},
+{
+glyphname = "no-qs.alt.2b";
+lastChange = "2013-07-07 02:09:38 -0800";
+layers = (
+{
+components = (
+{
+name = "no-qs.alt";
+transform = "{1, 0, 0, 1, 0, 0}";
+}
+);
+layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
+name = "Regular";
+width = 651;
+}
+);
 },
 {
 glyphname = "no-qs.alt.b2";

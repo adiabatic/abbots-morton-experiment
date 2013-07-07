@@ -46,7 +46,22 @@ pred = Predicates()
 CTX = Context()
 
 TEMPLATE = """
+lookup plain_to_2s {{
+    {0.plain_to_2s}
+}} plain_to_2s; 
+
+lookup plain_to_s2 {{
+    {0.plain_to_s2}
+}} plain_to_s2; 
+
 feature calt {{
+
+    {0.can_2s}
+    {0.can_s2}
+    
+    {0.does_2s}
+    {0.does_s2}
+    
     ###############################
     ## Pass 1: Connecting the Unconnected
     ##
@@ -58,14 +73,15 @@ feature calt {{
 
     
     # at the Short height
-    {0.calt_pass_1_short_1}
-
-    {0.calt_pass_1_short_2}
+    sub @can_2s @can_s2' lookup plain_to_s2;
+    sub @can_2s' lookup plain_to_2s @can_s2;
     
     ###############################
     ## Pass 2: Upgrading the Half-Connected
     ##
     
+    sub @does_2s @can_s2' lookup plain_to_s2;
+    sub @can_2s' lookup plain_to_2s @does_s2;
     {0.calt_pass_2}
 }} calt;
 """
@@ -111,18 +127,26 @@ CTX.calt_pass_1_baseline_2 = \
 ####
 ## Short Height
 
+
+
 # can/does start/end at short height horizontally
 can_s2  = [glyph['name'] for glyph in glyphs if pred.can_s2(glyph)]
 does_s2 = [x + ".s2" for x in can_s2]
 can_2s  = [glyph['name'] for glyph in glyphs if pred.can_2s(glyph)]
 does_2s = [x + '.2s' for x in can_2s]
 
-CTX.calt_pass_1_short_1 = \
-    "\n    ".join("sub {} {}' by {};".format(classnameize(can_s2), can, does)
-                  for can, does in zip(can_s2, does_s2))
-CTX.calt_pass_1_short_2 = \
-    '\n    '.join("sub {}' {} by {};".format(can, classnameize(can_2s), does)
-                   for can, does in zip(can_2s, does_2s))
+### lookups
+CTX.plain_to_2s = \
+    '\n    '.join("sub {} by {};".format(can, does) for can, does in zip(can_2s, does_2s))
+
+CTX.plain_to_s2 = \
+    '\n    '.join("sub {} by {};".format(can, does) for can, does in zip(can_s2, does_s2))
+
+### classes
+CTX.can_2s = "@can_2s = {};".format(classnameize(can_2s))
+CTX.can_s2 = "@can_s2 = {};".format(classnameize(can_s2))
+CTX.does_2s = "@does_2s = {};".format(classnameize(does_2s))
+CTX.does_s2 = "@does_s2 = {};".format(classnameize(does_s2))
 
 
 # don't bug me now
