@@ -99,6 +99,10 @@ TEMPLATE = """
 {0.does_2b}
 {0.does_b2}
 
+{0.can_b2b}
+{0.does_b2b}
+
+
 ##############################################################
 ## Single-Glyph Substitutions
 ##
@@ -166,16 +170,15 @@ lookup calt_pass_2 {{
     
     # at the baseline
     sub @does_2b' lookup _2b_to_b2b
-        @does_b2'  lookup  b2_to_b2b;
+        @does_b2' lookup  b2_to_b2b;
     
 }} calt_pass_2;
 
 lookup calt_pass_3 {{
-    sub @does_s2' lookup s2_to_s2s @does_s2;
-    sub @does_2s' lookup _2s_to_s2s @does_s2;
-
-    sub @does_b2' lookup b2_to_b2b @does_b2;
-    sub @does_2b' lookup _2b_to_b2b @does_b2;
+    sub @does_s2s
+        @can_s2'   lookup plain_to_s2;
+    sub @does_b2b
+        @can_b2'   lookup plain_to_b2;
 }} calt_pass_3;
 
 
@@ -186,7 +189,7 @@ lookup calt_pass_3 {{
 feature calt {{    
     lookup calt_pass_1;
     lookup calt_pass_2;
-#    lookup calt_pass_3;
+    lookup calt_pass_3;
 }} calt;
 """
 
@@ -206,6 +209,9 @@ can_b2  = [glyph['name'] for glyph in glyphs if pred.can_b2(glyph)]
 does_b2 = [x + ".b2" for x in can_b2]
 can_2b  = [glyph['name'] for glyph in glyphs if pred.can_2b(glyph)]
 does_2b = [x + '.2b' for x in can_2b]
+
+can_b2b  = [glyph['name'] for glyph in glyphs if pred.can_b2b(glyph)]
+does_b2b = [x + ".b2b" for x in can_b2b]
 
 can_b2b  = [glyph['name'] for glyph in glyphs if pred.can_b2b(glyph)]
 does_b2b = [x + ".b2b" for x in can_b2b]
@@ -274,6 +280,10 @@ CTX.can_b2 =   "@can_b2 = {};".format(classnameize(can_b2))
 
 CTX.does_2b =  "@does_2b = {};".format(classnameize(does_2b))
 CTX.does_b2 =  "@does_b2 = {};".format(classnameize(does_b2))
+
+CTX.can_b2b  = "@can_b2b = {};".format(classnameize(can_b2b))
+
+CTX.does_b2b = "@does_b2b = {};".format(classnameize(does_b2b))
 
 
 
