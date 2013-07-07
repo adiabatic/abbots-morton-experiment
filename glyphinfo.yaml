@@ -19,6 +19,15 @@
                 side: right
                 height: short
                 angle: horizontal
+                
+        - &no_alt_cxn_sets
+            - 
+                - *lbh        
+            - 
+                - *rbh    
+            -
+                - *lbh
+                - *rbh
 
     name: tea-qs
     connection sets:
@@ -33,7 +42,7 @@
             - *rsh
 -
     name: no-qs
-    connection sets: &no_cxn_sets
+    connection sets:
         - 
             - *lsh        
         - 
@@ -41,9 +50,7 @@
         -
             - *lsh
             - *rsh
--
-    name: no-qs.alt
-    connection sets: &no_alt_cxn_sets
+        # upside-down form
         - 
             - *lbh        
         - 
