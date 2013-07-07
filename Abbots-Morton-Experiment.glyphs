@@ -1783,12 +1783,12 @@ unicode = E666;
 },
 {
 glyphname = "no-qs.2b";
-lastChange = "2013-07-07 20:07:56 -0800";
+lastChange = "2013-07-07 20:23:52 -0800";
 layers = (
 {
 components = (
 {
-name = "no-qs.alt.2b";
+name = "no-qs.alt";
 transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
@@ -1907,7 +1907,7 @@ width = 651;
 },
 {
 glyphname = "no-qs.b2b";
-lastChange = "2013-07-07 20:08:51 -0800";
+lastChange = "2013-07-07 20:17:35 -0800";
 layers = (
 {
 background = {
