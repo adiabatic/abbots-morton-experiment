@@ -217,8 +217,7 @@ lookup calt_pass_2 {{
     sub @does_s2'   lookup  s2_to_s2s   # 9
         @does_2b'   lookup _2b_to_s2b;
     
-    # at this point, the last letter in a word tries to connect rightward
-    
+    # things connect backwards     
     
 
     # at the baseline
@@ -232,39 +231,6 @@ lookup calt_pass_2 {{
 }} calt_pass_2;
 
 
-
-#lookup calt_pass_3 {{#
-#    sub @does_s2s#
-#        @can_s2'   lookup plain_to_s2;#
-#
-#    sub @does_b2b#
-#        @can_b2'   lookup plain_to_b2;#
-#
-#    # diagonally#
-#    sub @does_s2' lookup s2_to_s2b#
-#        @can_b2'  lookup plain_to_b2;#
-#
-#    sub @does_b2' lookup b2_to_b2s#
-#        @can_s2'  lookup plain_to_s2;#
-#    #
-#}} calt_pass_3;
-
-
-
-#lookup calt_pass_4 {{#
-#    # diagonally#
-##    sub @does_2b' lookup _2b_to_s2b#
-##        @does_s2' lookup  s2_to_s2b;#
-#
-# #   sub @does_b2' lookup  b2_to_b2s#
-#  #      @does_s2' lookup  s2_to_s2s;#
-#    #
-#   # sub @does_b2#
-#    sub @does_s2' lookup s2_to_s2b#
-#        @does_b2' lookup b2_to_b2s;
-#    #
-#}} calt_pass_4;#
-
 ##############################################################
 ## Features
 ##
@@ -272,8 +238,6 @@ lookup calt_pass_2 {{
 feature calt {{    
     lookup calt_pass_1;
     lookup calt_pass_2;
-#    lookup calt_pass_3;
-#    lookup calt_pass_4;
 }} calt;
 """
 
