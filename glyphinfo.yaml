@@ -1,0 +1,50 @@
+-
+    name: tea-qs
+    connection sets:
+        - 
+            - &lbh
+                side: left
+                height: baseline
+                angle: horizontal
+        - 
+            - &rbh
+                side: right
+                height: baseline
+                angle: horizontal
+        -
+            - *lbh
+            - *rbh
+-
+    name: no-qs
+    connection sets: &no_cxn_sets
+        - 
+            - &lsh
+                side: left
+                height: short
+                angle: horizontal
+        
+        - 
+            - &rsh
+                side: right
+                height: short
+                angle: horizontal
+    
+        -
+            - *lsh
+            - *rsh
+-
+    name: no-qs.alt
+    connection sets: &no_alt_cxn_sets
+        - 
+            - *lbh        
+        - 
+            - *rbh    
+        -
+            - *lbh
+            - *rbh
+-
+    name: it-qs
+    connection sets: *no_cxn_sets # just connect at the top for now
+-
+    name: eat-qs
+    connection sets: *no_alt_cxn_sets 
