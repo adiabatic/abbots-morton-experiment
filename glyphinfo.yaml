@@ -1,6 +1,5 @@
 -
-    name: tea-qs
-    connection sets:
+    dummy sets: # keep these in the topmost thing (eventually pea)
         - 
             - &lbh
                 side: left
@@ -11,22 +10,30 @@
                 side: right
                 height: baseline
                 angle: horizontal
-
--
-    name: no-qs
-    connection sets: &no_cxn_sets
         - 
             - &lsh
                 side: left
                 height: short
                 angle: horizontal
-        
-        - 
             - &rsh
                 side: right
                 height: short
                 angle: horizontal
-    
+
+    name: tea-qs
+    connection sets:
+        - 
+            - *lbh
+        - 
+            - *rbh
+
+-
+    name: no-qs
+    connection sets: &no_cxn_sets
+        - 
+            - *lsh        
+        - 
+            - *rsh    
         -
             - *lsh
             - *rsh
@@ -70,4 +77,13 @@
             - *lsh
         -
             - *lbh
-            
+-
+    name: awe-qs
+    connection sets:
+        -
+            - *lsh
+        -
+            - *rbh
+        -
+            - *lsh
+            - *rbh            
