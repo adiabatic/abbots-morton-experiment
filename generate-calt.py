@@ -60,6 +60,24 @@ pred = Predicates()
 CTX = Context()
 
 TEMPLATE = """
+##############################################################
+## Glyph Classes
+##
+
+{0.can_2s}
+{0.can_s2}
+
+{0.does_2s}
+{0.does_s2}
+
+{0.can_s2s}
+{0.does_s2s}
+
+
+##############################################################
+## Single-Glyph Substitutions
+##
+
 lookup plain_to_2s {{
     {0.plain_to_2s}
 }} plain_to_2s; 
@@ -74,16 +92,13 @@ lookup s2_to_s2s {{
 
 # not sure if I need 2s_to_s2s
 
+
+##############################################################
+## Features
+##
+
 feature calt {{
 
-    {0.can_2s}
-    {0.can_s2}
-    
-    {0.does_2s}
-    {0.does_s2}
-    
-    {0.can_s2s}
-    {0.does_s2s}
     
     ###############################
     ## Pass 1: Connecting the Unconnected
@@ -166,7 +181,10 @@ CTX.plain_to_s2 = \
     '\n    '.join("sub {} by {};".format(can, does) for can, does in zip(can_s2, does_s2))
 
 CTX.s2_to_s2s = \
-    '\n    '.join("sub {} by {};".format(can, does) for can, does in zip(can_s2s, does_s2s))
+    '\n    '.join("sub {}.s2 by {};".format(can, does) for can, does in zip(can_s2s, does_s2s))
+
+CTX._2s_to_s2s = \
+    '\n    '.join("sub {}.2s by {};".format(can, does) for can, does in zip(can_s2s, does_s2s))
 
 ### classes
 CTX.can_2s =   "@can_2s = {};".format(classnameize(can_2s))
