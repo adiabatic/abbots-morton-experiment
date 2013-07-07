@@ -73,6 +73,14 @@ pred = Predicates()
 CTX = Context()
 
 TEMPLATE = """
+# Glyph names and lookup names must be:
+# - up to 31 characters
+# - be comprised of A-Z a-z 0-9 . _
+# - must not start with a digit or period (underscores OK)
+
+# glyph names and lookup names can be 31 characters;
+# glyph class names (lists) max out at 30.
+
 ##############################################################
 ## Glyph Classes
 ##
