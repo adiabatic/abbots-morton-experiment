@@ -19,6 +19,21 @@ class Predicates(object):
         return r
 
     @classmethod
+    def _has_given_connection(self, glyph, left_height, right_height):
+        for cset in glyph['connection sets']:
+            have_lhs = False
+            have_rhs = False
+            for cxn in cset:
+                try:
+                    if cxn['side'] == 'left'  and cxn['height'] == left_height: have_lhs = True
+                    if cxn['side'] == 'right' and cxn['height'] == right_height: have_rhs = True
+                except: pass
+                if have_lhs and have_rhs: return True
+        return False
+            
+
+
+    @classmethod
     def can_s2(self, glyph):
         def f(cxn):
             return cxn.get('side') == 'left' and cxn.get('height') == 'short'
@@ -31,17 +46,7 @@ class Predicates(object):
             
     @classmethod
     def can_s2s(self, glyph):
-        for cset in glyph['connection sets']:
-            have_lhs = False
-            have_rhs = False
-            for cxn in cset:
-                try:
-                    if cxn['side'] == 'left'  and cxn['height'] == 'short': have_lhs = True
-                    if cxn['side'] == 'right' and cxn['height'] == 'short': have_rhs = True
-                except: pass
-                if have_lhs and have_rhs: return True
-        return False
-            
+        return self._has_given_connection(glyph, 'short', 'short')            
             
     @classmethod
     def can_b2(self, glyph):
@@ -56,16 +61,7 @@ class Predicates(object):
             
     @classmethod
     def can_b2b(self, glyph):        
-        for cset in glyph['connection sets']:
-            have_lhs = False
-            have_rhs = False
-            for cxn in cset:
-                try:
-                    if cxn['side'] == 'left'  and cxn['height'] == 'baseline': have_lhs = True
-                    if cxn['side'] == 'right' and cxn['height'] == 'baseline': have_rhs = True
-                except: pass
-                if have_lhs and have_rhs: return True
-        return False
+        return self._has_given_connection(glyph, 'baseline', 'baseline')            
             
 
     
