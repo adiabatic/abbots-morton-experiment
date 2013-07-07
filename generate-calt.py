@@ -46,7 +46,11 @@ class Predicates(object):
             
     @classmethod
     def can_s2s(self, glyph):
-        return self._has_given_connection(glyph, 'short', 'short')            
+        return self._has_given_connection(glyph, 'short', 'short')
+            
+    @classmethod
+    def can_s2b(self, glyph):
+        return self._has_given_connection(glyph, 'short', 'baseline')
             
     @classmethod
     def can_b2(self, glyph):
@@ -62,6 +66,11 @@ class Predicates(object):
     @classmethod
     def can_b2b(self, glyph):        
         return self._has_given_connection(glyph, 'baseline', 'baseline')            
+
+    @classmethod
+    def can_b2s(self, glyph):
+        return self._has_given_connection(glyph, 'baseline', 'short')
+            
             
 
     
@@ -103,6 +112,10 @@ TEMPLATE = """
 {0.does_b2b}
 
 
+## Diagonal Connections
+{0.can_s2b}
+{0.can_b2s}
+
 ##############################################################
 ## Single-Glyph Substitutions
 ##
@@ -143,6 +156,17 @@ lookup _2b_to_b2b {{
 }} _2b_to_b2b;
 
 
+## crossovers
+
+lookup b2_to_b2s {{
+    {0.b2_to_b2s}
+}} b2_to_b2s;
+
+lookup s2_to_s2b {{
+    {0.s2_to_s2b}
+}} s2_to_s2b;
+
+
 ##############################################################
 ## 'calt' Passes
 ##
@@ -177,8 +201,14 @@ lookup calt_pass_2 {{
 lookup calt_pass_3 {{
     sub @does_s2s
         @can_s2'   lookup plain_to_s2;
+
     sub @does_b2b
         @can_b2'   lookup plain_to_b2;
+
+    # diagonally
+    sub @does_s2' lookup s2_to_s2b
+        @can_b2'  lookup plain_to_b2;
+    
 }} calt_pass_3;
 
 
@@ -239,6 +269,13 @@ does_2s = [x + '.2s' for x in can_2s]
 can_s2s  = [glyph['name'] for glyph in glyphs if pred.can_s2s(glyph)]
 does_s2s = [x + ".s2s" for x in can_s2s]
 
+# diagonals
+can_s2b  = [glyph['name'] for glyph in glyphs if pred.can_s2b(glyph)]
+does_s2b = [x + ".s2b" for x in can_s2b]
+
+can_b2s  = [glyph['name'] for glyph in glyphs if pred.can_b2s(glyph)]
+does_b2s = [x + ".b2s" for x in can_b2s]
+
 
 
 ### lookups
@@ -256,6 +293,7 @@ CTX.s2_to_s2s = \
 CTX._2s_to_s2s = \
     '\n    '.join("sub {}.2s by {};".format(can, does) for can, does in zip(can_s2s, does_s2s))
 
+
 ## at baseline
 
 CTX.plain_to_2b = \
@@ -269,6 +307,15 @@ CTX.b2_to_b2b = \
 
 CTX._2b_to_b2b = \
     '\n    '.join("sub {}.2b by {};".format(can, does) for can, does in zip(can_b2b, does_b2b))
+
+
+## crossovers
+
+CTX.b2_to_b2s = \
+    '\n    '.join("sub {}.2b by {};".format(can, does) for can, does in zip(can_b2s, does_b2s))
+
+CTX.s2_to_s2b = \
+    '\n    '.join("sub {}.s2 by {};".format(can, does) for can, does in zip(can_s2b, does_s2b))
 
 
 
@@ -297,6 +344,16 @@ CTX.does_s2 =  "@does_s2 = {};".format(classnameize(does_s2))
 CTX.can_s2s  = "@can_s2s = {};".format(classnameize(can_s2s))
 
 CTX.does_s2s = "@does_s2s = {};".format(classnameize(does_s2s))
+
+
+
+
+CTX.can_b2s = "@can_b2s = {};".format(classnameize(can_b2s))
+CTX.can_s2b = "@can_s2b = {};".format(classnameize(can_s2b))
+
+CTX.does_b2s = "@does_b2s = {};".format(classnameize(does_b2s))
+CTX.does_s2b = "@does_s2b = {};".format(classnameize(does_s2b))
+
 
 
 
