@@ -179,16 +179,23 @@ lookup _2s_to_b2s {{
 ## 'calt' Passes
 ##
 
+# Possibly useful lookupflags: IgnoreBaseGlyphs, IgnoreLigatures (defined in GDEF table)
+
 ### Connects the unconnected.
 lookup calt_pass_1 {{
     
-    # at the Short height
-    sub @can_2s' lookup plain_to_2s
-        @can_s2' lookup plain_to_s2;
+    sub @can_2s'    lookup plain_to_2s
+        @can_s2'    lookup plain_to_s2;
 
-    # at the baseline
-    sub @can_2b' lookup plain_to_2b
-        @can_b2' lookup plain_to_b2;
+    sub @can_s2'    lookup plain_to_s2
+        @can_2s'    lookup plain_to_2s;
+
+
+    sub @can_2b'    lookup plain_to_2b
+        @can_b2'    lookup plain_to_b2;
+
+    sub @can_b2'    lookup plain_to_b2
+        @can_2b'    lookup plain_to_2b;
     
 }} calt_pass_1;
 
@@ -226,7 +233,7 @@ lookup calt_pass_2 {{
     
     sub @does_s2'   lookup s2_to_s2b    # 8
         @does_2s'   lookup _2s_to_b2s;
-    sub @does_s2'   lookup s2_to_s2s    # 9
+    sub @does_s2'   lookup s2_to_s2s    # 9 (responsible for nnnnnnn failures?)
         @does_2s'   lookup _2s_to_s2s;
         
 }} calt_pass_2;
