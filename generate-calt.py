@@ -2,81 +2,6 @@
 import yaml
 import itertools
 
-class Context(object): pass
-
-class Predicates(object):
-    
-    @classmethod
-    def _any_cxn(self, pred, glyph):
-        r = False
-        try:
-            cxns = itertools.chain.from_iterable(glyph['connection sets'])
-            for cxn in cxns:
-                if pred(cxn):
-                    r = True
-                    break
-        except: pass
-        return r
-
-    @classmethod
-    def _has_given_connection(self, glyph, left_height, right_height):
-        for cset in glyph['connection sets']:
-            have_lhs = False
-            have_rhs = False
-            for cxn in cset:
-                try:
-                    if cxn['side'] == 'left'  and cxn['height'] == left_height: have_lhs = True
-                    if cxn['side'] == 'right' and cxn['height'] == right_height: have_rhs = True
-                except: pass
-                if have_lhs and have_rhs: return True
-        return False
-            
-
-
-    @classmethod
-    def can_s2(self, glyph):
-        def f(cxn):
-            return cxn.get('side') == 'left' and cxn.get('height') == 'short'
-        return self._any_cxn(f, glyph)
-        
-    @classmethod
-    def can_2s(self, glyph):
-        def f(cxn): return cxn.get('side') == 'right' and cxn.get('height') == 'short'
-        return self._any_cxn(f, glyph)
-            
-    @classmethod
-    def can_s2s(self, glyph):
-        return self._has_given_connection(glyph, 'short', 'short')
-            
-    @classmethod
-    def can_s2b(self, glyph):
-        return self._has_given_connection(glyph, 'short', 'baseline')
-            
-    @classmethod
-    def can_b2(self, glyph):
-        def f(cxn):
-            return cxn.get('side') == 'left' and cxn.get('height') == 'baseline'
-        return self._any_cxn(f, glyph)
-        
-    @classmethod
-    def can_2b(self, glyph):
-        def f(cxn): return cxn.get('side') == 'right' and cxn.get('height') == 'baseline'
-        return self._any_cxn(f, glyph)
-            
-    @classmethod
-    def can_b2b(self, glyph):        
-        return self._has_given_connection(glyph, 'baseline', 'baseline')            
-
-    @classmethod
-    def can_b2s(self, glyph):
-        return self._has_given_connection(glyph, 'baseline', 'short')
-            
-            
-
-    
-pred = Predicates()
-CTX = Context()
-
 TEMPLATE = """
 # Glyph names and lookup names must be:
 # - up to 31 characters
@@ -248,6 +173,83 @@ feature calt {{
     lookup calt_pass_2;
 }} calt;
 """
+
+class Context(object): pass
+
+class Predicates(object):
+    
+    @classmethod
+    def _any_cxn(self, pred, glyph):
+        r = False
+        try:
+            cxns = itertools.chain.from_iterable(glyph['connection sets'])
+            for cxn in cxns:
+                if pred(cxn):
+                    r = True
+                    break
+        except: pass
+        return r
+
+    @classmethod
+    def _has_given_connection(self, glyph, left_height, right_height):
+        for cset in glyph['connection sets']:
+            have_lhs = False
+            have_rhs = False
+            for cxn in cset:
+                try:
+                    if cxn['side'] == 'left'  and cxn['height'] == left_height: have_lhs = True
+                    if cxn['side'] == 'right' and cxn['height'] == right_height: have_rhs = True
+                except: pass
+                if have_lhs and have_rhs: return True
+        return False
+            
+
+
+    @classmethod
+    def can_s2(self, glyph):
+        def f(cxn):
+            return cxn.get('side') == 'left' and cxn.get('height') == 'short'
+        return self._any_cxn(f, glyph)
+        
+    @classmethod
+    def can_2s(self, glyph):
+        def f(cxn): return cxn.get('side') == 'right' and cxn.get('height') == 'short'
+        return self._any_cxn(f, glyph)
+            
+    @classmethod
+    def can_s2s(self, glyph):
+        return self._has_given_connection(glyph, 'short', 'short')
+            
+    @classmethod
+    def can_s2b(self, glyph):
+        return self._has_given_connection(glyph, 'short', 'baseline')
+            
+    @classmethod
+    def can_b2(self, glyph):
+        def f(cxn):
+            return cxn.get('side') == 'left' and cxn.get('height') == 'baseline'
+        return self._any_cxn(f, glyph)
+        
+    @classmethod
+    def can_2b(self, glyph):
+        def f(cxn): return cxn.get('side') == 'right' and cxn.get('height') == 'baseline'
+        return self._any_cxn(f, glyph)
+            
+    @classmethod
+    def can_b2b(self, glyph):        
+        return self._has_given_connection(glyph, 'baseline', 'baseline')            
+
+    @classmethod
+    def can_b2s(self, glyph):
+        return self._has_given_connection(glyph, 'baseline', 'short')
+            
+            
+
+    
+pred = Predicates()
+CTX = Context()
+
+
 
 y = None
 with open('glyphinfo.yaml') as f:
