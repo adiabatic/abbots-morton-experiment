@@ -189,6 +189,7 @@ lookup calt_pass_1 {{
     # at the baseline
     sub @can_2b' lookup plain_to_2b
         @can_b2' lookup plain_to_b2;
+    
 }} calt_pass_1;
 
 
@@ -205,7 +206,7 @@ lookup calt_pass_2 {{
         @can_b2'   lookup plain_to_b2;
     sub @does_s2'  lookup s2_to_s2s      # 9
         @can_s2'   lookup plain_to_s2;
-    
+            
     
     sub @does_b2'   lookup  b2_to_b2b   # 5
         @does_2b'   lookup _2b_to_b2b;
@@ -217,7 +218,6 @@ lookup calt_pass_2 {{
     sub @does_s2'   lookup  s2_to_s2s   # 9
         @does_2b'   lookup _2b_to_s2b;
 
-    # things connect backwards to things they shouldn't after adding all these rules
     
     sub @does_b2'   lookup  b2_to_b2s   # 5
         @does_2s'   lookup _2s_to_b2s;
@@ -228,9 +228,6 @@ lookup calt_pass_2 {{
         @does_2s'   lookup _2s_to_b2s;
     sub @does_s2'   lookup s2_to_s2s    # 9
         @does_2s'   lookup _2s_to_s2s;
-        
-        
-    
         
 }} calt_pass_2;
 
