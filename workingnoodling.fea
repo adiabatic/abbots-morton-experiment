@@ -1,0 +1,36 @@
+@_2s = [
+    it-qs.2s it-qs.b2s
+    no-qs.2s no-qs.s2s
+];
+
+@_2b = [
+    it-qs.2b it-qs.s2b
+    no-qs.2b no-qs.b2b
+];
+
+# the letter before this should be a 2s
+@preceding_2s_plz = [
+    it-qs it-qs.s2 it-qs.s2b
+    no-qs.s2 no-qs.s2s
+];
+
+# it-qs, no-qs, roe-qs, ox-qs (as in "on")
+lookup calt_pass_1 {
+#    sub it-qs' lookup It_it it-qs' lookup it_It;
+#    sub it-qs' lookup It_no no-qs' lookup it_No;
+    sub it-qs' @preceding_2s_plz by it-qs.2s;
+    
+    sub no-qs' @preceding_2s_plz by no-qs.2s;
+} calt_pass_1;
+
+lookup calt_pass_2 {
+    sub @_2s it-qs'     by it-qs.s2;    
+    sub @_2s it-qs.2s'  by it-qs.s2b;
+    sub @_2b it-qs'     by it-qs.b2;
+    sub @_2b it-qs.2s'  by it-qs.b2s;
+} calt_pass_2;
+
+feature calt {
+    lookup calt_pass_1;
+    lookup calt_pass_2;
+} calt;
