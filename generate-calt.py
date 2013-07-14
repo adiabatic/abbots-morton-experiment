@@ -16,161 +16,74 @@ TEMPLATE = """
 ##
 
 ## Connects at Short
-{0.can_2s}
-{0.can_s2}
+{0[can_2s]}
+{0[can_s2]}
 
-{0.does_2s}
-{0.does_s2}
+{0[does_2s]}
+{0[does_s2]}
 
-{0.can_s2s}
-{0.does_s2s}
+{0[can_s2s]}
+{0[does_s2s]}
 
 
 ## Connects at baseline
-{0.can_2b}
-{0.can_b2}
+{0[can_2b]}
+{0[can_b2]}
 
-{0.does_2b}
-{0.does_b2}
+{0[does_2b]}
+{0[does_b2]}
 
-{0.can_b2b}
-{0.does_b2b}
+{0[can_b2b]}
+{0[does_b2b]}
 
 
 ## Diagonal Connections
-{0.can_s2b}
-{0.can_b2s}
+{0[can_s2b]}
+{0[can_b2s]}
 
-##############################################################
-## Single-Glyph Substitutions
-##
-
-lookup plain_to_2s {{
-    {0.plain_to_2s}
-}} plain_to_2s; 
-
-lookup plain_to_s2 {{
-    {0.plain_to_s2}
-}} plain_to_s2; 
-
-lookup s2_to_s2s {{
-    {0.s2_to_s2s}
-}} s2_to_s2s;
-
-lookup _2s_to_s2s {{
-    {0._2s_to_s2s}
-}} _2s_to_s2s;
-
-
-## at baseline
-
-lookup plain_to_2b {{
-    {0.plain_to_2b}
-}} plain_to_2b; 
-
-lookup plain_to_b2 {{
-    {0.plain_to_b2}
-}} plain_to_b2; 
-
-lookup b2_to_b2b {{
-    {0.b2_to_b2b}
-}} b2_to_b2b;
-
-lookup _2b_to_b2b {{
-    {0._2b_to_b2b}
-}} _2b_to_b2b;
-
-
-## crossovers
-
-lookup b2_to_b2s {{
-    {0.b2_to_b2s}
-}} b2_to_b2s;
-
-lookup s2_to_s2b {{
-    {0.s2_to_s2b}
-}} s2_to_s2b;
-
-lookup _2b_to_s2b {{
-    {0._2b_to_s2b}
-}} _2b_to_s2b;
-
-lookup _2s_to_b2s {{
-    {0._2s_to_b2s}
-}} _2s_to_b2s;
 
 
 ##############################################################
 ## 'calt' Passes
 ##
 
-# Possibly useful lookupflags: IgnoreBaseGlyphs, IgnoreLigatures (defined in GDEF table)
+# figure out when we should use:
+# - no vs. upside-down-no
+# - utter vs. alternate-utter
+# - fee that starts at the top left and ends at Short vs. starts at Short and doesn't end
+# - etc.
+lookup determine_variants {{
+    sub no-qs it-qs no-qs'      by no-qs.alt;
+    sub she-qs      no-qs'      by no-qs.alt;
+    sub no-qs.alt   no-qs'      by no-qs.alt;
+    sub it-qs it-qs no-qs'      by no-qs.alt;
+}} determine_variants;
+
+
 
 ### Connects the unconnected.
 lookup calt_pass_1 {{
-    
-    sub @can_2s'    lookup plain_to_2s
-        @can_s2'    lookup plain_to_s2;
 
-    sub @can_s2'    lookup plain_to_s2
-        @can_2s'    lookup plain_to_2s;
-
-
-    sub @can_2b'    lookup plain_to_2b
-        @can_b2'    lookup plain_to_b2;
-
-    sub @can_b2'    lookup plain_to_b2
-        @can_2b'    lookup plain_to_2b;
-    
+    {0[calt_pass_1]}
+        
 }} calt_pass_1;
 
 
 
-### Connects what's connected on one side already.
-lookup calt_pass_2 {{
+#lookup calt_pass_2 {{
     
-    sub @does_b2' lookup b2_to_b2b     # 5
-        @can_2b'  lookup plain_to_2b;
-    sub @does_b2' lookup b2_to_b2s     # 6
-        @can_s2'  lookup plain_to_s2;
 
-    sub @does_s2'  lookup s2_to_s2b      # 8
-        @can_b2'   lookup plain_to_b2;
-    sub @does_s2'  lookup s2_to_s2s      # 9
-        @can_s2'   lookup plain_to_s2;
-            
-    
-    sub @does_b2'   lookup  b2_to_b2b   # 5
-        @does_2b'   lookup _2b_to_b2b;
-    sub @does_b2'   lookup b2_to_b2s    # 6
-        @does_2b'   lookup _2b_to_s2b;
-        
-    sub @does_s2'   lookup  s2_to_s2b   # 8
-        @does_2b'   lookup _2b_to_b2b;
-    sub @does_s2'   lookup  s2_to_s2s   # 9
-        @does_2b'   lookup _2b_to_s2b;
-
-    
-    sub @does_b2'   lookup  b2_to_b2s   # 5
-        @does_2s'   lookup _2s_to_b2s;
-    sub @does_b2'   lookup  b2_to_b2s   # 6
-        @does_2s'   lookup _2s_to_s2s;
-    
-    sub @does_s2'   lookup s2_to_s2b    # 8
-        @does_2s'   lookup _2s_to_b2s;
-    sub @does_s2'   lookup s2_to_s2s    # 9 (responsible for nnnnnnn failures?)
-        @does_2s'   lookup _2s_to_s2s;
-        
-}} calt_pass_2;
+#}} calt_pass_2;
 
 
 ##############################################################
 ## Features
 ##
 
-feature calt {{    
+feature calt {{
+    lookup determine_variants;
     lookup calt_pass_1;
-    lookup calt_pass_2;
+#    lookup calt_pass_2;
 }} calt;
 """
 
@@ -204,7 +117,11 @@ class Predicates(object):
         return False
             
 
-
+    @classmethod
+    def can(self, glyph, s):
+        """Return True if glyph can connect like s. (s might be things like "b2s".)"""
+        return getattr(self, 'can_'+s)(glyph)
+    
     @classmethod
     def can_s2(self, glyph):
         def f(cxn):
@@ -244,10 +161,57 @@ class Predicates(object):
         return self._has_given_connection(glyph, 'baseline', 'short')
             
             
+def flatten_once(lol):
+    return itertools.chain.from_iterable(lol)
 
+
+def stringize(connection):
+    if not connection: return ''
     
+    angle = connection['angle']
+    height = connection['height']
+    side = connection['side']
+    
+    if angle != 'horizontal':
+        raise NotImplementedError
+    if height == 'short':
+        if side == 'left':
+            return 's2'
+        elif side == 'right':
+            return '2s'
+        else:
+            raise ValueError('side neither left nor right')
+    elif height == 'baseline':
+        if side == 'left':
+            return 'b2'
+        elif side == 'right':
+            return '2b'
+        else:
+            raise ValueError('side neither left nor right')
+    else:
+        raise ValueError('height neither short nor baseline')
+
+
+def can_connect(lhs, rhs):
+    """Return True if the lhs string (say, "2b") can connect to the rhs (say, "b2")."""
+    if lhs.endswith('2b') and rhs.startswith('b2'): return True
+    if lhs.endswith('2s') and rhs.startswith('s2'): return True
+    return False
+
+def could_connect_rhs(lhs, glyph, rhs):
+    """Return a string like "b2s" or "s2b" that would connect to lhs when placed on rhs.
+    
+    lhs should be a string like "2b"; rhs should be a string like no-qs or no-qs.2b.
+    
+    Return '' if lhs and rhs can't connect."""
+    
+    for cset in glyph['connection sets']:
+        if len(cset) <= 1: continue
+        
+    
+
 pred = Predicates()
-CTX = Context()
+CTX = {}
 
 
 
@@ -260,129 +224,92 @@ def classnameize(names):
     return ' '.join(itertools.chain(["["], names, ["]"]))
 
 
-####
-## Baseline Height
-# can/does start/end at baseline horizontally
-can_b2  = [glyph['name'] for glyph in glyphs if pred.can_b2(glyph)]
-does_b2 = [x + ".b2" for x in can_b2]
-can_2b  = [glyph['name'] for glyph in glyphs if pred.can_2b(glyph)]
-does_2b = [x + '.2b' for x in can_2b]
+GLYPHS = {}
+connection_types = "2b b2 b2b 2s s2 s2s b2s s2b".split()
 
-can_b2b  = [glyph['name'] for glyph in glyphs if pred.can_b2b(glyph)]
-does_b2b = [x + ".b2b" for x in can_b2b]
-
-can_b2b  = [glyph['name'] for glyph in glyphs if pred.can_b2b(glyph)]
-does_b2b = [x + ".b2b" for x in can_b2b]
-
-
-####
-## Short Height
-
-# can/does start/end at short height horizontally on one side only
-can_s2  = [glyph['name'] for glyph in glyphs if pred.can_s2(glyph)]
-does_s2 = [x + ".s2" for x in can_s2]
-can_2s  = [glyph['name'] for glyph in glyphs if pred.can_2s(glyph)]
-does_2s = [x + '.2s' for x in can_2s]
-
-# can/does start/end at short height horizontally on both sides
-can_s2s  = [glyph['name'] for glyph in glyphs if pred.can_s2s(glyph)]
-does_s2s = [x + ".s2s" for x in can_s2s]
-
-# diagonals
-can_s2b  = [glyph['name'] for glyph in glyphs if pred.can_s2b(glyph)]
-does_s2b = [x + ".s2b" for x in can_s2b]
-
-can_b2s  = [glyph['name'] for glyph in glyphs if pred.can_b2s(glyph)]
-does_b2s = [x + ".b2s" for x in can_b2s]
-
-
-
-
-
-### lookups
-
-
-CTX.plain_to_2s = \
-    '\n    '.join("sub {} by {};".format(can, does) for can, does in zip(can_2s, does_2s))
-
-CTX.plain_to_s2 = \
-    '\n    '.join("sub {} by {};".format(can, does) for can, does in zip(can_s2, does_s2))
-
-CTX.s2_to_s2s = \
-    '\n    '.join("sub {}.s2 by {};".format(can, does) for can, does in zip(can_s2s, does_s2s))
-
-CTX._2s_to_s2s = \
-    '\n    '.join("sub {}.2s by {};".format(can, does) for can, does in zip(can_s2s, does_s2s))
-
-
-## at baseline
-
-CTX.plain_to_2b = \
-    '\n    '.join("sub {} by {};".format(can, does) for can, does in zip(can_2b, does_2b))
-
-CTX.plain_to_b2 = \
-    '\n    '.join("sub {} by {};".format(can, does) for can, does in zip(can_b2, does_b2))
-
-CTX.b2_to_b2b = \
-    '\n    '.join("sub {}.b2 by {};".format(can, does) for can, does in zip(can_b2b, does_b2b))
-
-CTX._2b_to_b2b = \
-    '\n    '.join("sub {}.2b by {};".format(can, does) for can, does in zip(can_b2b, does_b2b))
-
-
-## crossovers
-
-CTX.b2_to_b2s = \
-    '\n    '.join("sub {}.b2 by {};".format(can, does) for can, does in zip(can_b2s, does_b2s))
-
-CTX.s2_to_s2b = \
-    '\n    '.join("sub {}.s2 by {};".format(can, does) for can, does in zip(can_s2b, does_s2b))
-
-CTX._2b_to_s2b = \
-    '\n    '.join("sub {}.2b by {};".format(can, does) for can, does in zip(can_s2b, does_s2b))
-
-CTX._2s_to_b2s = \
-    '\n    '.join("sub {}.2s by {};".format(can, does) for can, does in zip(can_b2s, does_b2s))
-
+for cxn in connection_types:
+    GLYPHS['can_'+cxn] = \
+        [glyph['name'] for glyph in glyphs if pred.can(glyph, cxn)]
+    GLYPHS['does_'+cxn] = [x + '.' + cxn for x in GLYPHS['can_'+cxn]]
+        
 
 
 
 ### classes
 
-
-CTX.can_2b =   "@can_2b = {};".format(classnameize(can_2b))
-CTX.can_b2 =   "@can_b2 = {};".format(classnameize(can_b2))
-
-CTX.does_2b =  "@does_2b = {};".format(classnameize(does_2b))
-CTX.does_b2 =  "@does_b2 = {};".format(classnameize(does_b2))
-
-CTX.can_b2b  = "@can_b2b = {};".format(classnameize(can_b2b))
-
-CTX.does_b2b = "@does_b2b = {};".format(classnameize(does_b2b))
+for style in connection_types:
+    CTX['can_'+style]  = "@can_{} = {};".format(style, classnameize(GLYPHS['can_'+style]))
+    CTX["does_"+style] = "@does_{} = {};".format(style, classnameize(GLYPHS['does_'+style]))
 
 
 
+### calt pass 1
 
-CTX.can_2s =   "@can_2s = {};".format(classnameize(can_2s))
-CTX.can_s2 =   "@can_s2 = {};".format(classnameize(can_s2))
+subs = []
 
-CTX.does_2s =  "@does_2s = {};".format(classnameize(does_2s))
-CTX.does_s2 =  "@does_s2 = {};".format(classnameize(does_s2))
+for glyph, cxn in itertools.product(glyphs, "2s 2b".split()):
+    if pred.can(glyph, cxn):
+        name = glyph['name']
+        name_to = name.replace('.alt.', '')
+        subs.append("sub {0:<12} @can_{1} by {2}.{1};".format(name+"'", cxn, name_to))
 
-CTX.can_s2s  = "@can_s2s = {};".format(classnameize(can_s2s))
-
-CTX.does_s2s = "@does_s2s = {};".format(classnameize(does_s2s))
-
-
-
-
-CTX.can_b2s = "@can_b2s = {};".format(classnameize(can_b2s))
-CTX.can_s2b = "@can_s2b = {};".format(classnameize(can_s2b))
-
-CTX.does_b2s = "@does_b2s = {};".format(classnameize(does_b2s))
-CTX.does_s2b = "@does_s2b = {};".format(classnameize(does_s2b))
+CTX['calt_pass_1'] =  '\n    '.join(subs)
 
 
 
+### calt pass 2
 
-print TEMPLATE.format(CTX)
+subs = []
+for glyph, previous_attr in itertools.product(glyphs, ['', '2s', '2b']):
+    name = glyph['name']
+    if not previous_attr:
+        print
+        print "#", name
+        continue
+    cxns = flatten_once(glyph['connection sets'])
+    cxns = [k for k, v in itertools.groupby(sorted(cxns))]
+    cxns.insert(0, {})
+    for cxn in cxns:
+        if can_connect(previous_attr, stringize(cxn)): continue
+        cxn_s = stringize(cxn)
+        if cxn_s: cxn_s = "." + cxn_s
+        from_name = "{}{}'".format(name, cxn_s)
+        print "sub @can_{:<12} {:<14} by ...;".format(previous_attr, from_name, stringize(cxn))
+
+    
+
+
+#print TEMPLATE.format(CTX)
+
+
+
+
+
+
+        
+    
+
+def connection_types_for(g, h):
+    """
+    g and h are glyph objects.
+    Return a list of 2-tuples that describe the left and right connection types that 
+    the pair can use, like:
+    
+    [
+        (
+            dict(side=left,  height=short, angle=horizontal),
+            dict(side=right, height=short, angle=horizontal)
+        )
+    ]
+    
+    Returns an empty list if nothing matches (say, for "roe it").
+    BUG: needs a way to specify partially connecting glyphs for a second pass.
+    """
+    cxns = []
+    for gset, hset in itertools.product(g['connection sets'], h['connection sets']):
+        for gcxn, hcxn in zip(gset, hset):
+            if gcxn['height'] == hcxn['height'] and \
+               gcxn['angle']  == hcxn['angle']  and \
+               gcxn['side'] == 'left' and hcxn['side'] == 'right':
+                cxns.append((gcxn, hcxn))
+    return cxns
