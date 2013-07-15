@@ -7,7 +7,7 @@
 @_2b = [
             it-qs       it-qs.s2
             it-qs.2b it-qs.s2b
-            no-qs.2b no-qs.b2b
+            no-qs.alt.2b no-qs.alt.b2b
 ];
 
 # the letter before this should be a 2s
@@ -18,7 +18,7 @@
 
 @preceding_2b_plz = [
     it-qs       it-qs.b2 it-qs.b2s
-    no-qs.alt   no-qs.b2 no-qs.b2b
+    no-qs.alt   no-qs.alt.b2 no-qs.alt.b2b
 ];
 
 # figure out when we should use:
@@ -29,7 +29,8 @@
 lookup determine_variants {
     sub no-qs it-qs no-qs'      by no-qs.alt;
     sub she-qs      no-qs'      by no-qs.alt;
-    sub no-qs.alt   no-qs.alt'  by no-qs.alt;
+    sub no-qs.alt   no-qs'      by no-qs.alt;
+    sub it-qs it-qs no-qs'      by no-qs.alt;
 } determine_variants;
 
 # it-qs, no-qs, roe-qs, ox-qs (as in "on")
@@ -38,22 +39,22 @@ lookup calt_pass_1 {
     sub         it-qs'          @preceding_2b_plz by it-qs.2b;
     
     sub         no-qs'          @preceding_2s_plz by no-qs.2s;
-#    sub         no-qs'          @preceding_2b_plz by no-qs.2b;
-    sub         no-qs.alt'      @preceding_2b_plz by no-qs.2b;
+    sub         no-qs.alt'      @preceding_2b_plz by no-qs.alt.2b;
 } calt_pass_1;
 
 lookup calt_pass_2 {
     sub @_2s it-qs'     by it-qs.s2;    
-    sub @_2s it-qs.2s'  by it-qs.s2b; # problematic?
+    sub @_2s it-qs.2s'  by it-qs.s2b; # seems problematic; necessary for it-qs strings
     sub @_2b it-qs'     by it-qs.b2;
     sub @_2b it-qs.2s'  by it-qs.b2s;
     sub @_2s it-qs.2b'  by it-qs.s2b;
     
-    sub @_2b    no-qs' @preceding_2b_plz    by no-qs.b2b;
-    sub @_2s    no-qs'                      by no-qs.s2;
-    sub @_2s    no-qs.2s'                   by no-qs.s2s;
-    sub @_2b    no-qs.alt'                  by no-qs.b2;
-    sub @_2b    no-qs.2b'                   by no-qs.b2b;
+    sub @_2b    no-qs'          @preceding_2b_plz           by no-qs.alt.b2b;
+    
+    sub @_2s    no-qs'                                      by no-qs.s2;
+    sub @_2s    no-qs.2s'                                   by no-qs.s2s;
+    sub @_2b    no-qs.alt'                                  by no-qs.alt.b2;
+    sub @_2b    no-qs.alt.2b'                               by no-qs.alt.b2b;
 } calt_pass_2;
 
 feature calt {
