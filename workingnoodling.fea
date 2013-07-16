@@ -1,16 +1,17 @@
+# ends at the Short height, but the left side could be anything
 @_2s = [
     it-qs.2s it-qs.b2s
     no-qs.2s no-qs.s2s
 ];
 
-# not sure if this should be *does 2b* or *could do 2b*
+# not sure if this should be *does 2b* or *could do 2b*. Currently the latter.
 @_2b = [
             it-qs       it-qs.s2
             it-qs.2b it-qs.s2b
             no-qs.alt.2b no-qs.alt.b2b
 ];
 
-# the letter before this should be a 2s
+# the letter before this should be a 2s (end at the Short height)
 @preceding_2s_plz = [
     it-qs it-qs.s2 it-qs.s2b
     no-qs no-qs.s2 no-qs.s2s
