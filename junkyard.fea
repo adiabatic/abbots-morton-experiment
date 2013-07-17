@@ -1,0 +1,108 @@
+lookup No_it {
+
+} No_it;
+
+lookup no_It {
+
+} no_It;
+
+lookup No_no {
+
+} No_no;
+
+lookup no_No {
+
+} no_No;
+
+
+
+
+
+
+
+
+# Goes from .It to .Roe. .It changes.
+lookup It_roe {
+    sub it-qs'      roe-qs     by it-qs.2s;
+    sub it-qs.b2'   roe-qs     by it-qs.b2s;
+} It_roe;
+
+# Goes from .It to .Roe. .Roe changes.
+lookup it_Roe {
+    sub [it-qs.2s it-qs.b2s] roe-qs' by roe-qs.s2;
+} it_Roe;
+
+# no possible "roe it" connections
+
+
+@can_2s = [
+    # roe doesn't do this
+    it-qs
+    no-qs
+    # ox doesn't do this
+];
+
+@does_2s = [
+    # roe doesn't do this
+    it-qs.2s
+    no-qs.2s
+    # ox doesn't do this
+];
+
+@can_s2 = [
+    roe-qs
+    it-qs
+    no-qs
+    ox-qs
+];
+
+@does_s2 = [
+    roe-qs.s2
+    it-qs.s2
+    no-qs.s2
+    ox-qs.s2
+];
+
+@can_b2 = [
+    roe-qs
+    it-qs
+    no-qs
+#    ox-qs
+];
+
+@does_b2 = [
+    roe-qs.b2
+    it-qs.b2
+    no-qs.b2
+#    ox-qs.b2
+];
+
+lookup it_to_roe {
+    sub it-qs'      roe-qs     by it-qs.2s;
+    sub it-qs.b2'   roe-qs     by it-qs.b2s;
+} it_to_roe;
+
+# roe-qs, it-qs, no-qs, ox-qs (as in "on")
+lookup calt_pass_1 {
+    #sub roe-qs' @can_s2 by roe-qs.2s;
+    sub it-qs'  @can_s2 by it-qs.2s;
+    sub no-qs'  @can_s2 by no-qs.2s;
+    #sub ox-qs'  @can_s2 by ox-qs.2s;
+    
+    #sub roe-qs' @can_b2 by roe-qs.2b;
+    sub it-qs'  @can_b2 by it-qs.2b;
+    sub no-qs'  @can_b2 by no-qs.2b;
+    sub ox-qs'  @can_b2 by ox-qs.2b;
+} calt_pass_1;
+
+lookup calt_pass_2 {
+    #sub [roe-qs] roe-qs' by roe-qs; # no change
+        # not much .It can connect to .Roe
+    sub [it-qs it-qs.b2]' lookup it_to_roe roe-qs roe_from_it;
+
+} calt_pass_2;
+
+feature calt {
+    lookup calt_pass_1;
+    lookup calt_pass_2;
+} calt;

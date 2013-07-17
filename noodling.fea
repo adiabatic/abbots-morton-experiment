@@ -1,0 +1,59 @@
+lookup foo {
+    sub it-qs by it-qs.2s;
+} foo;
+
+lookup bar {
+    sub it-qs by it-qs.s2;
+} bar;
+
+lookup baz {
+    sub it-qs.b2 by it-qs.s2b;
+} baz;
+
+lookup quux {
+    sub it-qs by it-qs.b2;
+} quux;
+
+lookup spam {
+    sub it-qs.s2 by it-qs.s2b;
+} spam;
+
+lookup bacon {
+    sub it-qs.2b' by it-qs.s2b;
+}  bacon;
+
+lookup eggs {
+    sub it-qs.s2 by it-qs.s2b;
+} eggs;
+
+lookup sausage {
+    sub it-qs.2s by it-qs.b2s;
+} sausage;
+
+lookup ketchup {
+    sub it-qs.s2 by it-qs.s2b;
+} ketchup;
+
+lookup fries {
+    sub it-qs by it-qs.b2;
+} fries;
+
+
+feature calt {
+    # pass 1
+    sub it-qs'      lookup foo it-qs' lookup bar;
+    
+    # do 5 and 8
+    # pass 2
+    #sub it-qs.b2'   lookup baz  it-qs'  lookup quux; # it doesn't do base-to-base
+    sub it-qs.s2'   lookup ketchup it-qs' lookup fries;
+
+    sub it-qs.s2'   lookup spam it-qs.2b' lookup bacon;
+    #sub it-qs.s2'   lookup ... it-qs.2b' lookup ...; # for matching with non-like letters
+    
+    sub it-qs.s2'   lookup eggs it-qs.2s' lookup sausage;
+    #sub it-qs.s2'   lookup lamb it-qs. # for matching with non-like letters
+    
+    # sub it-qs.s2'   lookup ketchup it-qs. # no Deep mixes yet
+
+} calt;
