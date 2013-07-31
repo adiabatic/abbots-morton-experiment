@@ -55,9 +55,9 @@ horizontalStems = (
 id = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
 userData = {
 GSCornerRadius = 200;
-GSOffsetHorizontal = 10;
+GSOffsetHorizontal = 35;
 GSOffsetMakeStroke = 1;
-GSOffsetVertical = 10;
+GSOffsetVertical = 35;
 };
 verticalStems = (
 35
