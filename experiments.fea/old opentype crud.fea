@@ -1,0 +1,69 @@
+# We want to read these left to right, so "Ends...Starts, Ends...Starts". 
+
+
+@EndsShort = [
+				out-qs.init
+				
+];
+
+@StartsShort = [
+				roe-qs.s2
+];
+
+@EndsBaseline = [
+	awe-qs
+	bay-qs
+	cheer-qs
+	eight-qs
+	et-qs
+	excite-qs
+	key-qs
+	llan-qs
+				no-qs.alt
+	oolong-qs
+	ooze-qs
+	ox-qs
+	oy-qs
+	pea-qs
+	she-qs
+	tea-qs
+				utter-qs.alt
+	vie-qs
+	zhivago-qs
+	zoo-qs
+];
+
+@StartsBaseline = [
+				oolong-qs.b2b
+				oolong-qs.b2
+];
+
+
+
+
+sub @EndsBaseline no-qs' by no-qs.alt;
+sub it-qs oolong-qs' by oolong-qs.b2;
+
+sub it-qs no-qs' it-qs by no-qs.s2s;
+sub it-qs no-qs'       by no-qs.s2;
+
+sub tea-qs no-qs' by no-qs.b2;
+
+sub 
+
+# make "pr" join properly
+sub pea-qs'     roe-qs  by pea-qs.half;
+sub pea-qs.half roe-qs' by roe-qs.s2;
+
+sub it-qs'   roe-qs  by it-qs.2s;
+sub it-qs.2s roe-qs' by roe-qs.s2;
+sub tea-qs roe-qs'   by roe-qs.b2;
+
+sub utter-qs'   may-qs  by utter-qs.2sr;
+sub utter-qs.2sr may-qs' by may-qs.s2;
+
+sub day-qs utter-qs by day_utter-qs;
+sub day_utter-qs roe-qs' by roe-qs.s2;
+
+sub utter-qs'   roe-qs by utter-qs.2s;
+sub utter-qs.2s roe-qs' by roe-qs.s2;

@@ -1,0 +1,68 @@
+@letters = [n x];
+@n_like = [n];
+@x_like = [x];
+@pass_2_initials = [   n.b2 ]; # none of these can be first of pairs
+@pass_2_finals   = [ n n.2b ]; 
+
+lookup n_init_b_1 {
+	sub n by n.2b;
+} n_init_b_1;
+
+lookup n_fina_b_1 {
+	sub n by n.b2;
+} n_fina_b_1;
+
+
+lookup x_init_s_1 {
+	sub x by x.2s;
+} x_init_s_1;
+
+lookup x_init_b_1 {
+    sub x by x.2b;
+} x_init_b_1;
+
+lookup x_fina_b_1 {
+    sub x by x.b2;
+} x_fina_b_1;
+
+
+lookup x_fina_s_1 {
+	sub x by x.s2;
+} x_fina_s_1;
+
+
+# pass 2
+
+lookup n_init_2 {
+	sub n.b2 by n.b2b;
+} n_init_2;
+
+lookup n_fina_2 {
+	sub n    by n.b2;
+	sub n.2b by n.b2b;
+} n_fina_2;
+
+lookup calt_pass_1 {
+	sub @n_like' lookup n_init_b_1
+	    @n_like' lookup n_fina_b_1;
+
+	sub @x_like' lookup x_init_s_1
+	    @x_like' lookup x_fina_s_1;
+
+	sub @n_like' lookup n_init_b_1
+	    @x_like' lookup x_fina_b_1;
+
+	sub @x_like' lookup x_init_b_1
+	    @n_like' lookup n_fina_b_1;
+	    
+} calt_pass_1;
+
+lookup calt_pass_2 {
+	sub @pass_2_initials' lookup n_init_2
+	    @pass_2_finals'   lookup n_fina_2;
+} calt_pass_2;
+
+feature calt {
+	lookup calt_pass_1;
+	lookup calt_pass_2;
+} calt;

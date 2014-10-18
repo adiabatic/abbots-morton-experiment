@@ -1,0 +1,8 @@
+lookup calt_pass_1 {
+    
+} calt_pass_1;
+
+feature calt {
+    lookup calt_pass_1;
+    lookup calt_pass_2;
+} calt;
