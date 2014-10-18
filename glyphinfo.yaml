@@ -1,33 +1,42 @@
 -
     dummy sets: # keep these in the topmost thing (eventually pea)
-        - 
+        - &lbh_only
             - &lbh
                 side: left
                 height: baseline
                 angle: horizontal
-        - 
+        - &rbh_only
             - &rbh
                 side: right
                 height: baseline
                 angle: horizontal
-        - 
+        - &lsh_only
             - &lsh
                 side: left
                 height: short
                 angle: horizontal
+        - &rsh_only
             - &rsh
                 side: right
                 height: short
                 angle: horizontal
-                
-        - &no_alt_cxn_sets
+
+        - &base_to_base_horizontally_only # alternate ·no, ·oolong
             - 
-                - *lbh        
-            - 
-                - *rbh    
+                - *lbh
+            -
+                - *rbh
             -
                 - *lbh
                 - *rbh
+        - &short_to_short_horizontally_only # ·no (ignoring "horizontally"?, ·pea-half & ·foot too)
+            - 
+                - *lsh
+            -
+                - *rsh
+            -
+                - *lsh
+                - *rsh
 
     name: tea-qs
     connection sets:
@@ -50,7 +59,9 @@
         -
             - *lsh
             - *rsh
-        # upside-down form
+-
+    name: no-qs.alt
+    connection sets:
         - 
             - *lbh        
         - 
@@ -62,6 +73,14 @@
     name: it-qs
     connection sets:
         -
+            - *lsh
+        -
+            - *rbh
+        -
+            - *lbh
+        -
+            - *rsh            
+        -
             - *lbh
             - *rsh
         -
@@ -69,15 +88,10 @@
             - *rbh
 -
     name: eat-qs
-    connection sets: *no_alt_cxn_sets
+    connection sets: *base_to_base_horizontally_only
 -
     name: et-qs
     connection sets:
-        -
-            -
-                side: left
-                height: short
-                angle: vertical
         -
             - *rbh
 
