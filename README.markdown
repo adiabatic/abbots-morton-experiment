@@ -31,4 +31,4 @@ The sorts of connections a letter is tuned for can be further described:
 Apache License, version 2.0.
 
 [qs]: http://en.wikipedia.org/wiki/Quikscript
-[blog]: http://www.frogorbits.com/blog/
+[blog]: https://www.frogorbits.com/blog/
