@@ -2,11 +2,11 @@
 copyright = "\U00A9 2013 Nathan Sharfi";
 customParameters = (
 {
-name = "license";
+name = license;
 value = "Apache License, version 2.0";
 },
 {
-name = "licenseURL";
+name = licenseURL;
 value = "http://www.apache.org/licenses/LICENSE-2.0.html";
 }
 );
@@ -17,12 +17,11 @@ familyName = "Abbots Morton Experiment";
 featurePrefixes = (
 {
 code = "languagesystem DFLT dflt;\012languagesystem Quik dflt;\012";
-name = "Languagesystems";
+name = Languagesystems;
 },
 {
-code = 
-;
-name = "Everything";
+code = "";
+name = Everything;
 }
 );
 fontMaster = (
@@ -105,9 +104,9 @@ nodes = (
 width = 841;
 }
 );
-leftKerningGroup = "day";
+leftKerningGroup = day;
 leftMetricsKey = "day-qs";
-rightKerningGroup = "utter.2s";
+rightKerningGroup = utter.2s;
 rightMetricsKey = "utter-qs";
 },
 {
@@ -117,7 +116,7 @@ lastChange = "2013-07-14 23:46:40 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
+name = Regular;
 paths = (
 {
 closed = 1;
@@ -570,15 +569,15 @@ nodes = (
 );
 }
 );
-width = 409;
+width = 419;
 }
 );
-leftKerningGroup = "removethin";
+leftKerningGroup = removethin;
 unicode = E671;
 },
 {
 glyphname = "eat-qs.2b";
-lastChange = "2013-07-06 21:56:11 -0800";
+lastChange = "2013-12-08 23:16:29 -0800";
 layers = (
 {
 components = (
@@ -588,14 +587,14 @@ transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-width = 409;
+name = Regular;
+width = 419;
 }
 );
 },
 {
 glyphname = "eat-qs.b2";
-lastChange = "2013-07-06 21:59:05 -0800";
+lastChange = "2013-12-08 23:16:29 -0800";
 layers = (
 {
 components = (
@@ -605,14 +604,14 @@ transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-width = 409;
+name = Regular;
+width = 419;
 }
 );
 },
 {
 glyphname = "eat-qs.b2b";
-lastChange = "2013-07-07 08:47:34 -0800";
+lastChange = "2013-12-08 23:16:29 -0800";
 layers = (
 {
 background = {
@@ -1016,14 +1015,14 @@ transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-width = 162;
+name = Regular;
+width = 172;
 }
 );
 },
 {
 glyphname = "he-qs.b2";
-lastChange = "2013-07-06 21:59:05 -0800";
+lastChange = "2014-05-23 01:13:14 -0800";
 layers = (
 {
 components = (
@@ -1033,8 +1032,8 @@ transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-width = 162;
+name = Regular;
+width = 172;
 }
 );
 },
@@ -1043,7 +1042,7 @@ glyphname = "he-qs.half";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
+name = Regular;
 paths = (
 {
 closed = 1;
@@ -1133,7 +1132,7 @@ transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
+name = Regular;
 width = 650;
 }
 );
@@ -2758,7 +2757,7 @@ transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
+name = Regular;
 width = 519;
 }
 );
@@ -3262,8 +3261,8 @@ transform = "{1, 0, 0, 1, 0, 0}";
 }
 );
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-width = 311;
+name = Regular;
+width = 286;
 }
 );
 },
@@ -3273,7 +3272,7 @@ lastChange = "2013-06-30 21:52:27 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
+name = Regular;
 paths = (
 {
 closed = 1;
@@ -4740,23 +4739,23 @@ width = 600;
 unicode = 201C;
 },
 {
-glyphname = "quotedblright";
-lastChange = "2013-07-03 22:56:59 -0800";
+glyphname = quotedblright;
+lastChange = "2013-11-12 01:33:48 -0800";
 layers = (
 {
 components = (
 {
-name = "quoteright";
-transform = "{1, 0, 0, 1, 150, 0}";
+name = quoteright;
+transform = "{1, 0, 0, 1, 151, 0}";
 },
 {
-name = "quoteright";
-transform = "{1, 0, 0, 1, 0, 0}";
+name = quoteright;
+transform = "{1, 0, 0, 1, 1, 0}";
 }
 );
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
-width = 600;
+name = Regular;
+width = 325.686;
 }
 );
 unicode = 201D;
@@ -4827,7 +4826,7 @@ lastChange = "2013-06-28 22:03:34 -0800";
 layers = (
 {
 layerId = "0D4C6578-C4F3-4653-B13A-F1323A6E6F4B";
-name = "Regular";
+name = Regular;
 paths = (
 {
 closed = 1;
