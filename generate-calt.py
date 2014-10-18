@@ -264,7 +264,7 @@ for glyph, previous_attr in itertools.product(glyphs, ['', '2s', '2b']):
     name = glyph['name']
     if not previous_attr:
         print
-        print "#", name
+        print "    #", name
         continue
     cxns = flatten_once(glyph['connection sets'])
     cxns = [k for k, v in itertools.groupby(sorted(cxns))]
@@ -274,7 +274,7 @@ for glyph, previous_attr in itertools.product(glyphs, ['', '2s', '2b']):
         cxn_s = stringize(cxn)
         if cxn_s: cxn_s = "." + cxn_s
         from_name = "{}{}'".format(name, cxn_s)
-        print "sub @can_{:<12} {:<14} by ...;".format(previous_attr, from_name, stringize(cxn))
+        print "    sub @can_{:<12} {:<14} by ...;".format(previous_attr, from_name, stringize(cxn))
 
     
 
