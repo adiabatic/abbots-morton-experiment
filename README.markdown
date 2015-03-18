@@ -26,6 +26,8 @@ The sorts of connections a letter is tuned for can be further described:
 
 - ‘r’ for “reach” — utter-qs.2sr is designed to reach over to the Short connection at the top of .May
 
+Incidentally, the sample string that Font Book uses can be changed by editing “the name ID=19 sample string”. Dunno if Glyphs can do that yet.
+
 ## License
 
 Apache License, version 2.0.
